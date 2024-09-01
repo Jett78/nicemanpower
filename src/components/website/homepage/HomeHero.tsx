@@ -18,7 +18,7 @@ export default function HomeHero({}: Props) {
         <h1 className="text-[8vw] font-medium text-tertiary-800  hero text-center leading-none">
           Find Job <br /> You Deserve
         </h1>
-        <p className="text-[1.5vw]">
+        <p className="text-[1.5vw] text-tertiary-700">
           Your dream job is closer than you think—
           <span className="">let us help you find it.</span>
         </p>{" "}
