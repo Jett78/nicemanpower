@@ -6,7 +6,7 @@ import { useRef } from "react";
 type Props = {};
 gsap.registerPlugin(ScrollTrigger);
 export default function HowItWorks({}: Props) {
-  const stickyContainer = useRef();
+  const stickyContainer = useRef(null);
 
   useGSAP(() => {
     let tl = gsap.timeline({
@@ -103,13 +103,13 @@ export default function HowItWorks({}: Props) {
     </div>
   );
 }
-const steps = [
-  { number: 1, text: "Submit a resume", image: "/public/hire-step/step1.png" },
-  { number: 2, text: "Get matched", image: "/public/hire-step/step2.webp" },
-  {
-    number: 3,
-    text: "Give an interview",
-    image: "/public/hire-step/step3.webp",
-  },
-  { number: 4, text: "Get hired", image: "/public/hire-step/step4.webp" },
-];
+// const steps = [
+//   { number: 1, text: "Submit a resume", image: "/public/hire-step/step1.png" },
+//   { number: 2, text: "Get matched", image: "/public/hire-step/step2.webp" },
+//   {
+//     number: 3,
+//     text: "Give an interview",
+//     image: "/public/hire-step/step3.webp",
+//   },
+//   { number: 4, text: "Get hired", image: "/public/hire-step/step4.webp" },
+// ];

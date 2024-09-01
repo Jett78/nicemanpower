@@ -48,6 +48,7 @@ function App() {
       height: 0,
     }
   );
+  console.log(dimension);
 
   // lenis scroll
   useEffect(() => {
