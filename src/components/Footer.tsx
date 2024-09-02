@@ -45,9 +45,9 @@ export default function Footer({}: Props) {
             </span>
           </div> */}
 
-          <img className="w-[6vw]" src="/public/logo/nice-logo.png" alt="" />
+          <img className="w-[6vw]" src="/public/logo/nice-white-logo.png" alt="" />
 
-          <div className="flex w-full text-nowrap  text-[3vw] md:text-[2.5vw] lg:text-[0.9vw] text-tertiary-700 font-semibold gap-5 justify-end items-center">
+          <div className="flex w-full text-nowrap  text-[3vw] md:text-[2.5vw] lg:text-[0.9vw] text-tertiary-500 font-semibold gap-5 justify-end items-center">
             <Link to="" className="hover:text-secondary-500">
               Home
             </Link>

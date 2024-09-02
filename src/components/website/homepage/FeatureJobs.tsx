@@ -11,7 +11,7 @@ export default function FeatureJobs({}: Props) {
           <h1 className="text-[2vw] font-semibold hero w-full ">
             Featured Jobs
           </h1>
-          <p className="text-[1.2vw] w-[50%] leading-relaxed text-tertiary-700">
+          <p className="text-[1.2vw] w-[50%] leading-relaxed text-tertiary-200">
             Search all the open positions on the web. Get your own personalized
             salary estimate. Read reviews on over 30000+ companies worldwide.
           </p>
@@ -22,14 +22,14 @@ export default function FeatureJobs({}: Props) {
       </div>
 
       {/* jobs  */}
-      <div className="grid grid-cols-3 gap-5 mt-10">
+      <div className="grid grid-cols-2 gap-5 mt-10">
         {jobData.slice(0,3).map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
-            <div className="w-full cursor-pointer h-full  duration-300 transition-all shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  rounded-3xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
+            <div className="w-full cursor-pointer h-full bg-tertiary-800  duration-300 transition-all shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  rounded-3xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
                 {/* Company Name & Logo */}
                 <div className="flex justify-center items-center gap-3">
-                  <div className="w-10 h-10 border p-2  overflow-hidden rounded-full">
+                  <div className="w-10 h-10 border p-2 bg-tertiary-100  overflow-hidden rounded-full">
                     <img
                       src="/public/company-logo.png"
                       alt="company-logo"
@@ -47,13 +47,13 @@ export default function FeatureJobs({}: Props) {
                 </h3>
 
                 {/* Description */}
-                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
+                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-tertiary-200 font-semibold">
                   {job.description}
                 </p>
               </div>
 
               {/* Job Details */}
-              <div className="flex mt-2 flex-row flex-wrap text-tertiary-700 justify-start items-start gap-3 gap-x-5">
+              <div className="flex mt-2 flex-row flex-wrap text-tertiary-200 justify-start items-start gap-3 gap-x-5">
                 <div className="flex justify-center items-center gap-2">
                   <span>{job.icons.location}</span>
                   <span className="text-sm font-medium">{job.location}</span>

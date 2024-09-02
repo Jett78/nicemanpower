@@ -37,14 +37,14 @@ export default function Navbar({}: Props) {
   return (
     <motion.div
       animate={controls}
-      className="w-full flex   justify-center items-center fixed top-0 left-0 h-[3vw] py-[2.5vw] z-[50] "
+      className="w-full flex  justify-center items-center fixed top-0 left-0 h-[3vw] py-[2.5vw] z-[50] "
     >
-      <div className="mx-auto flex justify-center rounded-full px-[2vw] py-[0.8vw] bg-tertiary-50 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center">
+      <div className="mx-auto flex justify-center rounded-full px-[2vw] py-[0.5vw] bg-tertiary-800 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center">
         <div className="w-full gap-[10vw] flex justify-between items-center">
           <Link to="">
-            <img className="w-[5vw]" src="/public/logo/nice-logo.png" alt="" />
+            <img className="w-[5vw]" src="/public/logo/nice-white-logo.png" alt="" />
           </Link>
-          <div className="flex gap-5 text-[0.9vw] font-semibold justify-center items-center text-tertiary-700">
+          <div className="flex gap-5 text-[0.9vw] font-semibold justify-center items-center text-tertiary-200">
             <Link to="" className="hover:text-secondary-500">Home</Link>
             <Link to="" className="hover:text-secondary-500">About</Link>
             <Link to="" className="hover:text-secondary-500">Services</Link>

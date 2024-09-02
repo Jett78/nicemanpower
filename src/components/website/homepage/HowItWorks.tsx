@@ -36,7 +36,7 @@ export default function HowItWorks() {
   return (
     <div className="w-full ">
       <div className="w-full h-screen flex justify-center relative items-center">
-        <h1 className="text-[8vw] sticky top-[20vh]  font-medium text-tertiary-800 hero text-center leading-none">
+        <h1 className="text-[8vw] sticky top-[20vh]  font-medium text-tertiary-100 hero text-center leading-none">
           How It <br /> Works?
         </h1>
       </div>

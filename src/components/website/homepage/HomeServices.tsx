@@ -55,12 +55,12 @@ export default function HomeServices({}: Props) {
                 className="flex flex-col gap-1"
               >
                 <h3 className="font-semibold flex gap-5 items-center relative text-[4vw] md:text-[3.5vw] lg:text-[1.3vw]">
-                  <span className="text-[4vw] lg:text-[1.5vw] text-primary-500 font-semibold duration-300">
+                  <span className="text-[3.5vw] md:text-[2vw] lg:text-[1.2vw] text-primary-500 font-semibold duration-300">
                     0{item.id}.
                   </span>
                   {item.title}
                 </h3>
-                <p className="text-[3.5vw] md:text-[2vw] lg:text-[1.2vw] font-medium text-tertiary-700">
+                <p className="text-[3.5vw] md:text-[2vw] lg:text-[1.2vw] font-medium text-tertiary-200">
                   {item.description}
                 </p>
               </motion.div>

@@ -28,7 +28,7 @@ export default function HomeAbout({}: Props) {
             Millions of jobs. Find the one that's right for you.
           </h2>
 
-          <p className="text-[1.2vw] text-tertiary-700 leading-relaxed">
+          <p className="text-[1.2vw] text-tertiary-200 leading-relaxed">
             We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
             provide skilled workers across various sectors, with branches and
             training centers throughout Nepal, adhering to international hiring
@@ -36,7 +36,7 @@ export default function HomeAbout({}: Props) {
           </p>
 
           <Link to="" className="mt-5">
-            <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold text-tertiary-800 border-2 rounded-full border-tertiary-100">
+            <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold text-tertiary-100 border-2 rounded-full border-tertiary-100">
               Learn More
             </button>
           </Link>
