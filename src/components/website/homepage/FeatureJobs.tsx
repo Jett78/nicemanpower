@@ -8,7 +8,7 @@ export default function FeatureJobs({}: Props) {
     <div className="py-[4rem] pt-[6rem]">
       <div className="w-full flex gap-5 justify-between items-end">
         <div className="flex w-full h-full flex-col gap-2">
-          <h1 className="text-[2vw] font-semibold hero w-full ">
+          <h1 className="text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-br from-tertiary-200 to-tertiary-600  leading-none hero">
             Featured Jobs
           </h1>
           <p className="text-[1.2vw] w-[50%] leading-relaxed text-tertiary-200">
@@ -23,7 +23,7 @@ export default function FeatureJobs({}: Props) {
 
       {/* jobs  */}
       <div className="grid grid-cols-2 gap-5 mt-10">
-        {jobData.slice(0,3).map((job, index) => (
+        {jobData.slice(0, 3).map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
             <div className="w-full cursor-pointer h-full bg-tertiary-800  duration-300 transition-all shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  rounded-3xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">

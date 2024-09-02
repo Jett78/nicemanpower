@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
 
 type Props = {};
@@ -18,15 +19,25 @@ export default function HomeHero({}: Props) {
       </div> */}
       {/* Content */}
       <div className="flex flex-col w-full h-full justify-center z-[2] relative items-center">
-        <div className="p-[0.6vw] my-5 text-[0.8vw] px-[2vw] font-medium rounded-full shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-          <div className="flex text-tertiary-100">
+        <div
+          className="p-[0.6vw] my-5 text-[0.8vw] px-[2vw] font-medium  rounded-full shadow-[0px_2px_3px_-1px_rgba(255,255,255,0.1),0px_1px_0px_0px_rgba(255,255,255,0.02),0px_0px_0px_1px_rgba(255,255,255,0.08)]
+
+
+"
+        >
+          <div className="flex justify-center items-center text-tertiary-100">
             <span className="font-semibold text-tertiary-100">
               Low Digital Marketing ROI
             </span>
             <span className="px-2">|</span>
-            <span className="text-secondary-500 cursor-pointer font-semibold">
-              Work with us
-            </span>
+            <div className="flex group">
+              <span className="text-secondary-500 cursor-pointer font-semibold">
+                Work with us
+              </span>
+              <span className="ml-1 group-hover:ml-2 duration-200">
+                <Icon icon="gg:arrow-right-o" className="w-5 h-5 text-tertiary-200 mt-[2px]" />
+              </span>
+            </div>
           </div>
         </div>
         <h1 className="text-[8vw] font-bold text-transparent bg-clip-text bg-gradient-to-br from-tertiary-200 to-tertiary-600 text-center leading-none">

@@ -24,7 +24,7 @@ export default function HomeServices({}: Props) {
               <span className="w-[5vw] h-[1.5px] bg-secondary-500"></span>{" "}
               Excellence across multiple disciplines
             </p>
-            <h1 className="hero text-[8vw] lg:text-[4.5vw] leading-none w-full font-semibold">
+            <h1 className="hero text-[4vw]  font-bold text-transparent bg-clip-text bg-gradient-to-br from-tertiary-200 to-tertiary-600 text-right w-full leading-none">
               We Specialize
             </h1>
           </motion.div>

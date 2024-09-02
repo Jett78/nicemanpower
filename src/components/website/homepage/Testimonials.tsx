@@ -13,7 +13,7 @@ export default function Testimonials({}: Props) {
       className="pb-[2rem] min-h-screen overflow-hidden flex justify-center items-center flex-col w-full"
     >
       <div className="w-full justify-center items-center text-center">
-        <h1 className="hero text-[8vw] lg:text-[4.5vw]  lg:text-center font-semibold ">
+        <h1 className="text-[4vw] font-bold text-transparent bg-clip-text bg-gradient-to-br from-tertiary-200 to-tertiary-600 text-center leading-none hero">
           Voice Of Our <span className="">Clients</span>
         </h1>
         <p className="w-6/12 text-[1.3vw] text-tertiary-200 mx-auto leading-relaxed">
