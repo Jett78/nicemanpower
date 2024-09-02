@@ -8,7 +8,7 @@ export default function FeatureJobs({}: Props) {
           <h1 className="text-[2vw] font-semibold hero w-full ">
             Featured Jobs
           </h1>
-          <p className="text-[1vw] w-[50%] leading-relaxed text-tertiary-700">
+          <p className="text-[1.2vw] w-[50%] leading-relaxed text-tertiary-700">
             Search all the open positions on the web. Get your own personalized
             salary estimate. Read reviews on over 30000+ companies worldwide.
           </p>

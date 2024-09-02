@@ -16,7 +16,7 @@ export default function Testimonials({}: Props) {
         <h1 className="hero text-[8vw] lg:text-[4.5vw]  lg:text-center font-semibold ">
           Voice Of Our <span className="">Clients</span>
         </h1>
-        <p className="w-6/12 mx-auto leading-relaxed">
+        <p className="w-6/12 text-[1.3vw] text-tertiary-700 mx-auto leading-relaxed">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
           delectus accusantium a non nemo impedit?
         </p>
@@ -41,7 +41,7 @@ export default function Testimonials({}: Props) {
             {reviewsData.concat(reviewsData).map((review, index) => (
               <div
                 key={index}
-                className="p-5 py-[5vw] lg:py-[1.5vw] cursor-pointer hover:border-tertiary-100 w-[70vw] md:w-[50vw] m-1 lg:w-[25vw] h-auto rounded-lg border-tertiary-50 shadow-sm duration-300 border flex justify-start flex-col gap-2 items-start"
+                className="p-5 py-[5vw] lg:py-[1.5vw] cursor-pointer hover:border-tertiary-100 w-[70vw] md:w-[50vw] m-1 lg:w-[25vw] h-auto rounded-lg border-tertiary-50 shadow-sm duration-300 border flex justify-start flex-col gap-5 items-start"
               >
                 <div className="flex text-yellow-400 justify-center items-center">
                   <Icon
@@ -65,7 +65,7 @@ export default function Testimonials({}: Props) {
                     className="w-4 h-4 md:w-6 md:h-6 lg:w-5 lg:h-5 object-cover object-center"
                   />
                 </div>
-                <h3 className="font-medium text-[4vw] text-tertiary-600 md:text-[3vw] lg:text-[1vw]">
+                <h3 className="font-medium text-[4vw] text-tertiary-600 md:text-[3vw] lg:text-[1.2vw]">
                   <span className="text-secondary-400">&quot;</span>
                   {review.reviewDescription}
                   <span className="text-secondary-400">&quot;</span>

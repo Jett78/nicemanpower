@@ -5,7 +5,7 @@ type Props = {};
 export default function HomeAbout({}: Props) {
   return (
     <div className="py-[5rem] flex justify-center items-center">
-      <div className="flex justify-center items-center gap-[5rem]">
+      <div className="flex justify-center items-center gap-[6rem]">
         {/* image  */}
         <div className="flex justify-center items-center h-full">
           <div className="relative w-[25vw] h-[30vw]  ">
@@ -24,11 +24,11 @@ export default function HomeAbout({}: Props) {
 
         {/* right desc  */}
         <div className="flex flex-col justify-center items-start gap-1 text-left h-full w-[40%]">
-          <h2 className="text-[1.2vw] font-medium text-primary-500">
+          <h2 className="text-[1vw] font-semibold text-primary-500">
             Millions of jobs. Find the one that's right for you.
           </h2>
 
-          <p className="text-[1vw] text-tertiary-700 leading-relaxed">
+          <p className="text-[1.2vw] text-tertiary-700 leading-relaxed">
             We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
             provide skilled workers across various sectors, with branches and
             training centers throughout Nepal, adhering to international hiring

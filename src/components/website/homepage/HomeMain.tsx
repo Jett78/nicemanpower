@@ -5,6 +5,7 @@ import HowItWorks from "./HowItWorks";
 import HomeServices from "./HomeServices";
 import Testimonials from "./Testimonials";
 import HomeHero from "./HomeHero";
+import CTA from "./cta";
 
 type Props = {};
 
@@ -18,6 +19,11 @@ export default function HomeMain({}: Props) {
         <FeatureJobs />
         <HowItWorks />
         <HomeServices />
+      </div>
+      <div className="w-full mx-auto">
+        <CTA />
+      </div>
+      <div className="w-11/12 lg:w-9/12 mx-auto">
         <Testimonials />
       </div>
     </>

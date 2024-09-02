@@ -44,12 +44,12 @@ export default function Navbar({}: Props) {
           <Link to="">
             <img className="w-[5vw]" src="/public/logo/nice-logo.png" alt="" />
           </Link>
-          <div className="flex gap-5 text-[0.9vw] font-medium justify-center items-center">
-            <Link to="">Home</Link>
-            <Link to="">About</Link>
-            <Link to="">Services</Link>
-            <Link to="">Blog</Link>
-            <Link to="">Contact</Link>
+          <div className="flex gap-5 text-[0.9vw] font-semibold justify-center items-center text-tertiary-700">
+            <Link to="" className="hover:text-secondary-500">Home</Link>
+            <Link to="" className="hover:text-secondary-500">About</Link>
+            <Link to="" className="hover:text-secondary-500">Services</Link>
+            <Link to="" className="hover:text-secondary-500">Blog</Link>
+            <Link to="" className="hover:text-secondary-500">Contact</Link>
 
             <Link to="">
               <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-primary-500 rounded-full text-tertiary-50">
