@@ -4,7 +4,7 @@ type Props = {};
 
 export default function HomeAbout({}: Props) {
   return (
-    <div className="py-[5rem] flex justify-center items-center">
+    <div className="py-[5rem] pb-[7rem]  flex justify-center items-center">
       <div className="flex justify-center items-center gap-[6rem]">
         {/* image  */}
         <div className="flex justify-center items-center h-full">

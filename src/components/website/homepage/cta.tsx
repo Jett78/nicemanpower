@@ -40,7 +40,7 @@ export default function Cta({}: Props) {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full rounded-xl object-cover object-center"
+                className="w-full h-full rounded-3xl brightness-90 object-cover object-center"
               />
             </div>
           ))}
@@ -62,7 +62,7 @@ export default function Cta({}: Props) {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full rounded-xl object-cover object-center"
+                  className="w-full h-full rounded-3xl brightness-90 object-cover object-center"
                 />
               </div>
             ))}

@@ -74,7 +74,7 @@ function App() {
 
   return (
     <Router>
-      <div className="relative  bg-white text-black ">
+      <div className="relative  bg-tertiary-100 text-black ">
         {/* Gradient Ellipse */}
         {/* <div className="fixed inset-0 flex justify-center items-center">
           <div className="w-[90vw] lg:w-[50vw] h-[90vh] lg:h-[40vw] bg-gradient-to-r from-[#061a26] via-[#0d2b3a] to-[#0f3447] rounded-full opacity-50 transform scale-150 blur-3xl"></div>

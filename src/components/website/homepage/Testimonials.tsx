@@ -24,8 +24,8 @@ export default function Testimonials({}: Props) {
 
       <div className="w-full mt-10 flex justify-start items-center">
         <div className="relative overflow-hidden bg-transparent w-full flex">
-          <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-white to-transparent z-10"></div>
-          <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-white to-transparent z-10"></div>
+          <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-tertiary-100 to-transparent z-10"></div>
+          <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-tertiary-100 to-transparent z-10"></div>
 
           <motion.div
             className="flex gap-5"
@@ -41,7 +41,7 @@ export default function Testimonials({}: Props) {
             {reviewsData.concat(reviewsData).map((review, index) => (
               <div
                 key={index}
-                className="p-5 py-[5vw] lg:py-[1.5vw] cursor-pointer hover:border-tertiary-100 w-[70vw] md:w-[50vw] m-1 lg:w-[25vw] h-auto rounded-lg border-tertiary-50 shadow-sm duration-300 border flex justify-start flex-col gap-5 items-start"
+                className="bg-tertiary-50 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-5 py-[5vw] lg:py-[1.5vw] cursor-pointer hover:border-tertiary-100 w-[70vw] md:w-[50vw] m-1 lg:w-[25vw] h-auto rounded-3xl border-tertiary-50  duration-300 border flex justify-start flex-col gap-5 items-start"
               >
                 <div className="flex text-yellow-400 justify-center items-center">
                   <Icon
@@ -65,7 +65,7 @@ export default function Testimonials({}: Props) {
                     className="w-4 h-4 md:w-6 md:h-6 lg:w-5 lg:h-5 object-cover object-center"
                   />
                 </div>
-                <h3 className="font-medium text-[4vw] text-tertiary-600 md:text-[3vw] lg:text-[1.2vw]">
+                <h3 className="font-medium text-[4vw] text-tertiary-700 md:text-[3vw] lg:text-[1vw]">
                   <span className="text-secondary-400">&quot;</span>
                   {review.reviewDescription}
                   <span className="text-secondary-400">&quot;</span>
@@ -85,7 +85,7 @@ export default function Testimonials({}: Props) {
 
                   <div className="flex flex-col text-[3.5vw] md:text-[2.5vw] lg:text-[1vw]">
                     <span className="font-medium">{review.name}</span>
-                    <span className="text-[3vw] md:text-[1.8vw] lg:text-[0.8vw]">
+                    <span className="text-[3vw] md:text-[1.8vw] lg:text-[0.8vw] text-tertiary-600">
                       {review.position}
                     </span>
                   </div>

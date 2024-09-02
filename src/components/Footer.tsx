@@ -12,7 +12,7 @@ export default function Footer({}: Props) {
       className="w-full mt-[5vh]"
     >
       <div className="w-11/12 relative lg:w-8/12 mx-auto flex flex-col">
-        <div className="w-full h-[30vh] flex justify-center items-center bg-tertiary-800 rounded-3xl">
+        <div className="w-full h-[30vh] flex justify-center items-center bg-tertiary-800 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded-3xl">
           <div className="w-full p-[2rem] text-tertiary-50 pb-4 flex justify-between  items-center">
             <div className=" flex flex-col">
               <h1 className="text-[5vw] md:text-[4vw] lg:text-[3vw] leading-normal">

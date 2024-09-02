@@ -34,7 +34,7 @@ export default function HowItWorks() {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="w-full h-screen flex justify-center relative items-center">
         <h1 className="text-[8vw] sticky top-[20vh]  font-medium text-tertiary-800 hero text-center leading-none">
           How It <br /> Works?
@@ -50,7 +50,7 @@ export default function HowItWorks() {
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-8/12 h-[60vh] shadow-sm bg-[#e0f7fa]  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center">
+            <div className="w-8/12 h-[60vh] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-[#e0f7fa]  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center">
               <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                 Submit A Resume
               </span>
@@ -76,7 +76,7 @@ export default function HowItWorks() {
             >
               <div
                 style={{ backgroundColor: step.background }}
-                className="w-8/12 h-[60vh] shadow-sm   mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center"
+                className="w-8/12 h-[60vh] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center"
               >
                 <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                   {step.text}
