@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 
 type Props = {};
 
@@ -15,8 +15,8 @@ export default function HomeServices({}: Props) {
       <div className="grid grid-cols-2 gap-20 h-full relative">
         <div>
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full justify-end items-start sticky top-[50%] left-0 flex flex-col text-end"
           >
@@ -24,7 +24,7 @@ export default function HomeServices({}: Props) {
               <span className="w-[5vw] h-[1.5px] bg-secondary-500"></span>{" "}
               Excellence across multiple disciplines
             </p>
-            <h1 className="hero text-[8vw] lg:text-[4.5vw] leading-none text-end w-full font-semibold">
+            <h1 className="hero text-[8vw] lg:text-[4.5vw] leading-none w-full font-semibold">
               We Specialize
             </h1>
           </motion.div>
