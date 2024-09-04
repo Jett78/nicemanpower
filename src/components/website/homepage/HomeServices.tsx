@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 // import { Icon } from "@iconify/react";
 
@@ -41,16 +42,13 @@ export default function HomeServices({}: Props) {
               whileInView={{ scale: 1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 group w-full flex flex-col justify-start items-start"
+              className="cursor-pointer relative duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 group w-full flex flex-col justify-start items-start"
             >
-              <div className="w-full flex justify-between items-center">
-                {/* Uncomment and use the icon if needed */}
-                {/* <div className="w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-tertiary-100 p-2 lg:p-3 flex justify-center items-center">
-                  <Icon
-                    icon={item.icon}
-                    className="w-full h-full text-secondary-400 group-hover:rotate-[360deg] duration-500"
-                  />
-                </div> */}
+              <div className="absolute top-3 right-3 w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-green-200 p-2 lg:p-3 flex justify-center items-center">
+                <Icon
+                  icon={item.icon}
+                  className="w-full h-full text-zinc-700 group-hover:rotate-[360deg] duration-500"
+                />
               </div>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
