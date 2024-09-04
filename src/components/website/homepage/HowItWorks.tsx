@@ -47,16 +47,17 @@ export default function HowItWorks() {
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-8/12 h-[70vh] bg-blue-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center">
+            <div className="w-8/12 h-[70vh] bg-blue-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center">
               <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                 Submit A Resume
               </span>
 
-              <div className="flex justify-center items-center gap-10">
-                <p className="w-[50%] text-[1.2vw] text-tertiary-800">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Debitis dignissimos consequuntur laboriosam rem id accusantium
-                  ab odio cupiditate, laborum tenetur?
+              <div className="flex justify-center items-center gap-8">
+                <p className="w-[55%] text-[1.1vw] text-tertiary-700">
+                  Start your journey by submitting your application online.
+                  Provide us with your resume, portfolio, and any other relevant
+                  information to help us understand your qualifications and
+                  career aspirations.
                 </p>
                 <img
                   src="/public/hire-step/step1.png"
@@ -73,14 +74,14 @@ export default function HowItWorks() {
             >
               <div
                 style={{ backgroundColor: step.background }}
-                className="w-8/12 h-[70vh]  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-[8vw] justify-center relative items-center"
+                className="w-8/12 h-[70vh]  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center"
               >
                 <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                   {step.text}
                 </span>
 
-                <div className="flex justify-center items-center gap-10">
-                  <p className="w-[50%] text-[1.2vw] text-tertiary-800">
+                <div className="flex justify-center items-center gap-8">
+                  <p className="w-[55%] text-[1.1vw] text-tertiary-700">
                     {step.description}
                   </p>
                   <img
@@ -99,20 +100,12 @@ export default function HowItWorks() {
 }
 
 const steps = [
-  // {
-  //   id: "card1",
-  //   src: "/public/hire-step/step1.png",
-  //   text: "Submit a resume",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. At quibusdam nulla sapiente omnis vitae quidem rerum voluptate sunt facilis quia.",
-  //   background: "#e0f7fa", // Light blue
-  // },
   {
     id: "card2",
     src: "/public/hire-step/step2.webp",
     text: "Get matched",
     description:
-      "Explicabo repudiandae laborum, libero corrupti alias quaerat hic molestiae officia, maiores aspernatur.",
+      "After submitting your application, our team will review your qualifications and match you with the best roles that fit your experience and career goals. We ensure that every match is carefully selected to provide the best opportunities for you.",
     background: "#ffecb3", // Light orange
   },
   {
@@ -120,7 +113,7 @@ const steps = [
     src: "/public/hire-step/step3.webp",
     text: "Give an interview",
     description:
-      "Quisquam, provident dolore? Aliquam blanditiis velit nostrum qui necessitatibus laboriosam officia.",
+      "Once matched, you'll be invited to interview with our clients. We provide you with all the necessary resources and guidance to ensure you're fully prepared to showcase your skills and expertise during the interview process.",
     background: "#e0e0e0", // Light green
   },
   {
@@ -128,7 +121,7 @@ const steps = [
     src: "/public/hire-step/step4.webp",
     text: "Get hired",
     description:
-      "Ducimus, accusantium. Molestiae dolorum incidunt, doloremque provident magni quis nobis.",
+      "After successfully completing the interview, you'll receive feedback and, if selected, get hired. We work with you throughout the negotiation and onboarding process to ensure a smooth transition into your new role.",
     background: "#c5e1a5", // Light gray
   },
 ];
