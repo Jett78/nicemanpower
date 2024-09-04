@@ -9,6 +9,41 @@ export default function ServicesMain({}: Props) {
       transition={{ duration: 1 }}
       className="py-[2rem] w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[7rem] mx-auto"
     >
+      <div className="mb-[5rem]">
+        <h1 className="text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+          What services do we provide?
+        </h1>
+        <h3 className="text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+          At Nice Recruiting Agency, we are dedicated to providing comprehensive
+          manpower solutions that empower businesses to succeed. Our services
+          range from permanent and contract staffing to executive search, skill
+          development, and outsourcing.
+        </h3>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="flex mt-8 flex-col gap-2"
+        >
+          <div className="grid w-full  mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
+            {servicesData.map((service, index) => (
+              <div
+                key={index}
+                className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-tertiary-600"
+              >
+                <h3 className="w-full  duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw]  pb-3">
+                  {service.title}
+                </h3>
+                <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
       <h1 className="text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
@@ -24,14 +59,14 @@ export default function ServicesMain({}: Props) {
         {workData.map((item) => (
           <div
             key={item.id}
-            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-2 overflow-hidden     rounded-lg "
+            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-2 overflow-hidden     rounded-xl "
           >
             <img
               src={item.imgSrc}
               alt={item.title}
               className="w-full h-[75vw] md:h-[40vw] lg:h-[20vw] scale-105 group-hover:scale-105 duration-300  object-cover object-center rounded-md"
             />
-            <h3 className=" p-2 px-4  rounded-md text-zinc-50 backdrop-blur-sm border border-tertiary-600 flex gap-2  justify-center items-center font-semibold z-10 text-left  absolute top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
+            <h3 className=" p-2 px-4  rounded-md text-zinc-50 backdrop-blur-sm border border-tertiary-50 flex gap-2  justify-center items-center font-semibold z-10 text-left  absolute top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
               <span className="text-[5vw] md:text-[3vw]  lg:text-[2vw] leading-none text-secondary-500">
                 •
               </span>{" "}
@@ -60,8 +95,8 @@ export default function ServicesMain({}: Props) {
         </p>
 
         <div className="grid w-full  mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-zinc-100 border border-tertiary-700/50">
-            <h3 className="w-full group-hover:border-blue-500 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-blue-400 pb-3">
+          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
+            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
               Understanding Your Needs
             </h3>
             <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
@@ -69,8 +104,8 @@ export default function ServicesMain({}: Props) {
               business and the specific qualifications you seek in candidates.
             </p>
           </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-zinc-100 border border-tertiary-700/50">
-            <h3 className="w-full group-hover:border-blue-500 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-blue-400 pb-3">
+          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
+            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
               Sourcing Talent
             </h3>
             <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
@@ -78,8 +113,8 @@ export default function ServicesMain({}: Props) {
               we identify top candidates who align with your criteria.
             </p>
           </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-zinc-100 border border-tertiary-700/50">
-            <h3 className="w-full group-hover:border-blue-500 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-blue-400 pb-3">
+          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
+            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
               Screening & Assessment
             </h3>
             <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
@@ -87,8 +122,8 @@ export default function ServicesMain({}: Props) {
               candidate meets the high standards required for the role.
             </p>
           </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-zinc-100 border border-tertiary-700/50">
-            <h3 className="w-full group-hover:border-blue-500 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-blue-400 pb-3">
+          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
+            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
               Matching & Placement
             </h3>
             <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
@@ -97,8 +132,8 @@ export default function ServicesMain({}: Props) {
             </p>
           </div>
 
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-zinc-100 border border-tertiary-700/50">
-            <h3 className="w-full group-hover:border-blue-500 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-blue-400 pb-3">
+          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
+            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
               Ongoing Support
             </h3>
             <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
@@ -176,5 +211,56 @@ const workData = [
     title: "Electro-mechanical Industries",
     description:
       "Our proven process ensures successful placements for both clients and candidates.",
+  },
+];
+
+const servicesData = [
+  {
+    id: 1,
+    icon: "carbon:search",
+    imgSrc: "/service-img/service-1.png",
+    title: "Permanent Staffing",
+    description:
+      "We match businesses with skilled professionals for long-term roles, aligning company culture with employee skills.",
+  },
+  {
+    id: 2,
+    icon: "mdi:tick-circle-outline",
+    imgSrc: "/service-img/service-2.png",
+    title: "Contract Staffing",
+    description:
+      "Offering flexible staffing solutions for project-based or temporary needs, helping businesses scale their workforce as required.",
+  },
+  {
+    id: 3,
+    icon: "ph:globe",
+    imgSrc: "/service-img/service-3.png",
+    title: "Executive Search",
+    description:
+      "Specialized recruitment for leadership positions, finding executives who align with company vision and goals.",
+  },
+  {
+    id: 4,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Skill Development & Training",
+    description:
+      "Providing training programs to enhance the skills of employees, ensuring they are equipped to meet industry demands.",
+  },
+  {
+    id: 5,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Outsourcing Solutions",
+    description:
+      "Managing various business processes to help companies focus on their core activities while we handle the rest.",
+  },
+  {
+    id: 6,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Training and Development",
+    description:
+      "Providing training and workshops to improve employee skills and support career advancement.",
   },
 ];
