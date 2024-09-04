@@ -22,7 +22,7 @@ export default function Cta({}: Props) {
   const smoothXRight = useSpring(xRight, { stiffness: 60, damping: 20 });
 
   return (
-    <div className="w-full min-h-[100vh] overflow-hidden flex justify-center items-center">
+    <div className="w-full pt-[6rem]  overflow-hidden flex justify-center items-center">
       <div className="flex flex-col relative gap-4">
         <div className="absolute hero top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15vw] h-[15vw] rounded-full bg-secondary-500 text-white z-10 flex justify-center items-center">
           <span className="text-[2vw] text-center font-semibold">
@@ -36,7 +36,7 @@ export default function Cta({}: Props) {
           style={{ x: smoothXLeft }}
         >
           {images.map((image, index) => (
-            <div key={index} className="min-w-[30vw] h-[20vw] overflow-hidden">
+            <div key={index} className="min-w-[30vw] h-[15vw] overflow-hidden">
               <img
                 src={image.src}
                 alt={image.alt}
@@ -57,7 +57,7 @@ export default function Cta({}: Props) {
             .map((image, index) => (
               <div
                 key={index}
-                className="min-w-[30vw] h-[20vw] overflow-hidden"
+                className="min-w-[30vw] h-[15vw] overflow-hidden"
               >
                 <img
                   src={image.src}
