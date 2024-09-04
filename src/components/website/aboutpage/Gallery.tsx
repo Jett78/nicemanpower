@@ -55,10 +55,11 @@ export default function Gallery({}: Props) {
 
   return (
     <div className="w-full py-[2rem]">
-      <h1 className="hero text-[8vw] lg:text-[3vw] lg:text-center font-semibold">
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Gallery
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
+      <p className="text-[1.2vw] text-zinc-700 text-center lg:w-8/12 mx-auto">Cherish the moments with us with the collection of our memories.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5">
         {teamMembers.map((member, index) => (
           <div
             key={index}
@@ -83,13 +84,15 @@ export default function Gallery({}: Props) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
               >
-                <span className="text-[13px] font-medium relative">Click me</span>
+                <span className="text-[13px] text-zinc-50 font-medium relative">
+                  Click me
+                </span>
               </motion.div>
             )}
 
             {/* Text overlay */}
             <div className="absolute hidden lg:flex opacity-0 group-hover:opacity-[1] duration-300 z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-11/12 mx-auto  justify-center items-center">
-              <span className="lg:text-[1.3vw] font-semibold italic">
+              <span className="lg:text-[1.3vw] font-semibold italic text-zinc-50">
                 {member.name}
               </span>
             </div>
@@ -116,7 +119,7 @@ export default function Gallery({}: Props) {
           >
             <div className="relative w-11/12 h-auto max-w-3xl">
               <div className="absolute bottom-5 left-1/2 -translate-x-1/2">
-                <span className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] italic font-semibold">
+                <span className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] italic font-semibold text-zinc-100">
                   {teamMembers[currentImageIndex].name}
                 </span>
               </div>

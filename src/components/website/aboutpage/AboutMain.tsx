@@ -18,28 +18,28 @@ export default function AboutMain({}: Props) {
         transition={{ duration: 1 }}
         className="text-[5vw] lg:text-[2.2vw]  text-start lg:text-center leading-loose"
       >
-        <h1 className="text-[8vw] hero lg:text-[3.5vw] leading-none  lg:text-center font-semibold ">
-          About <span className="text-secondary-400">Us</span>
+        <h1 className="text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+          About Us
         </h1>
-        <p className="text-[3.5vw] md:text-[3vw] text-tertiary-200 leading-snug lg:text-[1.2vw] mt-2">
+        <p className="text-[3.5vw] md:text-[3vw] text-zinc-700 leading-snug lg:text-[1.2vw] mt-2">
           Welcome to Nice Recruitment Agency Ethical and responsible manpower
           agency in Nepal
         </p>
       </motion.p>
 
       {/* cards */}
-      <div className="grid w-full lg:w-7/12 pb-[2rem] mx-auto md:grid-cols-2 mt-5 gap-5">
+      <div className="grid w-full lg:w-8/12 pb-[2rem] mx-auto md:grid-cols-2 mt-5 gap-5">
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="w-full relative bg-[#061a26] flex flex-col justify-start items-start gap-2 p-5 rounded-lg overflow-hidden border-zinc-700/50 border group cursor-pointer"
+            className="w-full relative  flex flex-col justify-start items-start gap-2 p-5 rounded-3xl overflow-hidden border-zinc-700 border-2 group cursor-pointer"
           >
-            <div className="absolute top-0 left-0 w-full h-full backdrop-blur-sm bg-black bg-opacity-[0.2] flex justify-center items-center group-hover:opacity-0 pointer-events-none duration-300">
-              <h3 className="font-semibold text-[4vw] md:text-[2.5vw] lg:text-[1.2vw] pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full backdrop-blur-sm bg-white bg-opacity-[0.2] flex justify-center items-center group-hover:opacity-0 pointer-events-none duration-300">
+              <h3 className="font-semibold hero text-[4vw] md:text-[2.5vw] lg:text-[1.2vw] pointer-events-none">
                 {card.title}
               </h3>
             </div>
-            <p className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] leading-loose text-center text-zinc-300">
+            <p className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] leading-loose text-center text-zinc-700">
               {card.description}
             </p>
           </div>
@@ -54,10 +54,10 @@ export default function AboutMain({}: Props) {
         viewport={{ once: false, amount: 0.3 }}
         className="w-full py-[2rem]"
       >
-        <h1 className="hero text-[8vw] lg:text-[3vw]  lg:text-center font-semibold ">
-          {`Chariman's`} <span className="text-secondary-400">Message</span>
+        <h1 className="text-[1vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500  leading-none hero">
+          {`Chairman's Message`}
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-5 mt-5 gap-x-5">
+        <div className="grid grid-cols-1 lg:grid-cols-5 mt-2  gap-x-5">
           <div className="lg:col-span-3 flex flex-col gap-2">
             {/* name  */}
             <h2 className="font-semibold text-[4vw] md:text-[3vw] lg:text-[1.5vw] pointer-events-none">
@@ -68,7 +68,7 @@ export default function AboutMain({}: Props) {
               Chairman, Nice Recruiting Agency
             </h3>
             {/* message  */}
-            <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-loose  text-zinc-300">
+            <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-loose  text-zinc-700">
               It is with great pride and enthusiasm that I address you today as
               the Chairman of Nice Recruiting Agency - a leading provider of
               comprehensive manpower solutions. As we embark on an exciting new

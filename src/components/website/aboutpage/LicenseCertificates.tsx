@@ -3,12 +3,19 @@ type Props = {};
 export default function LicenseCertificates({}: Props) {
   return (
     <div className="w-full py-[2rem]">
-      <h1 className="hero text-[8vw] lg:text-[3vw]  lg:text-center font-semibold ">
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         License & Certificates
       </h1>
-      <div className="grid lg:w-7/12 w-full mx-auto grid-cols-1 md:grid-cols-2 mt-5 gap-5">
+      <p className="text-[1.2vw] lg:text-center text-zinc-700 lg:w-8/12 mx-auto">
+        Verify our credentials and industry certifications ensuring quality and
+        compliance.
+      </p>
+      <div className="grid lg:w-7/12 w-full mx-auto grid-cols-1 md:grid-cols-2 mt-10 gap-5">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex rounded-xl  border p-2 border-secondary-500  relative">
+          <div
+            key={index}
+            className="flex rounded-xl  border p-2 border-secondary-500  relative"
+          >
             {/* <img
              
               src="/frame.png"

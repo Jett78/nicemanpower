@@ -25,11 +25,15 @@ export default function OurClientele({}: Props) {
       viewport={{ once: false, amount: 0.3 }}
       className="py-[2rem] w-full"
     >
-      <h1 className="hero text-[8vw] lg:text-[3vw]  lg:text-center font-semibold">
-        Our <span className="text-secondary-400">Clientele</span>
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        Our Clientele
       </h1>
+      <p className="text-[1.2vw] text-zinc-700 w-8/12 mx-auto text-center">
+        We have already worked with 200+ clients all over the world and they are
+        pretty satisfied with our work.
+      </p>
 
-      <div className="w-full mt-5 lg:grid grid-cols-5 gap-x-10">
+      <div className="w-full mt-10 lg:grid grid-cols-5 gap-x-10">
         {/* Steps List */}
         <div className="col-span-1 relative h-full flex flex-col gap-4">
           <div className="sticky top-[4rem]">
@@ -55,7 +59,7 @@ export default function OurClientele({}: Props) {
               >
                 <h2
                   className={`font-semibold text-[5vw] md:text-[3vw] lg:text-[1.5vw] duration-300 transition-colors ${
-                    activeStep === number ? "text-white" : "text-gray-400 "
+                    activeStep === number ? "text-zinc-700" : "text-zinc-500 "
                   }`}
                 >
                   {text}

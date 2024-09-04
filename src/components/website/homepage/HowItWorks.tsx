@@ -36,21 +36,18 @@ export default function HowItWorks() {
   return (
     <div className="w-full ">
       <div className="w-full h-screen flex justify-center relative items-center">
-        <h1 className="text-[8vw] hero font-bold text-transparent bg-clip-text bg-gradient-to-br from-tertiary-200 to-tertiary-600 text-center leading-none sticky top-[10vh]">
+        <h1 className="text-[8vw] hero font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none sticky top-[10vh]">
           How It <br /> Works?
         </h1>
       </div>
 
       {/* Main container */}
       <div className="w-full">
-        <div
-          ref={stickyContainer}
-          className="w-full h-screen overflow-hidden relative"
-        >
+        <div ref={stickyContainer} className="w-full h-screen  relative">
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-8/12 h-[60vh] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-[#e0f7fa]  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center">
+            <div className="w-8/12 h-[70vh] bg-blue-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center">
               <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                 Submit A Resume
               </span>
@@ -76,7 +73,7 @@ export default function HowItWorks() {
             >
               <div
                 style={{ backgroundColor: step.background }}
-                className="w-8/12 h-[60vh] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-20 justify-center relative items-center"
+                className="w-8/12 h-[70vh]  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-[8vw] justify-center relative items-center"
               >
                 <span className="text-[2vw] relative text-tertiary-800 font-semibold">
                   {step.text}

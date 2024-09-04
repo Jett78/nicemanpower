@@ -1,4 +1,3 @@
-"use client";
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 // import RelatedBlogs from "./RelatedBlogs";
@@ -8,9 +7,9 @@ type Props = {};
 export default function BlogDetail({}: Props) {
   return (
     <>
-      <div className="w-11/12 pt-[6rem]  lg:pt-[7rem] relative md:w-9/12 lg:w-9/12 mx-auto py-[5rem]">
+      <div className="w-11/12 pt-[6rem]  lg:pt-[7rem] relative md:w-9/12 lg:w-7/12 mx-auto py-[5rem]">
         <Link to="/blogs" className="w-full flex justify-start">
-          <div className="text-zinc-300 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
+          <div className="text-zinc-700 z-40 hover:scale-105 duration-300 hover:text-zinc-800 flex  justify-center items-center">
             <div className="overflow-hidden title flex justify-center items-center">
               <Icon
                 icon="ic:outline-arrow-left"
@@ -23,7 +22,7 @@ export default function BlogDetail({}: Props) {
         <div className="w-full flex flex-col gap-5 justify-start items-start">
           {/* title  */}
           <div className="w-full">
-            <h1 className="text-3xl md:text-5xl w-full text-start lg:text-center relative  mt-10 title font-bold">
+            <h1 className="text-3xl hero md:text-5xl w-full text-start lg:text-center relative  mt-10 title font-bold">
               Navigating the Challenges of Remote Hiring
             </h1>
             {/* intro  */}

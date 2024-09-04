@@ -12,18 +12,18 @@ export default function Footer({}: Props) {
       className="w-full mt-[5vh]"
     >
       <div className="w-11/12 relative lg:w-8/12 mx-auto flex flex-col">
-        <div className="w-full h-[30vh] flex justify-center items-center bg-tertiary-800 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded-3xl">
-          <div className="w-full p-[5rem] text-tertiary-100  h-full flex justify-between  items-center">
+        <div className="w-full h-[30vh] flex justify-center items-center bg-zinc-100 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  rounded-3xl">
+          <div className="w-full p-[5rem] text-zinc-800  h-full flex justify-between  items-center">
             <div className=" flex flex-col">
               <h1 className="text-[5vw] md:text-[4vw] hero font-medium lg:text-[3vw] leading-normal">
                 Reach out
               </h1>
-              <h1 className="text-[5vw] md:text-[4vw] lg:text-[1vw] text-tertiary-300 leading-normal">
+              <h1 className="text-[5vw] md:text-[4vw] lg:text-[1vw] text-zinc-600 leading-normal">
                 info@nicerecruitment.org
               </h1>
             </div>
 
-            <p className="w-[50%] text-end text-tertiary-200 text-[1.2vw]">
+            <p className="w-[50%] text-end text-zinc-700 text-[1vw]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
               perferendis, odio at in dolores recusandae natus aliquam ut
               inventore repellendus.
@@ -45,7 +45,7 @@ export default function Footer({}: Props) {
             </span>
           </div> */}
 
-          <img className="w-[6vw]" src="/public/logo/nice-white-logo.png" alt="" />
+          <img className="w-[6vw]" src="/public/logo/nice-logo.png" alt="" />
 
           <div className="flex w-full text-nowrap  text-[3vw] md:text-[2.5vw] lg:text-[0.9vw] text-tertiary-500 font-semibold gap-5 justify-end items-center">
             <Link to="" className="hover:text-secondary-500">

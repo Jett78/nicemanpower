@@ -11,35 +11,40 @@ export default function BlogMain({}: Props) {
       className="pt-[6rem]  lg:pt-[7rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
     >
       {" "}
-      <h1 className="hero text-[8vw] lg:text-[3vw]  lg:text-center font-semibold ">
-        Discover Our <span className="text-secondary-400">Article</span>
+      <h1 className="text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        Discover Our Article
       </h1>
+      <h3 className="text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+        At Nice Recruiting Agency, we are dedicated to providing comprehensive
+        manpower solutions that empower businesses to succeed. Our services
+        range from permanent and contract staffing to executive search, skill
+        development, and outsourcing.
+      </h3>
       {/* cards */}
       <div className="grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
         {workData.map((item) => (
           <Link
             to={`/blogs/${item.id}`}
             key={item.id}
-            className="w-full flex flex-col justify-start items-start group gap-2 p-4 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300  border border-tertiary-700 lg:border-transparent"
+            className="w-full flex flex-col justify-start items-start group gap-2 p-4 rounded-lg cursor-pointer hover:border-tertiary-700 duration-300  border-2 border-tertiary-700 lg:border-transparent"
           >
-            <div className="w-full h-[30vh] overflow-hidden">
+            <div className="w-full h-[30vh] rounded-xl overflow-hidden">
               <img
                 src={item.imgSrc}
                 alt={item.title}
                 className="scale-105 object-cover object-center rounded-md"
               />
             </div>
-
-            <div className="flex w-full justify-between text-[2.5vw] md:text-[1.5vw] lg:text-[0.7vw] text-zinc-300">
+            <div className="flex w-full justify-between text-[2.5vw] md:text-[1.5vw] lg:text-[0.7vw] text-zinc-500">
               <span>July 20, 2024</span>
               <span>5 minutes read</span>
             </div>
-            <h3 className="font-semibold text-[4vw] group-hover:text-secondary-400  duration-300 md:text-[3vw] lg:text-[1.2vw]">
+            <h3 className="font-semibold text-[4vw]   duration-300 md:text-[3vw] lg:text-[1.2vw]">
               {item.title.length > 50
                 ? item.title.slice(0, 50) + "..."
                 : item.title}
             </h3>
-            <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] text-zinc-300">
+            <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] text-zinc-700">
               {item.description.length > 70
                 ? item.description.slice(0, 70) + "..."
                 : item.description}

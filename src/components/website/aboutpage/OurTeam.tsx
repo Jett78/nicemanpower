@@ -5,14 +5,19 @@ type Props = {};
 export default function OurTeam({}: Props) {
   return (
     <div className="w-full py-[2rem]">
-      <h1 className="hero text-[8vw] lg:text-[3vw]  lg:text-center font-semibold ">
-        Our <span className="text-secondary-400">Team</span>
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        Our Team
       </h1>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5 gap-x-5 gap-y-4">
+      <p className="text-[1.2vw] text-zinc-700 w-11/12 lg:w-8/12 mx-auto">
+        We are what we are today is only because of our dedicated team. Let us
+        introduce you our team who makes it possible for you to get the skilled
+        manpower you need.
+      </p>
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-x-5 gap-y-4">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex cursor-pointer hover:border-tertiary-700 duration-300 w-full bg-[#061a26] border border-tertiary-700/50 flex-col p-5 rounded-lg gap-1"
+            className="flex text-zinc-800   cursor-pointer hover:border-tertiary-700 duration-300 w-full  border-2 border-tertiary-700 flex-col p-10 rounded-xl gap-1"
           >
             {/* Team member image */}
             <img

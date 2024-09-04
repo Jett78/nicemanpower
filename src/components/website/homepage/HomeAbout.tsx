@@ -23,12 +23,12 @@ export default function HomeAbout({}: Props) {
         </div>
 
         {/* right desc  */}
-        <div className="flex flex-col justify-center items-start gap-1 text-left h-full w-[40%]">
-          <h2 className="text-[1vw] font-semibold text-primary-500">
+        <div className="flex flex-col justify-center items-start gap-1 text-left h-full w-[50%]">
+          <h2 className="text-[1vw]  font-semibold text-orange-500 hero">
             Millions of jobs. Find the one that's right for you.
           </h2>
 
-          <p className="text-[1.2vw] text-tertiary-200 leading-relaxed">
+          <p className="text-[1.2vw] text-zinc-700 leading-relaxed">
             We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
             provide skilled workers across various sectors, with branches and
             training centers throughout Nepal, adhering to international hiring
@@ -36,8 +36,8 @@ export default function HomeAbout({}: Props) {
           </p>
 
           <Link to="" className="mt-5">
-            <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold text-tertiary-100 border-2 rounded-full border-tertiary-100">
-              Learn More
+            <button className="px-[2vw] py-[1vw] text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500">
+              Let me know the sectors
             </button>
           </Link>
         </div>

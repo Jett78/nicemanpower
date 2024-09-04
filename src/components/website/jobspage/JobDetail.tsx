@@ -21,7 +21,7 @@ export default function JobDetail({}: Props) {
       transition={{ duration: 1 }}
       className="pt-[6rem]  lg:pt-[7rem]"
     >
-      <div className="w-11/12 lg:w-9/12 mx-auto border border-tertiary-700/50 p-3 lg:p-10 rounded-lg">
+      <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
         {/* top  */}
         <div className="flex flex-col gap-2 w-full">
           <div className="w-full flex items-center  justify-between">
@@ -111,7 +111,7 @@ export default function JobDetail({}: Props) {
                 About company
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-300">
+              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 We are a leading construction firm based in Dubai, UAE,
                 specializing in large-scale infrastructure projects. With a
                 commitment to quality and innovation, we pride ourselves on
@@ -126,7 +126,7 @@ export default function JobDetail({}: Props) {
                 Job Details and Responsibilities
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-300">
+              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 As a Construction Laborer, you will be responsible for
                 supporting various construction projects by performing manual
                 tasks such as digging, lifting, and transporting materials.
@@ -142,7 +142,7 @@ export default function JobDetail({}: Props) {
                 Skills and experience
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-300">
+              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 {` As a Construction Laborer, you will be responsible for
                 supporting various construction projects by performing manual
                 tasks such as digging, lifting, and transporting materials.
@@ -163,7 +163,7 @@ export default function JobDetail({}: Props) {
           <div className="flex justify-start mt-5">
             <button
               onClick={handleOpenForm}
-              className="cursor-pointer border border-black dark:border-white px-8 py-3 rounded-lg text-[3.5vw] md:text-[3vw] lg:text-[1vw] leading-none flex justify-center items-center"
+              className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 "
             >
               Apply now
             </button>
@@ -178,14 +178,14 @@ export default function JobDetail({}: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center"
+            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-white/40 h-screen flex items-center justify-center"
           >
             <Link
               onClick={handleCloseForm}
               to="/jobs"
               className="w-full absolute top-[10%] left-[10%] flex justify-start"
             >
-              <div className="text-zinc-300 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
+              <div className="text-zinc-700 z-40 hover:scale-105 duration-300 hover:text-zinc-800 flex  justify-center items-center">
                 <div className="overflow-hidden title flex justify-center items-center">
                   <Icon
                     icon="ic:outline-arrow-left"
@@ -198,12 +198,12 @@ export default function JobDetail({}: Props) {
             {/* form  */}
             <form
               action=""
-              className="py-5 w-11/12 md:w-9/12 lg:w-5/12 max-w-3xl mt-5 grid grid-cols-2 gap-4"
+              className="py-5 w-11/12 md:w-9/12 lg:w-5/12 max-w-3xl mt-5 grid grid-cols-2 gap-5"
             >
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="fullName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-200 lg:text-[1.1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
                 >
                   Full Name
                 </label>
@@ -212,7 +212,7 @@ export default function JobDetail({}: Props) {
                   id="fullName"
                   name="fullName"
                   placeholder="John Doe"
-                  className="p-2 py-4 border border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -220,7 +220,7 @@ export default function JobDetail({}: Props) {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="email"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-200 lg:text-[1.1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
                 >
                   Email
                 </label>
@@ -229,7 +229,7 @@ export default function JobDetail({}: Props) {
                   id="email"
                   name="email"
                   placeholder="john@example.com"
-                  className="p-2 py-4 border border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -237,7 +237,7 @@ export default function JobDetail({}: Props) {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="phone"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-200 lg:text-[1.1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
                 >
                   Phone
                 </label>
@@ -246,14 +246,14 @@ export default function JobDetail({}: Props) {
                   id="phone"
                   name="phone"
                   placeholder="+977 **********"
-                  className="p-2 py-4 border border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
                   required
                 />
               </div>
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="address"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-200 lg:text-[1.1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
                 >
                   Address
                 </label>
@@ -262,7 +262,7 @@ export default function JobDetail({}: Props) {
                   id="address"
                   name="address"
                   placeholder="Kathmandu"
-                  className="p-2 py-4 border border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -270,7 +270,7 @@ export default function JobDetail({}: Props) {
               <div className="col-span-2 flex flex-col gap-2">
                 <label
                   htmlFor="message"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-200 lg:text-[1.1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
                 >
                   Message
                 </label>
@@ -279,7 +279,7 @@ export default function JobDetail({}: Props) {
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 border border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -287,7 +287,7 @@ export default function JobDetail({}: Props) {
               <div className="flex justify-start">
                 <button
                   type="submit"
-                  className="border border-black dark:border-white px-8 py-3 rounded-lg text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-none flex justify-center items-center hover:bg-white hover:text-black transition-colors duration-300"
+                  className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 "
                 >
                   Apply
                 </button>

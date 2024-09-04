@@ -1,5 +1,4 @@
 import { useRef, useState } from "react";
-import Chart from "../../../public/chart/organizational-chart.png";
 import { Icon } from "@iconify/react";
 
 type Props = {};
@@ -36,13 +35,16 @@ export default function OrganizationalChart({}: Props) {
   };
 
   return (
-    <div className="py-[2rem] w-full">
-      <h1 className="hero text-[8vw] lg:text-[3vw] lg:text-center font-semibold">
-        <span className="text-secondary-400">Organizational </span>Chart
+    <div className="py-[3rem] w-full">
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        Organizational Chart
       </h1>
+      <p className="text-[1.2vw] text-zinc-700 text-center">
+        Visualize our structure and key roles within the company.
+      </p>
 
       <div
-        className="w-full p-5 mt-5 h-[70vh] flex justify-center items-start relative group overflow-hidden border border-tertiary-700 rounded-lg"
+        className="w-full p-5 mt-10 h-[70vh] bg-zinc-100 flex justify-center items-start relative group overflow-hidden border-2 border-tertiary-700 rounded-lg"
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -55,7 +57,7 @@ export default function OrganizationalChart({}: Props) {
           Drag{" "}
           <Icon
             icon="ant-design:drag-outlined"
-            className="text-white mt-[1.5px]"
+            className="text-zinc-800 mt-[1.5px]"
           />
         </span>
         <div
@@ -69,7 +71,7 @@ export default function OrganizationalChart({}: Props) {
           className="w-[100vw] lg:w-[60vw] select-none"
         >
           <img
-            src={Chart}
+            src="/public/chart/organizational-chart.png"
             className="mx-auto w-full h-auto object-contain pointer-events-none user-select-none"
             alt="Organizational Chart"
           />

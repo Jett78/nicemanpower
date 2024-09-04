@@ -61,11 +61,11 @@ export default function JobCard({ job, index }: Props) {
   return (
     <Link to={`/jobs/${job.companyName}`} key={index}>
       <motion.div
-        className="w-full cursor-pointer border duration-300 transition-all border-zinc-800 rounded-xl flex flex-col justify-start p-5 items-start gap-3 relative overflow-hidden"
-        style={{
-          background: getGradient(hoveredIndex === index ? index : null),
-          transition: "background 0.5s ease-in-out", // Ensure smooth transition
-        }}
+        className="w-full cursor-pointer border-2 duration-300 transition-all border-zinc-700 bg-zinc-100 rounded-xl flex flex-col justify-start p-5 items-start gap-3 relative overflow-hidden"
+        // style={{
+        //   background: getGradient(hoveredIndex === index ? index : null),
+        //   transition: "background 0.5s ease-in-out", // Ensure smooth transition
+        // }}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
       >

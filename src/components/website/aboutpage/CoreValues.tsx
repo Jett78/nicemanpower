@@ -8,23 +8,27 @@ export default function CoreValues({}: Props) {
 
   return (
     <div className="py-[2rem] w-full relative">
-      <h1 className="hero text-[8vw] lg:text-[3vw] lg:text-center font-semibold">
-        Our Core <span className="text-secondary-400">Values</span>
+      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        Our Core Values
       </h1>
+      <p className="text-[1.2vw] text-zinc-700 w-8/12 mx-auto text-center">
+        Discover the principles and standards that drive our commitment to
+        excellence, integrity, and innovation in everything we do.
+      </p>
 
-      <div className="grid w-full  grid-cols-2 mt-5 gap-5">
+      <div className="grid w-full  grid-cols-2 mt-10 gap-5">
         {CoreValuesData.map((item, index) => (
           <div
             key={index}
-            className="cursor-pointer bg-[#061a26] flex justify-start  items-center px-5 py-5 rounded-lg relative"
+            className="cursor-pointer bg-zinc-100 flex justify-start  items-center px-5 py-10 rounded-lg relative"
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
           >
             <span
-              className={`text-[3.5vw] md:text-[2.5vw] lg:text-[1.5vw] ${
+              className={`text-[3.5vw] md:text-[2.5vw] font-medium lg:text-[1.2vw] ${
                 hovered === index
                   ? "relative z-40 text-secondary-400"
-                  : "text-tertiary-300"
+                  : "text-zinc-700"
               }`}
             >
               {item.name}
