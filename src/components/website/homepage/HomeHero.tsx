@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+// import { Icon } from "@iconify/react/dist/iconify.js";
 import { Link } from "react-router-dom";
 
 type Props = {};

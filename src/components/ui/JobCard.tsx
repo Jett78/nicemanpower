@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -31,17 +31,18 @@ type Props = {
 
 export default function JobCard({ job, index }: Props) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [gradientAngle, setGradientAngle] = useState<number>(0);
+  // const [gradientAngle, setGradientAngle] = useState<number>(0);
 
-  useEffect(() => {
-    // Set the gradient angle based on the window height
-    const handleResize = () => setGradientAngle(window.innerHeight / 2);
+  console.log(hoveredIndex);
+  // useEffect(() => {
+  //   // Set the gradient angle based on the window height
+  //   // const handleResize = () => setGradientAngle(window.innerHeight / 2);
 
-    handleResize(); // Set initial angle
-    window.addEventListener("resize", handleResize);
+  //   handleResize(); // Set initial angle
+  //   window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const handleMouseEnter = (index: number) => {
     setHoveredIndex(index);
@@ -52,11 +53,11 @@ export default function JobCard({ job, index }: Props) {
   };
 
   // Define a function to generate the gradient based on the hovered state
-  const getGradient = (index: number | null) => {
-    return index !== null
-      ? `linear-gradient(${gradientAngle}deg, rgba(162, 214, 245, 0.16), rgba(162, 214, 245, 0.18))`
-      : `linear-gradient(0deg, rgba(162, 214, 245, 0.15), rgba(162, 214, 245, 0.15))`;
-  };
+  // const getGradient = (index: number | null) => {
+  //   return index !== null
+  //     ? `linear-gradient(${gradientAngle}deg, rgba(162, 214, 245, 0.16), rgba(162, 214, 245, 0.18))`
+  //     : `linear-gradient(0deg, rgba(162, 214, 245, 0.15), rgba(162, 214, 245, 0.15))`;
+  // };
 
   return (
     <Link to={`/jobs/${job.companyName}`} key={index}>
