@@ -20,7 +20,7 @@ export default function JobsMain({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-[2rem] pt-[6rem]  lg:pt-[7rem] w-full"
+      className="py-[2rem] pt-[6rem]  lg:pt-[8rem] w-full"
     >
       <h1 className="text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Vacancies Announcement

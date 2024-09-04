@@ -7,7 +7,7 @@ export default function Contact({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="pt-[6rem]  lg:pt-[7rem] pb-[4rem] w-9/12 lg:w-9/12 mx-auto"
+      className="pt-[6rem]  lg:pt-[8rem] pb-[4rem] w-9/12 lg:w-9/12 mx-auto"
     >
       <h1 className="text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Reach Out Us

@@ -19,7 +19,7 @@ export default function JobDetail({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="pt-[6rem]  lg:pt-[7rem]"
+      className="pt-[6rem]  lg:pt-[8rem]"
     >
       <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
         {/* top  */}

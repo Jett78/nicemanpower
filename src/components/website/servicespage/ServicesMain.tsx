@@ -7,7 +7,7 @@ export default function ServicesMain({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-[2rem] w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[7rem] mx-auto"
+      className="py-[2rem] w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[8rem] mx-auto"
     >
       <div className="mb-[5rem]">
         <h1 className="text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">

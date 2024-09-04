@@ -11,7 +11,7 @@ type Props = {};
 
 export default function AboutMain({}: Props) {
   return (
-    <motion.div className="w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[7rem] pb-[2rem] mx-auto">
+    <motion.div className="w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[8rem] pb-[2rem] mx-auto">
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
