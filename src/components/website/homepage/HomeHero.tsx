@@ -5,7 +5,7 @@ type Props = {};
 
 export default function HomeHero({}: Props) {
   return (
-    <div className="w-full lg:pt-[2rem]  overflow-hidden h-[100vh] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
+    <div className="w-full   overflow-hidden  lg:pt-[10vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
       {/* <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[2]">
         <div className=" bg-secondary-500 min-w-[50vw] rotate-6 h-[150vh]"></div>
         <div className=" bg-primary-400 min-w-[50vw] rotate-6 h-[150vh]"></div>

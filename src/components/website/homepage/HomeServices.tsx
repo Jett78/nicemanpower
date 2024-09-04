@@ -41,7 +41,7 @@ export default function HomeServices({}: Props) {
               whileInView={{ scale: 1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer duration-300 bg-zinc-100 border-2 border-zinc-700 rounded-3xl p-16 group w-full flex flex-col justify-start items-start"
+              className="cursor-pointer duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 group w-full flex flex-col justify-start items-start"
             >
               <div className="w-full flex justify-between items-center">
                 {/* Uncomment and use the icon if needed */}

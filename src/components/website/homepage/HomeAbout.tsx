@@ -4,7 +4,24 @@ type Props = {};
 
 export default function HomeAbout({}: Props) {
   return (
-    <div className="py-[5rem] pb-[7rem]  flex justify-center items-center">
+    <div className="py-[5rem] pb-[7rem]  flex flex-col justify-center items-center">
+      {/* experience  */}
+      <div className="pb-[5rem] grid  grid-cols-3 gap-10">
+        <div className="bg-[#D8FCE3] rounded-xl h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[1.5vw] hero">800+</span>
+          <span className="text-[1vw] text-zinc-700">
+            Successful Placements
+          </span>
+        </div>
+        <div className="bg-[#FDE7DB] rounded-xl h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[1.5vw] hero">20+</span>
+          <span className="text-[1vw] text-zinc-700">Industries Served</span>
+        </div>
+        <div className="bg-[#D2EDFF] rounded-xl h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[1.5vw] hero">17+</span>
+          <span className="text-[1vw] text-zinc-700">Years of Experience</span>
+        </div>
+      </div>
       <div className="flex justify-center items-center gap-[6rem]">
         {/* image  */}
         <div className="flex justify-center items-center h-full">

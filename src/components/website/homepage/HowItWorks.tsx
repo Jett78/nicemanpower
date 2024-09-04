@@ -121,7 +121,7 @@ const steps = [
     text: "Give an interview",
     description:
       "Quisquam, provident dolore? Aliquam blanditiis velit nostrum qui necessitatibus laboriosam officia.",
-    background: "#c5e1a5", // Light green
+    background: "#e0e0e0", // Light green
   },
   {
     id: "card4",
@@ -129,6 +129,6 @@ const steps = [
     text: "Get hired",
     description:
       "Ducimus, accusantium. Molestiae dolorum incidunt, doloremque provident magni quis nobis.",
-    background: "#e0e0e0", // Light gray
+    background: "#c5e1a5", // Light gray
   },
 ];

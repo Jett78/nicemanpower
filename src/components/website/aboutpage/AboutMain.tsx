@@ -32,7 +32,7 @@ export default function AboutMain({}: Props) {
         {cardsData.map((card, index) => (
           <div
             key={index}
-            className="w-full relative  flex flex-col justify-start items-start gap-2 p-5 rounded-3xl overflow-hidden border-zinc-700 border-2 group cursor-pointer"
+            className="w-full relative  flex flex-col justify-start items-start gap-2 p-5 rounded-3xl overflow-hidden border-zinc-600 border-2 group cursor-pointer"
           >
             <div className="absolute top-0 left-0 w-full h-full backdrop-blur-sm bg-white bg-opacity-[0.2] flex justify-center items-center group-hover:opacity-0 pointer-events-none duration-300">
               <h3 className="font-semibold hero text-[4vw] md:text-[2.5vw] lg:text-[1.2vw] pointer-events-none">
