@@ -18,6 +18,7 @@ export default function HomeHero({}: Props) {
         <div className="bg-gradient-to-r from-orange-300 to-secondary-300 min-w-[50vw] rotate-6 h-[150vh]"></div>
       </div> */}
       {/* Content */}
+
       <div className="flex flex-col w-full h-full justify-center z-[2] relative items-center">
         {/* <div
           className="p-[0.6vw] my-5 text-[0.8vw] px-[2vw] font-medium  rounded-full border-2 border-tertiary-50
@@ -41,12 +42,33 @@ export default function HomeHero({}: Props) {
             </div>
           </div>
         </div> */}
-        <h1 className="text-[8vw] hero uppercase  font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-700 to-zinc-800 text-center leading-none">
-          Find Job <br /> You Deserve
+
+        <h1 className="text-[8vw] relative  hero uppercase  font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-700 to-zinc-800 text-center leading-none">
+          <span className="">
+            Find Job <br /> You Deserve
+          </span>
+          <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
+            <img
+              src="/public/hero-img/hero1.png"
+              alt=""
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div className="absolute top-0 left-[100%]  w-[15vw] h-[22vw] hover:scale-95 duration-300 translate-x-10 -rotate-2 rounded-3xl overflow-hidden">
+            <img
+              src="/public/hero-img/hero2.png"
+              alt=""
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
         </h1>
-        <p className="text-[1.2vw] text-zinc-700  w-5/12 text-center">
+        <p className="text-[1.2vw]  text-zinc-700  w-5/12 text-center">
           We are manpower recruiting agency. We are experts in this field and we
-          know how to <span className="text-orange-500 italic">connect you with the skilled talents</span> all over the world.
+          know how to{" "}
+          <span className="text-orange-500 italic">
+            connect you with the skilled talents
+          </span>{" "}
+          all over the world.
         </p>
         <div className="flex gap-5 mt-[3rem] justify-center items-center">
           {/* <Link to="">
@@ -56,7 +78,7 @@ export default function HomeHero({}: Props) {
           </Link> */}
           <Link to="">
             <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
-              I need skilled talents 
+              I need skilled talents
             </button>
           </Link>
         </div>
