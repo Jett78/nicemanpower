@@ -59,7 +59,7 @@ export default function Contact({}: Props) {
               htmlFor="firstName"
               className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
             >
-              First Name
+              First Name <span className="text-blue-500">*</span>
             </label>
             <input
               type="text"
@@ -75,7 +75,7 @@ export default function Contact({}: Props) {
               htmlFor="lastName"
               className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
             >
-              Last Name
+              Last Name <span className="text-blue-500">*</span>
             </label>
             <input
               type="text"
@@ -91,7 +91,7 @@ export default function Contact({}: Props) {
               htmlFor="email"
               className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
             >
-              Email
+              Email <span className="text-blue-500">*</span>
             </label>
             <input
               type="email"
@@ -107,7 +107,7 @@ export default function Contact({}: Props) {
               htmlFor="phone"
               className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
             >
-              Phone
+              Phone <span className="text-blue-500">*</span>
             </label>
             <input
               type="tel"
@@ -123,7 +123,7 @@ export default function Contact({}: Props) {
               htmlFor="message"
               className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
             >
-              Message
+              Message <span className="text-blue-500">*</span>
             </label>
             <textarea
               id="message"
@@ -135,7 +135,7 @@ export default function Contact({}: Props) {
           </div>
 
           <div className="flex justify-start">
-            <button className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 ">
+            <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               Submit
             </button>
           </div>

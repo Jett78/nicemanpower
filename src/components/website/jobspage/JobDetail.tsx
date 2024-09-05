@@ -163,7 +163,7 @@ export default function JobDetail({}: Props) {
           <div className="flex justify-start mt-5">
             <button
               onClick={handleOpenForm}
-              className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 "
+              className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
             >
               Apply now
             </button>
@@ -287,7 +287,7 @@ export default function JobDetail({}: Props) {
               <div className="flex justify-start">
                 <button
                   type="submit"
-                  className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 "
+                  className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
                 >
                   Apply
                 </button>

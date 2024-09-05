@@ -122,11 +122,22 @@ export default function JobsMain({}: Props) {
 
       <div className="w-11/12 mt-10 flex justify-start lg:justify-center mx-auto items-center">
         {!showAll && (
+          // <button
+          //   onClick={handleViewAllClick}
+          //   className="border border-black dark:border-white px-8 py-3 rounded-lg text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-none flex justify-center items-center hover:bg-white hover:text-black transition-colors duration-300"
+          // >
+          //   View All Jobs
+          // </button>
+
           <button
             onClick={handleViewAllClick}
-            className="border border-black dark:border-white px-8 py-3 rounded-lg text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-none flex justify-center items-center hover:bg-white hover:text-black transition-colors duration-300"
+            className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[1vw] font-semibold  rounded-full text-blue-500 duration-300"
           >
             View All Jobs
+            <Icon
+              icon="lets-icons:arrow-right-long-light"
+              className="w-5 group-hover:translate-x-2 duration-300"
+            />
           </button>
         )}
       </div>

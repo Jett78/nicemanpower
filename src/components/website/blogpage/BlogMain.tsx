@@ -26,7 +26,7 @@ export default function BlogMain({}: Props) {
           <Link
             to={`/blogs/${item.id}`}
             key={item.id}
-            className="w-full flex flex-col justify-start items-start group gap-2 p-4 rounded-lg cursor-pointer hover:border-tertiary-600 duration-300  border-2 border-tertiary-600 lg:border-transparent"
+            className="w-full flex flex-col justify-start items-start group gap-2 p-4 rounded-lg cursor-pointer hover:border-zinc-400 duration-300  border-2 border-tertiary-600 lg:border-transparent"
           >
             <div className="w-full h-[30vh] rounded-xl overflow-hidden">
               <img

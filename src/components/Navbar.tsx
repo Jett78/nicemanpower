@@ -83,7 +83,7 @@ export default function Navbar({}: Props) {
             </Link> */}
 
             <Link to="/jobs">
-              <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-primary-500 rounded-full text-tertiary-50">
+              <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-blue-500 hover:bg-blue-600 duration-300   rounded-full text-tertiary-50">
                 Find Jobs
               </button>
             </Link>

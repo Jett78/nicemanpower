@@ -1,4 +1,5 @@
 // import React from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
 type Props = {};
@@ -24,10 +25,14 @@ export default function Cta({}: Props) {
   return (
     <div className="w-full pt-[6rem]  overflow-hidden flex justify-center items-center">
       <div className="flex flex-col relative gap-4">
-        <div className="absolute hero top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15vw] h-[15vw] rounded-full bg-secondary-500 text-white z-10 flex justify-center items-center">
-          <span className="text-[2vw] text-center font-semibold">
+        <div className="flex-col absolute hero top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[15vw] h-[15vw] rounded-full  bg-gradient-to-tr from-green-600 to-green-400 text-white z-10 flex justify-center items-center">
+          <span className="text-[2vw]  hero text-center font-semibold">
             100+ <br /> JOBS
           </span>
+          <Icon
+            icon="icon-park-outline:correct"
+            className="w-20 h-20 text-zinc-50"
+          />
         </div>
 
         {/* Scrolls to the left */}

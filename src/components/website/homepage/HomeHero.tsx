@@ -55,7 +55,7 @@ export default function HomeHero({}: Props) {
             </button>
           </Link> */}
           <Link to="">
-            <button className="px-[2vw] py-[0.6vw] text-[1vw] font-semibold bg-orange-500 rounded-full text-zinc-50 border-2 border-zinc-600 ">
+            <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               I need skilled talents 
             </button>
           </Link>

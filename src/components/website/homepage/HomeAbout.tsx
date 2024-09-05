@@ -53,7 +53,7 @@ export default function HomeAbout({}: Props) {
           </p>
 
           <Link to="" className="mt-5">
-            <button className="px-[2vw] py-[1vw] text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500">
+            <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
               Let me know the sectors
             </button>
           </Link>

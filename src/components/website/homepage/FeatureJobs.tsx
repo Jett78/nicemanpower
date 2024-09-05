@@ -17,9 +17,18 @@ export default function FeatureJobs({}: Props) {
             salary estimate. Read reviews on over 30000+ companies worldwide.
           </p>
         </div>
-        <div className="h-full flex justify-end items-end">
+        {/* <div className="h-full flex justify-end items-end">
           <span className="text-nowrap font-semibold">See more jobs </span>
-        </div>
+        </div> */}
+        <Link to="" className="mt-5">
+          <button className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[1vw] font-semibold  rounded-full text-blue-500 duration-300">
+            See more jobs{" "}
+            <Icon
+              icon="lets-icons:arrow-right-long-light"
+              className="w-5 group-hover:translate-x-2 duration-300"
+            />
+          </button>
+        </Link>
       </div>
 
       {/* jobs  */}
@@ -56,31 +65,52 @@ export default function FeatureJobs({}: Props) {
               {/* Job Details */}
               <div className="flex mt-2 flex-col flex-wrap text-zinc-700 justify-start items-start gap-3 gap-x-5">
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.location}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.location}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.location}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.date}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.date}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.date}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.type}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.type}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.type}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.salary}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.salary}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.salary}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.overtime}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.overtime}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.overtime}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.workdays}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.workdays}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.workdays}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <Icon className="w-4 h-4 object-cover object-center" icon={job.icons.benefits}></Icon>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.benefits}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.benefits}</span>
                 </div>
               </div>
