@@ -47,13 +47,27 @@ export default function HowItWorks() {
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-8/12 h-[70vh] bg-blue-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center">
-              <span className="text-[2vw] relative text-tertiary-800 font-semibold">
+            <div className="w-8/12 h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center">
+              <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                <img
+                  src="/public/step/paper.avif"
+                  alt=""
+                  className="w-full h-full object-cover object-center brightness-105"
+                />
+              </div>
+              <div className="absolute top-6 left-6 p-4 rounded-full bg-green-300 flex justify-center items-center">
+                <img
+                  src="/public/step/step1.png"
+                  alt=""
+                  className="w-[1.5vw] object-cover object-center"
+                />
+              </div>
+              <span className="text-[2vw] relative text-zinc-800 font-semibold">
                 Submit A Resume
               </span>
 
-              <div className="flex justify-center items-center gap-8">
-                <p className="w-[55%] text-[1.1vw] text-tertiary-700">
+              <div className="flex relative justify-center items-center gap-8">
+                <p className="w-[55%] text-[1.1vw] text-zinc-600">
                   Start your journey by submitting your application online.
                   Provide us with your resume, portfolio, and any other relevant
                   information to help us understand your qualifications and
@@ -73,15 +87,29 @@ export default function HowItWorks() {
               className={`w-full ${step.id} h-screen absolute z-[${index}] top-[100vh] left-0 flex justify-center items-center`}
             >
               <div
-                style={{ backgroundColor: step.background }}
-                className="w-8/12 h-[70vh]  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center"
+                // style={{ backgroundColor: step.background }}
+                className="w-8/12 h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center"
               >
-                <span className="text-[2vw] relative text-tertiary-800 font-semibold">
+                <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+                  <img
+                    src="/public/step/paper.avif"
+                    alt=""
+                    className="w-full h-full object-cover object-center brightness-105"
+                  />
+                </div>
+                <div className="absolute top-6 left-6 p-4 rounded-full bg-green-300 flex justify-center items-center">
+                  <img
+                    src={step.icon}
+                    alt=""
+                    className="w-[1.5vw] object-cover object-center"
+                  />
+                </div>
+                <span className="text-[2vw] relative  text-zinc-800 font-semibold">
                   {step.text}
                 </span>
 
-                <div className="flex justify-center items-center gap-8">
-                  <p className="w-[55%] text-[1.1vw] text-tertiary-700">
+                <div className="flex justify-center relative items-center gap-8">
+                  <p className="w-[55%] text-[1.1vw] text-zinc-600">
                     {step.description}
                   </p>
                   <img
@@ -107,6 +135,7 @@ const steps = [
     description:
       "After submitting your application, our team will review your qualifications and match you with the best roles that fit your experience and career goals. We ensure that every match is carefully selected to provide the best opportunities for you.",
     background: "#ffecb3", // Light orange
+    icon: "/public/step/step2.png",
   },
   {
     id: "card3",
@@ -115,6 +144,7 @@ const steps = [
     description:
       "Once matched, you'll be invited to interview with our clients. We provide you with all the necessary resources and guidance to ensure you're fully prepared to showcase your skills and expertise during the interview process.",
     background: "#e0e0e0", // Light green
+    icon: "/public/step/step3.png",
   },
   {
     id: "card4",
@@ -123,5 +153,6 @@ const steps = [
     description:
       "After successfully completing the interview, you'll receive feedback and, if selected, get hired. We work with you throughout the negotiation and onboarding process to ensure a smooth transition into your new role.",
     background: "#c5e1a5", // Light gray
+    icon: "/public/step/step4.png",
   },
 ];

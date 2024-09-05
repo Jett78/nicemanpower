@@ -55,21 +55,20 @@ export default function ServicesMain({}: Props) {
       </h3>
 
       {/* cards */}
-      <div className="grid mx-auto md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
+      <div className="grid mx-auto md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5 gap-y-8">
         {workData.map((item) => (
           <div
             key={item.id}
-            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-2 overflow-hidden     rounded-xl "
+            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-2"
           >
-            <img
-              src={item.imgSrc}
-              alt={item.title}
-              className="w-full h-[75vw] md:h-[40vw] lg:h-[20vw] scale-105 group-hover:scale-105 duration-300  object-cover object-center rounded-md"
-            />
-            <h3 className=" p-2 px-4  rounded-md text-zinc-50 backdrop-blur-sm border border-tertiary-50 flex gap-2  justify-center items-center font-semibold z-10 text-left  absolute top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
-              <span className="text-[5vw] md:text-[3vw]  lg:text-[2vw] leading-none text-secondary-500">
-                •
-              </span>{" "}
+            <div className="w-full h-[75vw] md:h-[40vw] lg:h-[18vw] group-hover:-translate-y-1 rounded-2xl duration-300 overflow-hidden">
+              <img
+                src={item.imgSrc}
+                alt={item.title}
+                className="w-full h-full scale-105  group-hover:scale-105 group-hover:grayscale duration-300  object-cover object-center "
+              />
+            </div>
+            <h3 className=" text-zinc-700 group-hover:text-orange-400 duration-300  flex gap-2  justify-center items-center font-semibold z-10 text-left   top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
               {item.title}
             </h3>
           </div>
@@ -94,54 +93,20 @@ export default function ServicesMain({}: Props) {
           detail.
         </p>
 
-        <div className="grid w-full  mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
-            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
-              Understanding Your Needs
-            </h3>
-            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-              We start by deeply understanding the unique requirements of your
-              business and the specific qualifications you seek in candidates.
-            </p>
-          </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
-            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
-              Sourcing Talent
-            </h3>
-            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-              Leveraging our extensive network and advanced search techniques,
-              we identify top candidates who align with your criteria.
-            </p>
-          </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
-            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
-              Screening & Assessment
-            </h3>
-            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-              We conduct thorough interviews and assessments to ensure each
-              candidate meets the high standards required for the role.
-            </p>
-          </div>
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
-            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
-              Matching & Placement
-            </h3>
-            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-              We carefully match candidates with roles that suit their skills
-              and career goals, ensuring a perfect fit for your organization.
-            </p>
-          </div>
-
-          <div className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600">
-            <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
-              Ongoing Support
-            </h3>
-            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-              Our commitment doesn’t end with placement. We provide continuous
-              support to ensure both clients and candidates are satisfied with
-              the outcome.
-            </p>
-          </div>
+        <div className="grid w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
+          {processData.map((service, index) => (
+            <div
+              key={index}
+              className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600"
+            >
+              <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
+                {service.title}
+              </h3>
+              <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
+                {service.description}
+              </p>
+            </div>
+          ))}
         </div>
       </motion.div>
     </motion.div>
@@ -262,5 +227,33 @@ const servicesData = [
     title: "Training and Development",
     description:
       "Providing training and workshops to improve employee skills and support career advancement.",
+  },
+];
+
+const processData = [
+  {
+    title: "Understanding Your Needs",
+    description:
+      "We start by deeply understanding the unique requirements of your business and the specific qualifications you seek in candidates.",
+  },
+  {
+    title: "Sourcing Talent",
+    description:
+      "Leveraging our extensive network and advanced search techniques, we identify top candidates who align with your criteria.",
+  },
+  {
+    title: "Screening & Assessment",
+    description:
+      "We conduct thorough interviews and assessments to ensure each candidate meets the high standards required for the role.",
+  },
+  {
+    title: "Matching & Placement",
+    description:
+      "We carefully match candidates with roles that suit their skills and career goals, ensuring a perfect fit for your organization.",
+  },
+  {
+    title: "Ongoing Support",
+    description:
+      "Our commitment doesn’t end with placement. We provide continuous support to ensure both clients and candidates are satisfied with the outcome.",
   },
 ];

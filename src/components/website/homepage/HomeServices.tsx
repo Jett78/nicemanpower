@@ -34,7 +34,7 @@ export default function HomeServices({}: Props) {
           </motion.div>
         </div>
         {/* cards */}
-        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-20">
+        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-16">
           {servicesData.map((item) => (
             <motion.div
               key={item.id}
@@ -42,7 +42,7 @@ export default function HomeServices({}: Props) {
               whileInView={{ scale: 1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer relative duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 group w-full flex flex-col justify-start items-start"
+              className="cursor-pointer relative duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 py-20 group w-full flex flex-col justify-start items-start"
             >
               <div className="absolute top-3 right-3 w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-green-200 p-2 lg:p-3 flex justify-center items-center">
                 <Icon

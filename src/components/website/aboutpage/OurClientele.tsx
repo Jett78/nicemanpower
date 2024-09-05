@@ -33,10 +33,10 @@ export default function OurClientele({}: Props) {
         pretty satisfied with our work.
       </p>
 
-      <div className="w-full mt-10 lg:grid grid-cols-5 gap-x-10">
+      <div className="w-full mt-10 lg:grid grid-cols-1 gap-x-10">
         {/* Steps List */}
         <div className="col-span-1 relative h-full flex flex-col gap-4">
-          <div className="sticky top-[4rem]">
+          <div className="sticky flex justify-around gap-5 mb-10   items-center top-[4rem]">
             {steps.map(({ number, text, image }) => (
               <motion.div
                 key={number}
@@ -49,8 +49,8 @@ export default function OurClientele({}: Props) {
                     setActiveStep(null);
                   }
                 }}
-                className={`w-full duration-300 transition-all py-5 flex justify-between cursor-pointer ${
-                  activeStep === number ? "border-tertiary-600" : ""
+                className={`w-full duration-300 transition-all py-5  rounded-full border-2  flex justify-around cursor-pointer ${
+                  activeStep === number ? "border-tertiary-600" : "border-zinc-400"
                 }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -58,7 +58,7 @@ export default function OurClientele({}: Props) {
                 transition={{ duration: 0.3 }}
               >
                 <h2
-                  className={`font-semibold text-[5vw] md:text-[3vw] lg:text-[1.5vw] duration-300 transition-colors ${
+                  className={`font-semibold text-[5vw] md:text-[3vw] lg:text-[1.2vw] leading-none duration-300 transition-colors ${
                     activeStep === number ? "text-zinc-700" : "text-zinc-500 "
                   }`}
                 >
@@ -70,7 +70,7 @@ export default function OurClientele({}: Props) {
         </div>
 
         {/* Image Display */}
-        <div className="col-span-4  h-auto relative overflow-hidden">
+        <div className="h-[50vh] relative overflow-hidden">
           <AnimatePresence>
             <motion.div
               key={activeStep || lastHoveredImage}

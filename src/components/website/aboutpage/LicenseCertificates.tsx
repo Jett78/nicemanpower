@@ -10,11 +10,11 @@ export default function LicenseCertificates({}: Props) {
         Verify our credentials and industry certifications ensuring quality and
         compliance.
       </p>
-      <div className="grid lg:w-7/12 w-full mx-auto grid-cols-1 md:grid-cols-2 mt-10 gap-5">
+      <div className="grid  w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-5">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex rounded-xl  border p-2 border-secondary-500  relative"
+            className="flex cursor-pointer rounded-xl h-fit w-full  border p-2 border-secondary-500  relative"
           >
             {/* <img
              

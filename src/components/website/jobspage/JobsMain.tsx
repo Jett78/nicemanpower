@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import jobData from "../../../jobs-data/JobsData";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 type Props = {};
 
@@ -65,31 +66,52 @@ export default function JobsMain({}: Props) {
               {/* Job Details */}
               <div className="flex mt-2 flex-col flex-wrap text-zinc-700 justify-start items-start gap-3 gap-x-5">
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.location}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.location}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.location}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.date}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.date}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.date}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.type}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.type}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.type}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.salary}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.salary}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.salary}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.overtime}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.overtime}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.overtime}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.workdays}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.workdays}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.workdays}</span>
                 </div>
                 <div className="flex justify-center items-center gap-2">
-                  <span>{job.icons.benefits}</span>
+                  <Icon
+                    className="w-4 h-4 object-cover object-center"
+                    icon={job.icons.benefits}
+                  ></Icon>
                   <span className="text-sm font-medium">{job.benefits}</span>
                 </div>
               </div>
