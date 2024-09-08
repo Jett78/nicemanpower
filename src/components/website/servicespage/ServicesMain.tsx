@@ -59,18 +59,21 @@ export default function ServicesMain({}: Props) {
         {workData.map((item) => (
           <div
             key={item.id}
-            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-2"
+            className="w-full group relative cursor-pointer  flex flex-col justify-start items-start gap-1"
           >
-            <div className="w-full h-[75vw] md:h-[40vw] lg:h-[18vw] group-hover:-translate-y-1 rounded-2xl duration-300 overflow-hidden">
+            <div className="w-full h-[75vw] md:h-[40vw] lg:h-[12vw] group-hover:-translate-y-1 rounded-2xl duration-300 overflow-hidden">
               <img
                 src={item.imgSrc}
                 alt={item.title}
                 className="w-full h-full scale-105  group-hover:scale-105 group-hover:grayscale duration-300  object-cover object-center "
               />
             </div>
-            <h3 className=" text-zinc-700 group-hover:text-orange-400 duration-300  flex gap-2  justify-center items-center font-semibold z-10 text-left   top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
+            <h3 className=" text-zinc-700 group-hover:text-orange-400 duration-300 mt-1  flex gap-2  justify-center items-center font-semibold z-10 text-left   top-2 left-2 text-[4vw] md:text-[2.5vw] lg:text-[1.2vw]">
               {item.title}
             </h3>
+            <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
+              {item.description}
+            </p>
           </div>
         ))}
       </div>
@@ -118,66 +121,58 @@ const workData = [
     id: 1,
     imgSrc: "/public/service-img/service-1.png",
     title: "Construction",
-    description:
-      "Our seasoned recruiters bring deep industry knowledge to find the best talent.",
+    description: "Connecting top talent with construction opportunities worldwide.",
   },
   {
     id: 2,
     imgSrc: "/public/service-img/service-2.png",
     title: "Oil & Gas Industries",
-    description:
-      "We align job opportunities with your unique skills and career goals.",
+    description: "Matching skilled professionals with industry-leading employers.",
   },
   {
     id: 3,
     imgSrc: "/public/service-img/service-3.png",
     title: "Hospitality Management",
-    description:
-      "Our extensive network connects you with top employers worldwide.",
+    description: "Linking you to global hospitality management roles.",
   },
   {
     id: 4,
     imgSrc: "/public/service-img/service-4.png",
-    title: "Faculties Management",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    title: "Facilities Management",
+    description: "Ensuring successful placements in facilities management.",
   },
   {
-    id: 4,
+    id: 5,
     imgSrc: "/public/service-img/service-5.png",
     title: "Transportations",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    description: "Connecting transportation professionals with key employers.",
   },
   {
-    id: 4,
+    id: 6,
     imgSrc: "/public/service-img/service-6.png",
     title: "Manufacturing",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    description: "Providing access to top manufacturing industry roles.",
   },
   {
-    id: 4,
+    id: 7,
     imgSrc: "/public/service-img/service-7.png",
     title: "Agricultural & Farmwork",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    description: "Placing talent in agricultural and farmwork positions.",
   },
   {
-    id: 4,
+    id: 8,
     imgSrc: "/public/service-img/service-8.png",
     title: "Retail",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    description: "Helping you secure roles in the fast-paced retail sector.",
   },
   {
-    id: 4,
+    id: 9,
     imgSrc: "/public/service-img/service-9.png",
     title: "Electro-mechanical Industries",
-    description:
-      "Our proven process ensures successful placements for both clients and candidates.",
+    description: "Specialized recruitment for the electro-mechanical industries.",
   },
 ];
+
 
 const servicesData = [
   {
