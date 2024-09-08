@@ -44,59 +44,66 @@ export default function JobDetail({}: Props) {
               {jobData.map((job, index) => (
                 <div
                   key={index}
-                  className="flex items-start  flex-col gap-2 w-full"
+                  className="grid grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
                 >
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.location}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.location}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.location}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.location}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.date}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.date}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.date}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.date}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.type}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.type}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.type}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.type}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.salary}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.salary}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.salary}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.salary}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.overtime}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.overtime}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.overtime}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.overtime}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.workdays}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.workdays}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.workdays}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.workdays}</span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
-                    <span>{job.icons.benefits}</span>
-                    <span className="text-[15px] md:text-lg lg:text-sm font-medium">
-                      {job.benefits}
-                    </span>
+                    <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                      icon={job.icons.benefits}
+                    ></Icon>
+                    <span className="text-sm font-medium text-zinc-700">{job.benefits}</span>
                   </div>
                 </div>
               ))}
             </div>
             {/* company logo  */}
             <div className="md:flex hidden justify-center items-center">
-              <div className="rounded-full object-cover object-center md:w-[19vw] p-6 md:h-[19vw] lg:w-[10vw] lg:h-[10vw] bg-white">
+              <div className="object-cover object-center w-full h-[15vw] bg-white">
                 <img
                   alt="company-logo"
-                  src="/public/company-logo.png"
+                  src="/public/vacancy.png"
                   className="w-full h-full object-center object-contain"
                 ></img>
               </div>
@@ -314,13 +321,13 @@ const jobData = [
     workdays: "6 days/week (8hrs)",
     benefits: "Food & Accommodation",
     icons: {
-      location: "🏙️",
-      date: "📅",
-      type: "⏰",
-      salary: "💰",
-      overtime: "⏳",
-      workdays: "🗓️",
-      benefits: "🏨",
+      location: "ep:location",
+      date: "uiw:date",
+      type: "mingcute:time-line",
+      salary: "dashicons:money-alt",
+      overtime: "mdi:sort-time-descending-outline",
+      workdays: "material-symbols:work-history-outline",
+      benefits: "lucide-lab:houses",
     },
   },
 ];

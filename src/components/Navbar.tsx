@@ -20,8 +20,8 @@ export default function Navbar({}: Props) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-   // Helper function to determine if the link should be active
-   const isActive = (href: string) => {
+  // Helper function to determine if the link should be active
+  const isActive = (href: string) => {
     return (
       location.pathname === href || location.pathname.startsWith(`${href}/`)
     );
@@ -51,15 +51,13 @@ export default function Navbar({}: Props) {
           <Link to="">
             <img className="w-[5vw]" src="/public/logo/nice-logo.png" alt="" />
           </Link>
-          
+
           <div className="flex gap-5 text-[0.9vw] font-semibold justify-center items-center text-zinc-700">
-          {navItems.map(({ href, label }) => (
+            {navItems.map(({ href, label }) => (
               <Link key={href} to={href}>
                 <span
                   className={`transition-all hover:text-green-500 font-medium duration-300 ${
-                    isActive(href)
-                      ? "text-green-500"
-                      : "text-tertiary-700 "
+                    isActive(href) ? "text-green-500" : "text-tertiary-700 "
                   }`}
                 >
                   {label}
@@ -82,9 +80,9 @@ export default function Navbar({}: Props) {
               Contact
             </Link> */}
 
-            <Link to="/jobs">
+            <Link to="/contact">
               <button className="px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-blue-500 hover:bg-blue-600 duration-300   rounded-full text-tertiary-50">
-                Find Jobs
+                Contact
               </button>
             </Link>
           </div>
@@ -94,11 +92,10 @@ export default function Navbar({}: Props) {
   );
 }
 
-
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/contact", label: "Contact" },
+  { href: "/jobs", label: "Find Jobs" },
 ];

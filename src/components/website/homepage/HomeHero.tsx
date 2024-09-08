@@ -5,7 +5,14 @@ type Props = {};
 
 export default function HomeHero({}: Props) {
   return (
-    <div className="w-full   overflow-hidden  lg:pt-[10vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
+    <div className="w-full   overflow-hidden  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
+         <div className="absolute top-0 left-0 w-full h-full   duration-300  overflow-hidden">
+          <img
+            src="/public/hero-img/hero2.png"
+            alt=""
+            className="w-full h-full brightness-[0.7] object-cover object-center"
+          />
+        </div>
       {/* <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[2]">
         <div className=" bg-secondary-500 min-w-[50vw] rotate-6 h-[150vh]"></div>
         <div className=" bg-primary-400 min-w-[50vw] rotate-6 h-[150vh]"></div>
@@ -43,11 +50,12 @@ export default function HomeHero({}: Props) {
           </div>
         </div> */}
 
-        <h1 className="text-[8vw] relative  hero uppercase  font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-700 to-zinc-800 text-center leading-none">
+        <h1 className="text-[3vw] relative   hero uppercase  font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
           <span className="">
-            Find Job <br /> You Deserve
+            {/* Find Job <br /> You Deserve */}
+            Connecting You with the Right Talent, <br /> Every Time
           </span>
-          <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
+          {/* <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
             <img
               src="/public/hero-img/hero1.png"
               alt=""
@@ -60,9 +68,9 @@ export default function HomeHero({}: Props) {
               alt=""
               className="w-full h-full object-cover object-center"
             />
-          </div>
+          </div> */}
         </h1>
-        <p className="text-[1.2vw]  text-zinc-700  w-5/12 text-center">
+        <p className="text-[1.2vw]  text-zinc-50  w-5/12 text-center">
           We are manpower recruiting agency. We are experts in this field and we
           know how to{" "}
           <span className="text-orange-500 italic">

@@ -1,3 +1,4 @@
+import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 type Props = {};
 
@@ -46,6 +47,17 @@ export default function Contact({}: Props) {
             <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-700">
               +977 01-4354297
             </h3>
+          </div>
+
+          {/* social */}
+          <div className="w-full flex flex-col gap-1 py-5 border-b-2 border-zinc-200">
+            <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
+              Social
+            </span>
+            <div className="flex gap-2 items-center">
+            <Icon icon="ic:baseline-facebook" className="w-6 h-6" />
+            <Icon icon="ri:instagram-fill" className="w-6 h-6" />
+            </div>
           </div>
         </div>
 
