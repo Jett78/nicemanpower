@@ -43,7 +43,7 @@ export default function Cta({}: Props) {
           {images.map((image, index) => (
             <div
               key={index}
-              className="w-[70vw] lg:min-w-[30vw] h-[50vw] lg:h-[15vw] overflow-hidden"
+              className="w-[70vw] lg:w-[30vw] h-[50vw] lg:h-[15vw] overflow-hidden"
             >
               <img
                 src={image.src}
@@ -65,7 +65,7 @@ export default function Cta({}: Props) {
             .map((image, index) => (
               <div
                 key={index}
-                className="w-[70vw] lg:min-w-[30vw] h-[50vw] lg:h-[15vw] overflow-hidden"
+                className="w-[70vw] lg:w-[30vw] h-[50vw] lg:h-[15vw] overflow-hidden"
               >
                 <img
                   src={image.src}
