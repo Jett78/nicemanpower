@@ -9,10 +9,10 @@ export default function FeatureJobs({}: Props) {
     <div className="py-[4rem] pt-[6rem]">
       <div className="w-full flex gap-5 justify-between items-end">
         <div className="flex w-full h-full flex-col gap-2">
-          <h1 className="text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+          <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
             Featured Jobs
           </h1>
-          <p className="text-[1.2vw] w-[50%] leading-relaxed text-zinc-700">
+          <p className="text-[3.5vw] lg:text-[1.2vw] lg:w-[50%] leading-relaxed text-zinc-700">
             Search all the open positions on the web. Get your own personalized
             salary estimate. Read reviews on over 30000+ companies worldwide.
           </p>
@@ -21,7 +21,7 @@ export default function FeatureJobs({}: Props) {
           <span className="text-nowrap font-semibold">See more jobs </span>
         </div> */}
         <Link to="" className="mt-5">
-          <button className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[1vw] font-semibold  rounded-full text-blue-500 duration-300">
+          <button className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold  rounded-full text-blue-500 duration-300">
             See more jobs{" "}
             <Icon
               icon="lets-icons:arrow-right-long-light"
@@ -32,7 +32,7 @@ export default function FeatureJobs({}: Props) {
       </div>
 
       {/* jobs  */}
-      <div className="grid grid-cols-3 gap-5 mt-10">
+      <div className="grid lg:grid-cols-3 gap-5 mt-10">
         {jobData.slice(0, 3).map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
             <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">

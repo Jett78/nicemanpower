@@ -4,28 +4,28 @@ type Props = {};
 
 export default function HomeAbout({}: Props) {
   return (
-    <div className="py-[5rem] pb-[7rem]  flex flex-col justify-center items-center">
+    <div className="py-[2rem] lg:py-[5rem] w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
       {/* experience  */}
-      <div className="pb-[5rem] grid  grid-cols-3 gap-10">
-        <div className="bg-[#D8FCE3] rounded-xl h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
-          <span className="font-semibold text-[2vw] hero">800+</span>
-          <span className="text-[1vw] text-zinc-700">
+      <div className="pb-[5rem] grid  lg:grid-cols-3 w-full gap-2 lg:gap-10">
+        <div className="bg-[#D8FCE3] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[4vw] lg:text-[2vw] hero">800+</span>
+          <span className="text-[3vw] lg:text-[1vw] text-zinc-700">
             Successful Placements
           </span>
         </div>
-        <div className="bg-[#FDE7DB] rounded-xl h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
-          <span className="font-semibold text-[2vw] hero">20+</span>
-          <span className="text-[1vw] text-zinc-700">Industries Served</span>
+        <div className="bg-[#FDE7DB] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[4vw] lg:text-[2vw] hero">20+</span>
+          <span className="text-[3vw] lg:text-[1vw] text-zinc-700">Industries Served</span>
         </div>
-        <div className="bg-[#D2EDFF] rounded-xl h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
-          <span className="font-semibold text-[2vw] hero">17+</span>
-          <span className="text-[1vw] text-zinc-700">Years of Experience</span>
+        <div className="bg-[#D2EDFF] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+          <span className="font-semibold text-[4vw] lg:text-[2vw] hero">17+</span>
+          <span className="text-[3vw] lg:text-[1vw] text-zinc-700">Years of Experience</span>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-[6rem]">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-[1rem] lg:gap-[6rem]">
         {/* image  */}
         <div className="flex justify-center items-center h-full">
-          <div className="relative w-[25vw] h-[30vw]  ">
+          <div className="relative w-[90vw] h-[50vw] lg:w-[25vw] lg:h-[30vw]  ">
             <img
               src="/public/hero-img/hero5.png"
               alt=""
@@ -40,12 +40,12 @@ export default function HomeAbout({}: Props) {
         </div>
 
         {/* right desc  */}
-        <div className="flex flex-col justify-center items-start gap-1 text-left h-full w-[50%]">
-          <h2 className="text-[1vw]  font-semibold text-orange-500 hero">
+        <div className="flex flex-col justify-center items-start gap-1 text-left h-full lg:w-[50%]">
+          <h2 className="text-[3vw] lg:text-[1vw]  font-semibold text-orange-500 hero">
             Millions of jobs. Find the one that's right for you.
           </h2>
 
-          <p className="text-[1.2vw] text-zinc-700 leading-relaxed">
+          <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 leading-relaxed">
             We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
             provide skilled workers across various sectors, with branches and
             training centers throughout Nepal, adhering to international hiring
@@ -53,7 +53,7 @@ export default function HomeAbout({}: Props) {
           </p>
 
           <Link to="" className="mt-5">
-            <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
+            <button className="px-[4vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3vw] lg:text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
               Let me know the sectors
             </button>
           </Link>

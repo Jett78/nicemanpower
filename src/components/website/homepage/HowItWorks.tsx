@@ -36,7 +36,7 @@ export default function HowItWorks() {
   return (
     <div className="w-full ">
       <div className="w-full h-screen flex justify-center relative items-center">
-        <h1 className="text-[8vw] hero font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none sticky top-[10vh]">
+        <h1 className="text-[9vw] lg:text-[8vw] hero font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none sticky top-[10vh]">
           How It <br /> Works?
         </h1>
       </div>
@@ -47,7 +47,7 @@ export default function HowItWorks() {
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-8/12 h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center">
+            <div className="w-11/12 lg:w-8/12  lg:h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-5 lg:p-16 justify-center relative items-center">
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <img
                   src="/public/step/paper.avif"
@@ -62,12 +62,12 @@ export default function HowItWorks() {
                   className="w-[1.5vw] object-cover object-center"
                 />
               </div>
-              <span className="text-[2vw] relative text-zinc-800 font-semibold">
+              <span className="text-[4vw] lg:text-[2vw] relative text-zinc-800 font-semibold">
                 Submit A Resume
               </span>
 
-              <div className="flex relative justify-center items-center gap-8">
-                <p className="w-[55%] text-[1.1vw] text-zinc-600">
+              <div className="flex flex-col lg:flex-row relative justify-center items-center gap-8">
+                <p className="w-full lg:w-[55%] text-[3.5vw] lg:text-[1.1vw] text-zinc-600">
                   Start your journey by submitting your application online.
                   Provide us with your resume, portfolio, and any other relevant
                   information to help us understand your qualifications and
@@ -76,7 +76,7 @@ export default function HowItWorks() {
                 <img
                   src="/public/hire-step/step1.png"
                   alt=""
-                  className="w-[50%] brightness-[0.5] rounded-xl top-0 left-0 h-full object-cover object-center"
+                  className="w-full lg:w-[50%] brightness-[0.5] rounded-xl top-0 left-0 h-full object-cover object-center"
                 />
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function HowItWorks() {
             >
               <div
                 // style={{ backgroundColor: step.background }}
-                className="w-8/12 h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-16 justify-center relative items-center"
+                className="w-11/12 lg:w-8/12 lg:h-[70vh] overflow-hidden border-2 border-zinc-500  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-10 lg:p-16 justify-center relative items-center"
               >
                 <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                   <img
@@ -104,18 +104,18 @@ export default function HowItWorks() {
                     className="w-[1.5vw] object-cover object-center"
                   />
                 </div>
-                <span className="text-[2vw] relative  text-zinc-800 font-semibold">
+                <span className="text-[4vw] lg:text-[2vw] relative  text-zinc-800 font-semibold">
                   {step.text}
                 </span>
 
-                <div className="flex justify-center relative items-center gap-8">
-                  <p className="w-[55%] text-[1.1vw] text-zinc-600">
+                <div className="flex flex-col justify-center relative items-center gap-8">
+                  <p className="w-full lg:w-[55%] text-[3.5vw] lg:text-[1.1vw] text-zinc-600">
                     {step.description}
                   </p>
                   <img
                     src={step.src}
                     alt=""
-                    className="w-[50%] brightness-[0.5] rounded-xl top-0 left-0 h-full object-cover object-center"
+                    className="w-full lg:w-[50%] brightness-[0.5] rounded-xl top-0 left-0 h-full object-cover object-center"
                   />
                 </div>
               </div>

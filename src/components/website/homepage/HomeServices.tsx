@@ -13,7 +13,7 @@ export default function HomeServices({}: Props) {
       viewport={{ once: false, amount: 0.1 }}
       className="pb-[5rem] min-h-screen flex justify-center items-center flex-col w-full"
     >
-      <div className="grid w-full grid-cols-2 gap-16 h-full relative">
+      <div className="grid w-full lg:grid-cols-2 gap-10 lg:gap-16 h-full relative">
         <div className="">
           <motion.div
             initial={{ opacity: 0 }}
@@ -21,20 +21,20 @@ export default function HomeServices({}: Props) {
             transition={{ duration: 1 }}
             className="w-full justify-end items-start sticky top-[50%] left-0 flex flex-col text-end"
           >
-            <p className="w-full mx-auto flex gap-1 justify-end items-center text-[1.3vw] leading-relaxed">
+            <p className="w-full mx-auto flex gap-1 justify-start lg:justify-end items-center text-[3.5vw] lg:text-[1.3vw] leading-relaxed">
               <span className="w-[5vw] text-zinc-700 h-[1.5px] bg-secondary-500 mr-3"></span>{" "}
               Excellence across
               <span className="text-orange-500 italic">
                 multiple disciplines
               </span>
             </p>
-            <h1 className="hero text-[4vw]  font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-right w-full leading-none">
+            <h1 className="hero text-[8vw] lg:text-[4vw]  font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-left lg:text-right w-full leading-none">
               We Specialize
             </h1>
           </motion.div>
         </div>
         {/* cards */}
-        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-16">
+        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-5 lg:gap-16">
           {servicesData.map((item) => (
             <motion.div
               key={item.id}
@@ -42,7 +42,7 @@ export default function HomeServices({}: Props) {
               whileInView={{ scale: 1 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="cursor-pointer relative duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-16 py-20 group w-full flex flex-col justify-start items-start"
+              className="cursor-pointer relative duration-300 bg-zinc-100 border-2 border-zinc-600 rounded-3xl p-10 lg:p-16 py-20 group w-full flex flex-col justify-start items-start"
             >
               <div className="absolute top-3 right-3 w-9 h-9 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-full bg-green-200 p-2 lg:p-3 flex justify-center items-center">
                 <Icon
