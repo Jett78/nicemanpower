@@ -35,14 +35,14 @@ export default function LicenseCertificates({}: Props) {
   };
   return (
     <div className="w-full py-[2rem]">
-      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         License & Certificates
       </h1>
-      <p className="text-[1.2vw] lg:text-center text-zinc-700 lg:w-8/12 mx-auto">
+      <p className="text-[3.5vw] lg:text-[1.2vw] lg:text-center text-zinc-700 lg:w-8/12 mx-auto">
         Verify our credentials and industry certifications ensuring quality and
         compliance.
       </p>
-      <div className="grid  w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-5">
+      <div className="grid  w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5 lg:mt-10 gap-5">
         {documentsData.map((member, index) => (
           <div
             onClick={() => openModal(index)}

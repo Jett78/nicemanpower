@@ -8,13 +8,13 @@ export default function BlogMain({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="pt-[6rem]  lg:pt-[8rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
+      className="pt-[4rem]  lg:pt-[8rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
     >
       {" "}
-      <h1 className="text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Discover Our Article
       </h1>
-      <h3 className="text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+      <h3 className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill

@@ -17,12 +17,13 @@ export default function Testimonials({}: Props) {
           Voice Of Our <span className="">Clients</span>
         </h1>
         <p className="w-full lg:w-6/12 text-[3.5vw] lg:text-[1.3vw] text-zinc-700 mx-auto leading-relaxed">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          delectus accusantium a non nemo impedit?
+          You may not trust us yet, but you can trust the positive experiences
+          of our clients who have benefited from our dedicated service and
+          successful placements.
         </p>
       </div>
 
-      <div className="w-full mt-10 flex justify-start items-center">
+      <div className="w-full mt-5 lg:mt-10 flex justify-start items-center">
         <div className="relative overflow-hidden bg-transparent w-full flex">
           <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-zinc-50 to-transparent z-10"></div>
           <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-zinc-50 to-transparent z-10"></div>

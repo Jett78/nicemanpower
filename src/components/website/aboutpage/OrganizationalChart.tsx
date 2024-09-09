@@ -36,15 +36,15 @@ export default function OrganizationalChart({}: Props) {
 
   return (
     <div className="py-[3rem] w-full">
-      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] lg:text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Organizational Chart
       </h1>
-      <p className="text-[1.2vw] text-zinc-700 text-center">
+      <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 text-start lg:text-center">
         Visualize our structure and key roles within the company.
       </p>
 
       <div
-        className="w-full p-5 mt-10 h-[70vh] bg-zinc-100 flex justify-center items-start relative group overflow-hidden border-2 border-tertiary-700 rounded-lg"
+        className="w-full p-5 mt-5 lg:mt-10 h-[70vh] bg-zinc-100 flex justify-center items-start relative group overflow-hidden border-2 border-tertiary-700 rounded-lg"
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

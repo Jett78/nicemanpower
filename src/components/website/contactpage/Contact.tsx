@@ -8,12 +8,12 @@ export default function Contact({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="pt-[6rem]  lg:pt-[8rem] pb-[4rem] w-9/12 lg:w-9/12 mx-auto"
+      className="pt-[4rem]  lg:pt-[8rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
     >
-      <h1 className="text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Reach Out Us
       </h1>
-      <p className="text-[1.2vw] lg:text-center mx-auto w-8/12 leading-relaxed text-zinc-700">
+      <p className="text-[3.5vw] lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Search all the open positions on the web. Get your own personalized
         salary estimate. Read reviews on over 30000+ companies worldwide.
       </p>
@@ -55,8 +55,8 @@ export default function Contact({}: Props) {
               Social
             </span>
             <div className="flex gap-2 items-center">
-            <Icon icon="ic:baseline-facebook" className="w-6 h-6" />
-            <Icon icon="ri:instagram-fill" className="w-6 h-6" />
+              <Icon icon="ic:baseline-facebook" className="w-6 h-6" />
+              <Icon icon="ri:instagram-fill" className="w-6 h-6" />
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function Contact({}: Props) {
               type="text"
               id="firstName"
               name="firstName"
-              className="p-2 py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
               required
             />
           </div>
@@ -93,7 +93,7 @@ export default function Contact({}: Props) {
               type="text"
               id="lastName"
               name="lastName"
-              className="p-2 py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
               required
             />
           </div>
@@ -109,7 +109,7 @@ export default function Contact({}: Props) {
               type="email"
               id="email"
               name="email"
-              className="p-2 py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
               required
             />
           </div>
@@ -125,7 +125,7 @@ export default function Contact({}: Props) {
               type="tel"
               id="phone"
               name="phone"
-              className="p-2 py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
               required
             />
           </div>
@@ -141,13 +141,13 @@ export default function Contact({}: Props) {
               id="message"
               name="message"
               //   rows="4"
-              className="p-2 py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
               required
             />
           </div>
 
           <div className="flex justify-start">
-            <button className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+            <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               Submit
             </button>
           </div>

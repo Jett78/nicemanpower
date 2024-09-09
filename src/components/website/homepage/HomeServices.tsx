@@ -13,16 +13,16 @@ export default function HomeServices({}: Props) {
       viewport={{ once: false, amount: 0.1 }}
       className="pb-[5rem] min-h-screen flex justify-center items-center flex-col w-full"
     >
-      <div className="grid w-full lg:grid-cols-2 gap-10 lg:gap-16 h-full relative">
-        <div className="">
+      <div className="flex flex-col  lg:flex-row w-full gap-10 lg:gap-14 h-full relative">
+        <div className="w-[50%]">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full justify-end items-start sticky top-[50%] left-0 flex flex-col text-end"
           >
-            <p className="w-full mx-auto flex gap-1 justify-start lg:justify-end items-center text-[3.5vw] lg:text-[1.3vw] leading-relaxed">
-              <span className="w-[5vw] text-zinc-700 h-[1.5px] bg-secondary-500 mr-3"></span>{" "}
+            <p className="w-full whitespace-nowrap mx-auto flex gap-1 justify-start lg:justify-end items-center text-[3.5vw] lg:text-[1.3vw] leading-relaxed">
+              <span className="w-[5vw] text-zinc-700 h-[1.5px] hidden lg:flex bg-secondary-500 mr-3"></span>{" "}
               Excellence across
               <span className="text-orange-500 italic">
                 multiple disciplines
@@ -34,7 +34,7 @@ export default function HomeServices({}: Props) {
           </motion.div>
         </div>
         {/* cards */}
-        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-5 lg:gap-16">
+        <div className="grid place-content-start place-items-start h-full mx-auto grid-cols-1 gap-5 lg:gap-10">
           {servicesData.map((item) => (
             <motion.div
               key={item.id}

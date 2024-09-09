@@ -21,19 +21,19 @@ export default function JobsMain({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-[2rem] pt-[6rem]  lg:pt-[8rem] w-full"
+      className="py-[2rem]  pt-[4rem]  lg:pt-[8rem] w-full"
     >
-      <h1 className="text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] w-11/12 mx-auto lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Vacancies Announcement
       </h1>
-      <p className="text-[1.2vw] lg:text-center mx-auto w-8/12 leading-relaxed text-zinc-700">
+      <p className="text-[3.5vw] w-11/12 lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Discover exciting career opportunities with our latest job openings.
         Find roles that match your skills and ambitions and apply today to join
         our dynamic team!
       </p>
 
       {/* cards */}
-      <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5">
+      <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
         {displayedJobs.map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
             <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
@@ -120,7 +120,7 @@ export default function JobsMain({}: Props) {
         ))}
       </div>
 
-      <div className="w-11/12 mt-10 flex justify-start lg:justify-center mx-auto items-center">
+      <div className="w-11/12 mt-5 lg:mt-10 flex justify-start lg:justify-center mx-auto items-center">
         {!showAll && (
           // <button
           //   onClick={handleViewAllClick}
@@ -131,7 +131,9 @@ export default function JobsMain({}: Props) {
 
           <button
             onClick={handleViewAllClick}
-            className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[1vw] font-semibold  rounded-full text-blue-500 duration-300"
+           
+            
+            className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[4vw] lg:text-[1vw] font-semibold  rounded-full text-blue-500 duration-300"
           >
             View All Jobs
             <Icon

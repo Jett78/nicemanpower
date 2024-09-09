@@ -11,19 +11,21 @@ type Props = {};
 
 export default function AboutMain({}: Props) {
   return (
-    <motion.div className="w-11/12 lg:w-9/12 pt-[6rem]  lg:pt-[8rem] pb-[2rem] mx-auto">
+    <motion.div className="w-11/12 lg:w-9/12 pt-[4rem]  lg:pt-[8rem] pb-[2rem] mx-auto">
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         className="text-[5vw] lg:text-[2.2vw]  text-start lg:text-center leading-loose"
       >
-        <h1 className="text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           About Us
         </h1>
         <p className="text-[3.5vw] md:text-[3vw] text-zinc-700 leading-snug lg:text-[1.2vw] mt-2">
-          Welcome to Nice Recruitment Agency Ethical and responsible manpower
-          agency in Nepal
+          “We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
+          provide skilled workers across various sectors, with branches and
+          training centers throughout Nepal, adhering to international hiring
+          standards.”
         </p>
       </motion.p>
 
@@ -54,17 +56,17 @@ export default function AboutMain({}: Props) {
         viewport={{ once: false, amount: 0.3 }}
         className="w-full py-[2rem]"
       >
-        <h1 className="text-[1vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500  leading-none hero">
+        <h1 className="text-[3vw] lg:text-[1vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500  leading-none hero">
           {`Chairman's Message`}
         </h1>
         <div className="grid grid-cols-1 lg:grid-cols-5 mt-2  gap-x-5">
           <div className="lg:col-span-3 flex flex-col gap-2">
             {/* name  */}
-            <h2 className="font-semibold text-[4vw] md:text-[3vw] lg:text-[1.5vw] pointer-events-none">
+            <h2 className="font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pointer-events-none">
               Nirmal GC
             </h2>
             {/* position */}
-            <h3 className="font-semibold text-[3vw] md:text-[2.5vw] lg:text-[1.2vw]">
+            <h3 className="font-semibold text-[3vw] text-zinc-800 md:text-[2.5vw] lg:text-[0.8vw] italic">
               Chairman, Nice Recruiting Agency
             </h3>
             {/* message  */}

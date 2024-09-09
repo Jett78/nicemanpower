@@ -5,25 +5,25 @@ type Props = {};
 export default function OurTeam({}: Props) {
   return (
     <div className="w-full py-[2rem]">
-      <h1 className="text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Team
       </h1>
-      <p className="text-[1.2vw] text-zinc-700 w-11/12 lg:w-8/12 mx-auto">
+      <p className="text-[3.5vw] lg:text-[1.2vw]  text-zinc-700 w-full lg:w-8/12 mx-auto">
         We are what we are today is only because of our dedicated team. Let us
         introduce you our team who makes it possible for you to get the skilled
         manpower you need.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-10 gap-x-5 gap-y-4">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5 lg:mt-10 gap-x-3 lg:gap-x-5 gap-y-4">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex text-zinc-800   cursor-pointer hover:border-tertiary-700 duration-300 w-full  border-2 border-tertiary-700 flex-col p-10 rounded-xl gap-1"
+            className="flex text-zinc-800   cursor-pointer hover:border-tertiary-700 duration-300 w-full  border-2 border-tertiary-700 flex-col p-2 lg:p-10 rounded-xl gap-1"
           >
             {/* Team member image */}
             <img
               src={member.imageSrc}
               alt={`${member.name}-img`}
-              className="rounded-full border-white border-2 w-[8rem] h-[8rem] object-cover object-center"
+              className="rounded-full border-white border-2 w-[5rem] h-[5rem] lg:w-[8rem] lg:h-[8rem] object-cover object-center"
             />
 
             {/* Name */}
@@ -37,12 +37,30 @@ export default function OurTeam({}: Props) {
             </h4>
 
             {/* Socials */}
-            <div className="flex items-center text-lg lg:text-sm text-[#3aaaaa] cursor-pointer gap-1">
-              Socials{" "}
-              <Icon
-                icon="solar:arrow-up-line-duotone"
-                className="w-5 h-5 rotate-45"
-              />
+            <div className="flex justify-between  cursor-pointer items-center text-lg lg:text-sm text-blue-500 gap-1">
+              <div className="cursor-pointer flex flex-col lg:flex-row justify-between items-center gap-5 w-auto group">
+                <div className="flex text-[3.5vw] lg:text-[1vw] gap-1">
+                  Socials{" "}
+                  <Icon
+                    icon="solar:arrow-up-line-duotone"
+                    className="w-5 h-5 rotate-45 group-hover:rotate-[90deg]  duration-300"
+                  />
+                </div>
+                <div className="flex lg:opacity-0 group-hover:opacity-100 gap-2 items-center text-zinc-700  duration-300">
+                  <Icon
+                    icon="ic:baseline-facebook"
+                    className="w-5 h-5 lg:w-6 lg:h-6 hover:scale-95 duration-300 hover:text-zinc-900"
+                  />
+                  <Icon
+                    icon="ri:instagram-fill"
+                    className="w-5 h-5 lg:w-6 lg:h-6 hover:scale-95 duration-300 hover:text-zinc-900"
+                  />
+                  <Icon
+                    icon="ri:twitter-fill"
+                    className="w-5 h-5 lg:w-6 lg:h-6 hover:scale-95 duration-300 hover:text-zinc-900"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         ))}
@@ -59,20 +77,20 @@ const teamMembers = [
     socials: "icon", // You can replace this with actual social media icons
   },
   {
-    name: "Jane Doe",
-    position: "CTO",
+    name: "Bandana Koirala",
+    position: "Managing Director",
     imageSrc: "/public/team/ceo.png",
     socials: "icon", // Replace with actual icons
   },
   {
-    name: "John Smith",
-    position: "CFO",
+    name: "Sanam Manandhar",
+    position: "HR Manager",
     imageSrc: "/public/team/ceo.png",
     socials: "icon", // Replace with actual icons
   },
   {
-    name: "Emily Johnson",
-    position: "COO",
+    name: "Niruta Thapa",
+    position: "Office Secretary",
     imageSrc: "/public/team/ceo.png",
     socials: "icon", // Replace with actual icons
   },

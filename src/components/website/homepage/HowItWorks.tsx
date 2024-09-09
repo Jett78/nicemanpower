@@ -108,7 +108,7 @@ export default function HowItWorks() {
                   {step.text}
                 </span>
 
-                <div className="flex flex-col justify-center relative items-center gap-8">
+                <div className="flex flex-col lg:flex-row justify-center relative items-center gap-8">
                   <p className="w-full lg:w-[55%] text-[3.5vw] lg:text-[1.1vw] text-zinc-600">
                     {step.description}
                   </p>

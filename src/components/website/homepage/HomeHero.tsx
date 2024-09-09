@@ -5,7 +5,7 @@ type Props = {};
 
 export default function HomeHero({}: Props) {
   return (
-    <div className="w-full   overflow-hidden h-[70vh]  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
+    <div className="w-full   overflow-hidden h-[90vh]  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
       <div className="absolute top-0 left-0 w-full h-full   duration-300  overflow-hidden">
         <img
           src="/public/hero-img/hero2.png"
@@ -84,8 +84,9 @@ export default function HomeHero({}: Props) {
               Contact
             </button>
           </Link> */}
-          <Link to="">
-            <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+          <Link to="/contact">
+            <button 
+            className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               I need skilled talents
             </button>
           </Link>

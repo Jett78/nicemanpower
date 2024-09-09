@@ -19,7 +19,7 @@ export default function JobDetail({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="pt-[6rem]  lg:pt-[8rem]"
+      className="pt-[4rem]  lg:pt-[8rem]"
     >
       <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
         {/* top  */}
@@ -51,49 +51,63 @@ export default function JobDetail({}: Props) {
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.location}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.location}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.location}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.date}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.date}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.date}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.type}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.type}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.type}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.salary}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.salary}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.salary}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.overtime}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.overtime}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.overtime}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.workdays}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.workdays}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.workdays}
+                    </span>
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                       icon={job.icons.benefits}
                     ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">{job.benefits}</span>
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.benefits}
+                    </span>
                   </div>
                 </div>
               ))}
@@ -170,9 +184,9 @@ export default function JobDetail({}: Props) {
           <div className="flex justify-start mt-5">
             <button
               onClick={handleOpenForm}
-              className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+              className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
             >
-              Apply now
+              Apply For The Position
             </button>
           </div>
         </div>
@@ -185,14 +199,14 @@ export default function JobDetail({}: Props) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-white/40 h-screen flex items-center justify-center"
+            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center"
           >
             <Link
               onClick={handleCloseForm}
               to="/jobs"
               className="w-full absolute top-[10%] left-[10%] flex justify-start"
             >
-              <div className="text-zinc-700 z-40 hover:scale-105 duration-300 hover:text-zinc-800 flex  justify-center items-center">
+              <div className="text-zinc-100 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
                 <div className="overflow-hidden title flex justify-center items-center">
                   <Icon
                     icon="ic:outline-arrow-left"
@@ -205,8 +219,14 @@ export default function JobDetail({}: Props) {
             {/* form  */}
             <form
               action=""
-              className="py-5 w-11/12 md:w-9/12 lg:w-5/12 max-w-3xl mt-5 grid grid-cols-2 gap-5"
+              className="py-5 relative bg-white p-5 rounded-3xl pt-[3rem] w-11/12 md:w-9/12 lg:w-5/12 max-w-3xl mt-5 grid grid-cols-2 gap-5"
             >
+              <div
+                onClick={handleCloseForm}
+                className="absolute cursor-pointer hover:scale-95 duration-300 text-zinc-700 hover:text-zinc-900 right-5 top-5"
+              >
+                <Icon icon="carbon:close-filled" className="w-7 h-7" />
+              </div>
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="fullName"
@@ -219,7 +239,7 @@ export default function JobDetail({}: Props) {
                   id="fullName"
                   name="fullName"
                   placeholder="John Doe"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -236,7 +256,7 @@ export default function JobDetail({}: Props) {
                   id="email"
                   name="email"
                   placeholder="john@example.com"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -253,7 +273,7 @@ export default function JobDetail({}: Props) {
                   id="phone"
                   name="phone"
                   placeholder="+977 **********"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -269,7 +289,7 @@ export default function JobDetail({}: Props) {
                   id="address"
                   name="address"
                   placeholder="Kathmandu"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -286,7 +306,7 @@ export default function JobDetail({}: Props) {
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-800 outline-none bg-transparent"
+                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -294,7 +314,7 @@ export default function JobDetail({}: Props) {
               <div className="flex justify-start">
                 <button
                   type="submit"
-                  className="px-[2vw] py-[0.8vw] text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+                  className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
                 >
                   Apply
                 </button>
