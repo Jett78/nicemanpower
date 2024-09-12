@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import jobData from "../../../jobs-data/JobsData";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-type Props = {};
 
-export default function FeatureJobs({}: Props) {
+export default function FeatureJobs() {
   return (
     <div className="py-[4rem] pt-[6rem]">
       <div className="w-full flex gap-5 justify-between items-end">

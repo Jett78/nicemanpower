@@ -1,8 +1,7 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
-type Props = {};
 
-export default function Contact({}: Props) {
+export default function Contact() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,7 +23,7 @@ export default function Contact({}: Props) {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Office
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-700">
+            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
               Samakhusi Town Planning, Kathmandu, Nepal.
             </h3>
           </div>
@@ -34,7 +33,7 @@ export default function Contact({}: Props) {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Email
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-700">
+            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
               info@nicerecruitment.org
             </h3>
           </div>
@@ -44,7 +43,7 @@ export default function Contact({}: Props) {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Phone
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-700">
+            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
               +977 01-4354297
             </h3>
           </div>
@@ -69,7 +68,7 @@ export default function Contact({}: Props) {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="firstName"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-500 lg:text-[0.9vw]"
             >
               First Name <span className="text-blue-500">*</span>
             </label>
@@ -77,7 +76,7 @@ export default function Contact({}: Props) {
               type="text"
               id="firstName"
               name="firstName"
-              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
               required
             />
           </div>
@@ -93,7 +92,7 @@ export default function Contact({}: Props) {
               type="text"
               id="lastName"
               name="lastName"
-              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
               required
             />
           </div>
@@ -109,7 +108,7 @@ export default function Contact({}: Props) {
               type="email"
               id="email"
               name="email"
-              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
               required
             />
           </div>
@@ -125,7 +124,7 @@ export default function Contact({}: Props) {
               type="tel"
               id="phone"
               name="phone"
-              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
               required
             />
           </div>
@@ -141,7 +140,7 @@ export default function Contact({}: Props) {
               id="message"
               name="message"
               //   rows="4"
-              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-600 outline-none bg-transparent"
+              className="p-2 py-3 lg:py-5 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
               required
             />
           </div>

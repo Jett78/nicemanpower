@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
+
 const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const controls = useAnimation();

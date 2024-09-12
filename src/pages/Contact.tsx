@@ -1,8 +1,7 @@
 import Contact from "../components/website/contactpage/Contact";
 
-type Props = {};
 
-export default function ContactPage({}: Props) {
+export default function ContactPage() {
   return (
     <div>
       <Contact />

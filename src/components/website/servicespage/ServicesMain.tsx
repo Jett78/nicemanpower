@@ -1,12 +1,12 @@
 import { useGSAP } from "@gsap/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { HoverEffect } from "../../ui/card-hover-effect";
+import Ctaform from "../homepage/Ctaform";
 
-const sections: any = [
+const sections = [
   {
     title: "Skilled Labor for Building and Infrastructure Projects",
     category: "Construction",
@@ -126,6 +126,11 @@ const sections: any = [
 ];
 
 export default function ServicesMain() {
+  const [active, Setactive] = useState(false);
+  // Overlay click handler
+  const closeDropdown = () => {
+    Setactive(false);
+  };
   const mainContainer = useRef(null);
   // GSAP Animation
   useGSAP(() => {
@@ -262,7 +267,7 @@ export default function ServicesMain() {
         ref={mainContainer}
         className="w-full lg:h-screen flex justify-center items-center"
       >
-        <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-5">
+        <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-10">
           {/* Left Titles */}
           <div className="h-[90vh] flex flex-col gap-2 w-full lg:w-[20vw]">
             {sections.map((section: any, index: number) => (
@@ -303,11 +308,14 @@ export default function ServicesMain() {
           </div>
 
           {/* Middle Images */}
-          <div className="h-[90vh] hidden  w-[30vw] rounded-2xl overflow-hidden lg:flex flex-col border-2 relative border-zinc-800">
+         <div>
+         <div className={`h-[90vh] hidden  w-[30vw] overflow-hidden lg:flex flex-col  relative `}>
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
-                className={`absolute object-center top-0 left-0 w-full h-full p-3 grid gap-3 grid-cols-2 auto-rows-fr images-${
+                className={` ${
+                        index % 2 === 0 ? "border-[#008932] " : "border-[#5da5d3]"
+                      } absolute object-center top-0 left-0 w-full h-full p-2 grid gap-3  rounded-2xl grid-cols-2 border-2 auto-rows-fr  images-${
                   index + 1
                 } ${index > 0 ? "opacity-0" : ""}`}
               >
@@ -334,9 +342,10 @@ export default function ServicesMain() {
               </div>
             ))}
           </div>
+         </div>
 
           {/* Right Descriptions */}
-          <div className="h-[90vh] hidden  w-[15vw] lg:flex justify-center items-start relative">
+          <div className="h-[90vh] hidden  w-[20vw] lg:flex justify-center items-start relative">
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
@@ -344,11 +353,13 @@ export default function ServicesMain() {
                   index + 1
                 } ${index > 0 ? "opacity-0" : "opacity-1"}`} // For descriptions
               >
-                <p className="text-[1.3vw] text-zinc-600">
+                <p className="text-[1.5vw] text-zinc-600">
                   {section.description}
                 </p>
                 <Link to="">
-                  <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-green-500 hover:bg-green-500 duration-300 rounded-full text-zinc-50 border-zinc-600">
+                  <button onClick={() => Setactive(!active)} className={`${
+                        index % 2 === 0 ? "bg-green-500 hover:bg-green-500 " : "bg-[#2b7aab]"
+                      } px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold  duration-300 rounded-full text-zinc-50 border-zinc-600`}>
                     Contact Us
                   </button>
                 </Link>
@@ -399,6 +410,18 @@ export default function ServicesMain() {
           ))}
         </div>
       </motion.div>
+        {/* --Dark overlay-- */}
+    {active && (
+        <>
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 z-[150]"
+            onClick={closeDropdown}
+          ></div>
+          <div className="fixed z-[200] inset-0 flex justify-center items-center">
+            <Ctaform closeDropdown={closeDropdown} />
+          </div>
+        </>
+      )}
     </motion.div>
   );
 }
