@@ -7,9 +7,8 @@ import OurClientele from "./OurClientele";
 import LicenseCertificates from "./LicenseCertificates";
 import { motion } from "framer-motion";
 
-type Props = {};
 
-export default function AboutMain({}: Props) {
+export default function AboutMain() {
   return (
     <motion.div className="w-11/12 lg:w-9/12 pt-[4rem]  lg:pt-[8rem] pb-[2rem] mx-auto">
       <motion.p
@@ -71,30 +70,32 @@ export default function AboutMain({}: Props) {
             </h3>
             {/* message  */}
             <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-loose  text-zinc-700">
-              It is with great pride and enthusiasm that I address you today as
+              "It is with great pride and enthusiasm that I address you today as
               the Chairman of Nice Recruiting Agency - a leading provider of
               comprehensive manpower solutions. As we embark on an exciting new
               chapter, I am honored to share our vision and the core values that
-              guide us in empowering organizations and individuals to thrive.
+              guide us in empowering organizations and individuals to thrive.<br/><br/>
+
               Since our inception, Nice Recruiting Agency has been steadfastly
               committed to revolutionizing the way businesses access and manage
               their most valuable resource - human capital. We are very proud of
               the fact that 80% plus of our work is repeated with preferred
-              clients who come to trust and acknowledge the fact. Through our
+              clients who come to trust and acknowledge the fact. <br/> <br/>
+              
+              Through our
               unwavering dedication to excellence, innovative approach, and deep
               industry expertise, we have established ourselves as a trusted
               partner that consistently delivers tailored workforce solutions to
-              meet the evolving needs of our clients
+              meet the evolving needs of our clients."
             </p>
           </div>
 
           {/* charman img */}
           <div className="w-full overflow-hidden relative lg:col-span-2 h-full">
-            <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-black to-transparent z-10"></div>
             <img
-              src="/public/team/ceo.png"
+              src="/public/chairman.png"
               alt="ceo-img"
-              className="scale-105 object-cover object-center"
+              className="scale-105 h-full object-cover object-center"
             ></img>
           </div>
         </div>

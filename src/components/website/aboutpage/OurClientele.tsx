@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-type Props = {};
 
 const steps = [
   { number: 1, text: "Bahrain", image: "/public/client/bahrain.png" },
@@ -11,7 +10,7 @@ const steps = [
   { number: 5, text: "Malaysia", image: "/public/client/malaysia.png" },
 ];
 
-export default function OurClientele({}: Props) {
+export default function OurClientele() {
   const [activeStep, setActiveStep] = useState<number | null>(1);
   const [lastHoveredImage, setLastHoveredImage] = useState<string | null>(
     steps[0].image
@@ -35,22 +34,19 @@ export default function OurClientele({}: Props) {
 
       <div className="w-full mt-5 lg:mt-10 lg:grid grid-cols-1 gap-x-10">
         {/* Steps List */}
-        <div className="col-span-1 relative h-full flex flex-col gap-4">
+        <div className="col-span-1 relative  flex flex-col gap-4">
           <div className="sticky flex justify-around gap-5 mb-10   items-center top-[4rem]">
             {steps.map(({ number, text, image }) => (
               <motion.div
                 key={number}
-                onMouseEnter={() => {
+                onClick={() => {
                   setActiveStep(number);
                   setLastHoveredImage(image);
                 }}
-                onMouseLeave={() => {
-                  if (activeStep === number) {
-                    setActiveStep(null);
-                  }
-                }}
-                className={`w-full duration-300 transition-all px-5 p-3 lg:p-3  rounded-full border-2  flex justify-around cursor-pointer ${
-                  activeStep === number ? "border-tertiary-600" : "border-zinc-400"
+                className={`w-full hover:scale-105 duration-300 transition-all px-5 p-3 lg:p-3  rounded-full border-2  flex justify-around cursor-pointer ${
+                  activeStep === number
+                    ? "border-white bg-[#2088ca] scale-105 text-white"
+                    : "border-zinc-400"
                 }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -59,7 +55,7 @@ export default function OurClientele({}: Props) {
               >
                 <h2
                   className={`font-semibold whitespace-nowrap text-[3.5vw] md:text-[3vw] lg:text-[1.2vw] leading-none duration-300 transition-colors ${
-                    activeStep === number ? "text-zinc-700" : "text-zinc-500 "
+                    activeStep === number ? "text-white" : "text-zinc-500 "
                   }`}
                 >
                   {text}
@@ -70,7 +66,7 @@ export default function OurClientele({}: Props) {
         </div>
 
         {/* Image Display */}
-        <div className="h-[50vh] relative overflow-hidden">
+        <div className="h-[60vh] overflow-auto relative">
           <AnimatePresence>
             <motion.div
               key={activeStep || lastHoveredImage}

@@ -2,7 +2,7 @@
 const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
     <main className="bg-white rounded-2xl  p-10">
-        <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer" onClick={closeDropdown} />
+        <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer w-8" onClick={closeDropdown} />
       <div>
         <p className="italic text-[14px] text-center w-[60%] mx-auto">
           We specialize in providing skilled professionals across industries

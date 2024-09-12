@@ -5,121 +5,127 @@ import gsap from "gsap";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { HoverEffect } from "../../ui/card-hover-effect";
-type Props = {};
 
 const sections: any = [
   {
     title: "Skilled Labor for Building and Infrastructure Projects",
     category: "Construction",
-    icon: "material-symbols-light:construction",
+    icon: "./public/icons/img1.png",
     images: [
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
+      "/public/oil/img1.png",
+      "/public/oil/img3.png",
+      "/public/oil/img4.png",
+      "/public/oil/img2.png",
+     
     ],
     description: "Need expert manpower to boost your business operations?",
   },
   {
-    title: "Electrical Services for Residential and Commercial",
-    category: "Electrical",
-    icon: "mdi:electricity-outline",
+    title: "Specialists for exploration, drilling, and maintenance.",
+    category: "Oil & Gas Industries",
+    icon: "./public/icons/img2.png",
+
     images: [
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
+      "/public/construction/img1.png",
+      "/public/construction/img3.png",
+      "/public/construction/img4.png",
+      "/public/construction/img2.png",
     ],
-    description: "Reliable electrical services to power up your projects.",
+    description: "Looking for skilled professionals to power your oil and gas projects?",
   },
   {
-    title: "Plumbing Solutions for Modern Buildings",
-    category: "Plumbing",
-    icon: "material-symbols:plumbing",
+    title: "Staff for hotels, restaurants, and guest services.",
+    category: "Hospitality Management",
+    icon: "./public/icons/img3.png",
+
     images: [
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
+      "/public/hospitality/img1.png",
+      "/public/hospitality/img3.png",
+      "/public/hospitality/img4.png",
+      "/public/hospitality/img2.png",
     ],
-    description: "Ensure efficient water management with expert plumbers.",
+    description: "Looking for skilled professionals to power your oil and gas projects?",
   },
   {
-    title: "Interior Design and Finishing",
-    category: "Interior Design",
-    icon: "mdi:design",
+    title: "Looking for dedicated staff to manage and maintain your facilities?",
+    category: "Facilities Management",
+    icon: "./public/icons/img4.png",
+
     images: [
-      "/public/hero-img/hero4.png",
-      "/public/hero-img/hero4.png",
-      "/public/hero-img/hero4.png",
-      "/public/hero-img/hero4.png",
+      "/public/facilities/img1.png",
+      "/public/facilities/img3.png",
+      "/public/facilities/img4.png",
+      "/public/facilities/img2.png",
     ],
-    description: "Creative interior solutions to make your space stand out.",
+    description: "Require talented staff to elevate your hospitality services?",
   },
   {
-    title: "Landscape Design and Maintenance",
-    category: "Landscaping",
-    icon: "lucide:land-plot",
+    title: "Drivers, operators, and logistics workforce.",
+    category: "Transportations",
+    icon: "./public/icons/img5.png",
     images: [
-      "/public/hero-img/hero5.png",
-      "/public/hero-img/hero5.png",
-      "/public/hero-img/hero5.png",
-      "/public/hero-img/hero5.png",
+      "/public/transport/img1.png",
+      "/public/transport/img3.png",
+      "/public/transport/img4.png",
+      "/public/transport/img2.png",
     ],
-    description: "Transform outdoor spaces into stunning landscapes.",
+    description: "Need reliable drivers and logistics experts for your transportation needs?",
   },
   {
-    title: "HVAC Systems Installation and Maintenance",
-    category: "HVAC",
-    icon: "material-symbols-light:hvac",
+    title: "Workers for assembly, production, and quality control.",
+    category: "Manufacturing",
+    icon: "./public/icons/img6.png",
+
     images: [
-      "/public/hero-img/hero6.png",
-      "/public/hero-img/hero6.png",
-      "/public/hero-img/hero6.png",
-      "/public/hero-img/hero6.png",
+      "/public/manufacture/img1.png",
+      "/public/manufacture/img3.png",
+      "/public/manufacture/img4.png",
+      "/public/manufacture/img2.png",
     ],
-    description: "Keep your environment comfortable with expert HVAC services.",
+    description: "Looking for skilled workers to streamline your manufacturing process?",
   },
   {
-    title: "Roofing and Waterproofing Services",
-    category: "Roofing",
-    icon: "material-symbols:roofing-outline",
+    title: "Field laborers, harvesters, and equipment operators.",
+    category: "Agricultural & Farmwork",
+    icon: "./public/icons/img7.png",
+
     images: [
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
-      "/public/hero-img/hero1.png",
+      "/public/agriculture/img1.png",
+      "/public/agriculture/img3.png",
+      "/public/agriculture/img4.png",
+      "/public/agriculture/img2.png",
     ],
-    description: "Durable roofing solutions for protection and longevity.",
+    description: "Need hardworking labor for your agricultural and farm operations?",
   },
   {
-    title: "Painting and Coating Solutions",
-    category: "Painting",
-    icon: "tabler:paint",
+    title: "Sales staff, cashiers, and stock management.",
+    category: "Retail",
+    icon: "./public/icons/img8.png",
     images: [
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
-      "/public/hero-img/hero2.png",
+      "/public/retail/img1.png",
+      "/public/retail/img3.png",
+      "/public/retail/img4.png",
+      "/public/retail/img2.png",
     ],
     description:
-      "Professional painting services to enhance your property's look.",
+      "Looking for experienced staff to enhance your retail operations?",
   },
   {
-    title: "Demolition and Site Preparation",
-    category: "Demolition",
-    icon: "game-icons:demolish",
+    title: "Technicians for electrical and mechanical systems.",
+    category: "Electro-mechanical Industries",
+    icon: "./public/icons/img9.png",
+
     images: [
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
-      "/public/hero-img/hero3.png",
+      "/public/industries/img1.png",
+      "/public/industries/img3.png",
+      "/public/industries/img4.png",
+      "/public/industries/img2.png",
     ],
-    description: "Safe and efficient demolition services for all projects.",
+    description: "Need skilled technicians for your electro-mechanical projects? ",
   },
 ];
 
-export default function ServicesMain({}: Props) {
+export default function ServicesMain() {
   const mainContainer = useRef(null);
   // GSAP Animation
   useGSAP(() => {
@@ -264,31 +270,33 @@ export default function ServicesMain({}: Props) {
                 key={index}
                 className={`w-full flex-grow rounded-xl flex gap-3 justify-between items-center p-4 title-card-${
                   index + 1
-                } ${index % 2 === 0 ? "bg-green-300" : "bg-orange-300"}`}
+                } ${index % 2 === 0 ? "bg-[#86efac]" : "bg-[#5da5d3]"}`}
               >
                 <div className="flex w-[80%] lg:w-auto flex-col justify-center flex-grow">
                   <p
-                    className={`hero font-medium h-auto overflow-hidden text-zinc-700 text-[3.5vw] mb-2 lg:mb-0 lg:text-[0.95vw] title-${
+                    className={`${
+                      index % 2 === 0 ? "text-black " : "text-white"
+                    } hero font-regular h-auto overflow-hidden text-[3.5vw] mb-2 lg:mb-[4px] lg:text-[1vw] title-${
                       index + 1
-                    }`}
+                    } `}
                   >
                     {section.title}
                   </p>
                   <div>
                     <button
-                      className={`px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.2vw] text-[3.5vw] lg:text-[0.8vw] font-semibold ${
-                        index % 2 === 0 ? "bg-green-200" : "bg-orange-200"
-                      } rounded-full  text-zinc-700 border-zinc-600`}
+                      className={`px-[5vw] lg:px-[1vw]  py-[2vw] lg:py-[0.5vw] text-[3.5vw] lg:text-[0.9vw] font-semibold ${
+                        index % 2 === 0 ? "bg-[#cffade] " : "bg-[#d5e8f4]"
+                      } rounded-lg  text-zinc-700 border-zinc-600`}
                     >
                       {section.category}
                     </button>
                   </div>
                 </div>
                 <div className="h-full flex justify-center items-center flex-grow">
-                  <Icon
-                    icon={section.icon}
+                  <img
+                    src={section.icon}
                     className="min-w-5 min-h-5 text-zinc-800"
-                  ></Icon>
+                  ></img>
                 </div>
               </div>
             ))}
@@ -299,14 +307,14 @@ export default function ServicesMain({}: Props) {
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
-                className={`absolute top-0 left-0 w-full h-full p-3 grid gap-3 grid-cols-2 auto-rows-fr images-${
+                className={`absolute object-center top-0 left-0 w-full h-full p-3 grid gap-3 grid-cols-2 auto-rows-fr images-${
                   index + 1
                 } ${index > 0 ? "opacity-0" : ""}`}
               >
                 {section.images.map((src: any, imgIndex: number) => (
                   <div
                     key={imgIndex}
-                    className={`relative overflow-hidden rounded-lg ${
+                    className={`relative overflow-hidden rounded-lg object-center ${
                       imgIndex % 4 === 0
                         ? "col-span-2 row-span-2"
                         : imgIndex % 3 === 0
@@ -317,7 +325,7 @@ export default function ServicesMain({}: Props) {
                     <img
                       src={src}
                       alt=""
-                      className="w-full h-full object-cover object-center rounded-lg transition-transform duration-300 hover:scale-105"
+                      className="w-full h-full object-center object-cover  rounded-lg transition-transform duration-300 hover:scale-105"
                     />
                     {/* Add subtle shadow for elevation */}
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-25"></div>
@@ -377,13 +385,13 @@ export default function ServicesMain({}: Props) {
            <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] p-[2px] rounded-2xl">
              <div
               key={index}
-              className="group h-full flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer  duration-300 w-full bg-white"
+              className="group h-full flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-2xl cursor-pointer  duration-300 w-full bg-white"
             >
               <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pb-3">
                 {service.title}
               </h3>
-              <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[1px] w-[10em]"></div>
-              <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
+              <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[0.1vw] group-hover:w-[15vw] ease-in-out duration-500 w-[7vw]"></div>
+              <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 h-[7vw]">
                 {service.description}
               </p>
             </div>

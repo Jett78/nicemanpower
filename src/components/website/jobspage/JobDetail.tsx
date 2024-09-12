@@ -2,10 +2,22 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
-type Props = {};
 
-export default function JobDetail({}: Props) {
+export default function JobDetail() {
   const [isOpenForm, setIsOpenForm] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
+    null
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = (index: number) => {
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentImageIndex(null);
+  };
   const handleOpenForm = () => {
     setIsOpenForm(true);
     document.body.style.overflowY = "hidden";
@@ -21,6 +33,17 @@ export default function JobDetail({}: Props) {
       transition={{ duration: 1 }}
       className="pt-[4rem]  lg:pt-[8rem]"
     >
+      <Link to="/jobs">
+        <div className="text-zinc-500 z-40 fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
+          <div className="overflow-hidden title flex justify-center items-center">
+            <Icon
+              icon="ic:outline-arrow-left"
+              className="w-[1.5rem] h-[1.5rem]"
+            />
+          </div>
+          <div className="font-medium">Back</div>
+        </div>
+      </Link>
       <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
         {/* top  */}
         <div className="flex flex-col gap-2 w-full">
@@ -118,11 +141,42 @@ export default function JobDetail({}: Props) {
                 <img
                   alt="company-logo"
                   src="/public/vacancy.png"
-                  className="w-full h-full object-center object-contain"
+                  className="cursor-pointer w-full h-full object-center object-contain"
+                  onClick={() => openModal(0)}
                 ></img>
               </div>
             </div>
           </div>
+
+          {/* Fullscreen Image Modal */}
+          <AnimatePresence>
+            {isModalOpen && currentImageIndex !== null && (
+              <motion.div
+                className="fixed inset-0 z-50 pt-[4rem] flex items-center justify-center bg-black bg-opacity-80"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={closeModal}
+              >
+                <div className="relative w-11/12 h-auto max-w-3xl">
+                  {/* <div className="absolute w-full flex justify-center items-center bottom-5 left-1/2 -translate-x-1/2">
+                <span className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] italic font-semibold text-zinc-100">
+                  {documentsData[currentImageIndex].name}
+                </span>
+              </div> */}
+                  <motion.img
+                    alt="company-logo"
+                    src="/public/vacancy.png"
+                    className="w-[30vw] mx-auto rounded-lg"
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0.8 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
 
           {/* detail text  */}
           <div className="flex flex-col gap-5 mt-5">
@@ -206,7 +260,7 @@ export default function JobDetail({}: Props) {
               to="/jobs"
               className="w-full absolute top-[10%] left-[10%] flex justify-start"
             >
-              <div className="text-zinc-100 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
+              {/* <div className="text-zinc-100 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
                 <div className="overflow-hidden title flex justify-center items-center">
                   <Icon
                     icon="ic:outline-arrow-left"
@@ -214,49 +268,179 @@ export default function JobDetail({}: Props) {
                   />
                 </div>
                 <div className="font-medium">Back</div>
-              </div>
+              </div> */}
             </Link>
             {/* form  */}
             <form
               action=""
-              className="py-5 relative bg-white p-5 rounded-3xl pt-[3rem] w-11/12 md:w-9/12 lg:w-5/12 max-w-3xl mt-5 grid grid-cols-2 gap-5"
+              className="py-5 relative bg-white p-5 rounded-3xl pt-[3rem] w-11/12 md:w-9/12 lg:w-8/12  mt-5 grid grid-cols-2 gap-5"
             >
-              <div
+              {/* <div
                 onClick={handleCloseForm}
                 className="absolute cursor-pointer hover:scale-95 duration-300 text-zinc-700 hover:text-zinc-900 right-5 top-5"
               >
                 <Icon icon="carbon:close-filled" className="w-7 h-7" />
-              </div>
+              </div> */}
+              <img
+                src="../public/cancelbtn.svg"
+                alt="cancel-btn"
+                className="absolute right-6 top-6 cursor-pointer w-8"
+                onClick={handleCloseForm}
+              />
+
               <div className="flex flex-col gap-2">
                 <label
-                  htmlFor="fullName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Full Name
+                  Full Name <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="fullName"
-                  name="fullName"
-                  placeholder="John Doe"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
+                  id="firstName"
+                  placeholder="Your Full Name"
+                  name="firstName"
+                  className="p-2 w-[25vw] text-sm py-2 lg:py-4 border-2 rounded-xl  border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label
-                  htmlFor="email"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Email
+                  Father's Name <span className="text-blue-500">*</span>
                 </label>
                 <input
-                  type="email"
+                  type="text"
+                  id="lastName"
+                  placeholder="Your Last Name"
+                  name="lastName"
+                  className="p-2 py-2 w-[25vw] text-sm  lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Passport Number<span className="text-blue-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Your Last Name"
+                  name="lastName"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Date of Birth<span className="text-blue-500">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="lastName"
+                  placeholder="Your Last Name"
+                  name="lastName"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Gender<span className="text-blue-500">*</span>
+                </label>
+                <select
+                  id="gender"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                >
+                  <option value="" disabled selected hidden className="">
+                    Gender
+                  </option>
+                  <option value="US">Male</option>
+                  <option value="CA">Female</option>
+                  <option value="FR">Other</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Marital Status<span className="text-blue-500">*</span>
+                </label>
+                <select
+                  id="maritial-status"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                >
+                  <option value="" disabled selected hidden className="">
+                    Maritial Status
+                  </option>
+                  <option value="US">Single</option>
+                  <option value="CA">Married</option>
+                  <option value="FR">Divorced</option>
+                </select>
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Mobile Number<span className="text-blue-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  placeholder="Your Last Name"
+                  name="lastName"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  required
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="countries"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Latest Qualification<span className="text-blue-500">*</span>
+                </label>
+                <select
+                  id="qualifications"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                >
+                  <option value="" disabled selected hidden className="">
+                    Your Latest Qualification
+                  </option>
+                  <option value="US">Bachelors</option>
+                  <option value="CA">Masters</option>
+                  <option value="FR">High School</option>
+                  <option value="DE">UnderGraduate</option>
+                </select>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="email"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                  Upload CV <span className="text-blue-500">*</span>
+                </label>
+                <input
+                  type="file"
                   id="email"
                   name="email"
-                  placeholder="john@example.com"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
+                  placeholder="Your Email"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -264,32 +448,16 @@ export default function JobDetail({}: Props) {
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="phone"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Phone
+                  Upload Passport Size Photo <span className="text-blue-500">*</span>
                 </label>
                 <input
-                  type="tel"
+                  type="file"
                   id="phone"
                   name="phone"
-                  placeholder="+977 **********"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
-                  required
-                />
-              </div>
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="address"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
-                >
-                  Address
-                </label>
-                <input
-                  type="text"
-                  id="address"
-                  name="address"
-                  placeholder="Kathmandu"
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
+                  placeholder="Your Phone Number"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -297,7 +465,7 @@ export default function JobDetail({}: Props) {
               <div className="col-span-2 flex flex-col gap-2">
                 <label
                   htmlFor="message"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[1vw]"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[1vw]"
                 >
                   Message
                 </label>
@@ -306,7 +474,7 @@ export default function JobDetail({}: Props) {
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 border-2 rounded-xl border-zinc-500 outline-none bg-transparent"
+                  className="p-2 py-4 w-[58vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
                   required
                 />
               </div>

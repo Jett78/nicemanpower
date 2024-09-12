@@ -1,9 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-type Props = {};
 
-export default function LicenseCertificates({}: Props) {
+export default function LicenseCertificates() {
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
     null
   );

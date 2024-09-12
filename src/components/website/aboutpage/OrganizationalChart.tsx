@@ -1,9 +1,8 @@
 import { useRef, useState } from "react";
 import { Icon } from "@iconify/react";
 
-type Props = {};
 
-export default function OrganizationalChart({}: Props) {
+export default function OrganizationalChart() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -36,7 +35,7 @@ export default function OrganizationalChart({}: Props) {
 
   return (
     <div className="py-[3rem] w-full">
-      <h1 className="text-[8vw] lg:text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw]   lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Organizational Chart
       </h1>
       <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 text-start lg:text-center">

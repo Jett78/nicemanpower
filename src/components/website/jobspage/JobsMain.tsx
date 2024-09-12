@@ -4,9 +4,8 @@ import jobData from "../../../jobs-data/JobsData";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-type Props = {};
 
-export default function JobsMain({}: Props) {
+export default function JobsMain() {
   const [showAll, setShowAll] = useState(false);
 
   const handleViewAllClick = () => {
