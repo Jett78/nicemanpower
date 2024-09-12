@@ -21,3 +21,8 @@
 .cursive {
   font-family: "Dancing Script", cursive;
 }
+
+@font-face{
+  font-family: "Hendrix";
+  src:url("/fonts/brhendrix.otf")
+}

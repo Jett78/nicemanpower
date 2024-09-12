@@ -6,7 +6,7 @@ import HomeServices from "./HomeServices";
 import Testimonials from "./Testimonials";
 import HomeHero from "./HomeHero";
 import CTA from "./cta";
-
+import JobsFeature from "./JobsFeature";
 type Props = {};
 
 export default function HomeMain({}: Props) {
@@ -16,6 +16,7 @@ export default function HomeMain({}: Props) {
       <HomeHero />
       <div className="w-11/12 lg:w-9/12 mx-auto">
         <HomeAbout />
+        <JobsFeature/>
         <FeatureJobs />
         <HowItWorks />
         <HomeServices />

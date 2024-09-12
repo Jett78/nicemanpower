@@ -1,6 +1,5 @@
-import React from "react";
 
-const Ctaform = ({closeDropdown}) => {
+const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
     <main className="bg-white rounded-2xl  p-10">
         <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer" onClick={closeDropdown} />
@@ -95,7 +94,7 @@ const Ctaform = ({closeDropdown}) => {
             id="message"
             name="message"
             placeholder="Your Message"
-            rows="4"
+            rows={4}
             className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />

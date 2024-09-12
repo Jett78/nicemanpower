@@ -1,14 +1,20 @@
 // import { Icon } from "@iconify/react/dist/iconify.js";
-import { Link } from "react-router-dom";
+import Ctaform from "./Ctaform";
+import {  useState } from "react";
 
-type Props = {};
+export default function HomeHero() {
+  const [active, Setactive] = useState(false);
+  // Overlay click handler
+  const closeDropdown = () => {
+    Setactive(false);
+  };
+  
 
-export default function HomeHero({}: Props) {
   return (
-    <div className="w-full   overflow-hidden h-[90vh]  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
+    <div className="w-full   overflow-hidden h-screen  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
       <div className="absolute top-0 left-0 w-full h-full   duration-300  overflow-hidden">
         <img
-          src="/public/hero-img/hero2.png"
+          src="/public/hero-img/hero8.png"
           alt=""
           className="w-full h-full brightness-[0.7] object-cover object-center"
         />
@@ -50,12 +56,19 @@ export default function HomeHero({}: Props) {
           </div>
         </div> */}
 
-        <h1 className="text-[9vw] lg:text-[3vw] relative   hero uppercase  font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
-          <span className="">
-            {/* Find Job <br /> You Deserve */}
-            Connecting You with the Right Talent, <br /> Every Time
-          </span>
-          {/* <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
+        <h1 className="text-[9vw] lg:text-[3vw] relative z-[10]    hero   font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
+          {/* Find Job <br /> You Deserve */}
+          Connecting You with the Right Talent, <br /> Every Time
+        </h1>
+
+        {/* paintbrush */}
+        <img
+          src="./public/brush.png"
+          alt="brush"
+          className="absolute right-80 top-20 z-[1] w-[20vw]"
+        />
+
+        {/* <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
             <img
               src="/public/hero-img/hero1.png"
               alt=""
@@ -69,8 +82,18 @@ export default function HomeHero({}: Props) {
               className="w-full h-full object-cover object-center"
             />
           </div> */}
-        </h1>
-        <p className="text-[3.5vw] lg:text-[1.2vw]  text-zinc-50 w-11/12 mx-auto  lg:w-5/12 text-center">
+           {/* --Dark overlay-- */}
+      {active && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 z-[150]"
+          onClick={closeDropdown}
+        ></div>
+      )}
+        <div className={`${active ? "fixed" : "hidden"} z-[200] fixed `}>
+          <Ctaform closeDropdown={closeDropdown}/>
+        </div>
+
+        <p className="text-[3.5vw] lg:text-[1.2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
           We are manpower recruiting agency. We are experts in this field and we
           know how to{" "}
           <span className="text-orange-500 italic">
@@ -78,18 +101,17 @@ export default function HomeHero({}: Props) {
           </span>{" "}
           all over the world.
         </p>
-        <div className="flex gap-5 mt-[3rem] justify-center items-center">
+        <div className="flex gap-5 mt-[1.5rem] justify-center items-center">
           {/* <Link to="">
             <button className="px-[2vw] py-[1vw] text-[1vw] font-semibold rounded-full text-tertiary-800 border border-tertiary-500">
               Contact
             </button>
           </Link> */}
-          <Link to="/contact">
-            <button 
-            className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+          <div>
+            <button  onClick={() => Setactive(!active)} className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               I need skilled talents
             </button>
-          </Link>
+          </div>
         </div>
       </div>
     </div>

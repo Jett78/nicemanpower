@@ -1,9 +1,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 
-type Props = {};
 
-export default function Testimonials({}: Props) {
+export default function Testimonials() {
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { HoverEffect } from "../../ui/card-hover-effect";
 type Props = {};
 
 const sections: any = [
@@ -199,7 +200,7 @@ export default function ServicesMain({}: Props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="py-[2rem] w-11/12 lg:w-8/12 pt-[4rem]  lg:pt-[8rem] mx-auto"
+      className="py-[2rem] w-11/12 lg:w-9/12 pt-[4rem]  lg:pt-[8rem] mx-auto"
     >
       <div className="mb-[5rem]">
         <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
@@ -212,7 +213,7 @@ export default function ServicesMain({}: Props) {
           development, and outsourcing.
         </h3>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -234,8 +235,11 @@ export default function ServicesMain({}: Props) {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
+      <div className="w-full mx-auto px-8">
+      <HoverEffect items={projects} />
+    </div>
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
@@ -370,24 +374,76 @@ export default function ServicesMain({}: Props) {
         </p> */}
         <div className="grid w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
           {processData.map((service, index) => (
-            <div
+           <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] p-[2px] rounded-2xl">
+             <div
               key={index}
-              className="group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-zinc-600"
+              className="group h-full flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer  duration-300 w-full bg-white"
             >
-              <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] border-b-2 border-zinc-400 pb-3">
+              <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pb-3">
                 {service.title}
               </h3>
+              <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[1px] w-[10em]"></div>
               <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
                 {service.description}
               </p>
             </div>
+           </div>
           ))}
         </div>
       </motion.div>
     </motion.div>
   );
 }
-
+const projects = [
+  {
+    id: 1,
+    icon: "carbon:search",
+    imgSrc: "/service-img/service-1.png",
+    title: "Permanent Staffing",
+    description:
+      "We match businesses with skilled professionals for long-term roles, aligning company culture with employee skills.",
+  },
+  {
+    id: 2,
+    icon: "mdi:tick-circle-outline",
+    imgSrc: "/service-img/service-2.png",
+    title: "Contract Staffing",
+    description:
+      "Offering flexible staffing solutions for project-based or temporary needs, helping businesses scale their workforce as required.",
+  },
+  {
+    id: 3,
+    icon: "ph:globe",
+    imgSrc: "/service-img/service-3.png",
+    title: "Executive Search",
+    description:
+      "Specialized recruitment for leadership positions, finding executives who align with company vision and goals.",
+  },
+  {
+    id: 4,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Skill Development & Training",
+    description:
+      "Providing training programs to enhance the skills of employees, ensuring they are equipped to meet industry demands.",
+  },
+  {
+    id: 5,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Outsourcing Solutions",
+    description:
+      "Managing various business processes to help companies focus on their core activities while we handle the rest.",
+  },
+  {
+    id: 6,
+    icon: "system-uicons:graph-increase",
+    imgSrc: "/service-img/service-4.png",
+    title: "Training and Development",
+    description:
+      "Providing training and workshops to improve employee skills and support career advancement.",
+  },
+];
 // const workData = [
 //   {
 //     title: "Skilled Labor for Building and Infrastructure Projects",
@@ -500,56 +556,56 @@ export default function ServicesMain({}: Props) {
 //   },
 // ];
 
-const servicesData = [
-  {
-    id: 1,
-    icon: "carbon:search",
-    imgSrc: "/service-img/service-1.png",
-    title: "Permanent Staffing",
-    description:
-      "We match businesses with skilled professionals for long-term roles, aligning company culture with employee skills.",
-  },
-  {
-    id: 2,
-    icon: "mdi:tick-circle-outline",
-    imgSrc: "/service-img/service-2.png",
-    title: "Contract Staffing",
-    description:
-      "Offering flexible staffing solutions for project-based or temporary needs, helping businesses scale their workforce as required.",
-  },
-  {
-    id: 3,
-    icon: "ph:globe",
-    imgSrc: "/service-img/service-3.png",
-    title: "Executive Search",
-    description:
-      "Specialized recruitment for leadership positions, finding executives who align with company vision and goals.",
-  },
-  {
-    id: 4,
-    icon: "system-uicons:graph-increase",
-    imgSrc: "/service-img/service-4.png",
-    title: "Skill Development & Training",
-    description:
-      "Providing training programs to enhance the skills of employees, ensuring they are equipped to meet industry demands.",
-  },
-  {
-    id: 5,
-    icon: "system-uicons:graph-increase",
-    imgSrc: "/service-img/service-4.png",
-    title: "Outsourcing Solutions",
-    description:
-      "Managing various business processes to help companies focus on their core activities while we handle the rest.",
-  },
-  {
-    id: 6,
-    icon: "system-uicons:graph-increase",
-    imgSrc: "/service-img/service-4.png",
-    title: "Training and Development",
-    description:
-      "Providing training and workshops to improve employee skills and support career advancement.",
-  },
-];
+// const servicesData = [
+//   {
+//     id: 1,
+//     icon: "carbon:search",
+//     imgSrc: "/service-img/service-1.png",
+//     title: "Permanent Staffing",
+//     description:
+//       "We match businesses with skilled professionals for long-term roles, aligning company culture with employee skills.",
+//   },
+//   {
+//     id: 2,
+//     icon: "mdi:tick-circle-outline",
+//     imgSrc: "/service-img/service-2.png",
+//     title: "Contract Staffing",
+//     description:
+//       "Offering flexible staffing solutions for project-based or temporary needs, helping businesses scale their workforce as required.",
+//   },
+//   {
+//     id: 3,
+//     icon: "ph:globe",
+//     imgSrc: "/service-img/service-3.png",
+//     title: "Executive Search",
+//     description:
+//       "Specialized recruitment for leadership positions, finding executives who align with company vision and goals.",
+//   },
+//   {
+//     id: 4,
+//     icon: "system-uicons:graph-increase",
+//     imgSrc: "/service-img/service-4.png",
+//     title: "Skill Development & Training",
+//     description:
+//       "Providing training programs to enhance the skills of employees, ensuring they are equipped to meet industry demands.",
+//   },
+//   {
+//     id: 5,
+//     icon: "system-uicons:graph-increase",
+//     imgSrc: "/service-img/service-4.png",
+//     title: "Outsourcing Solutions",
+//     description:
+//       "Managing various business processes to help companies focus on their core activities while we handle the rest.",
+//   },
+//   {
+//     id: 6,
+//     icon: "system-uicons:graph-increase",
+//     imgSrc: "/service-img/service-4.png",
+//     title: "Training and Development",
+//     description:
+//       "Providing training and workshops to improve employee skills and support career advancement.",
+//   },
+// ];
 
 const processData = [
   {
