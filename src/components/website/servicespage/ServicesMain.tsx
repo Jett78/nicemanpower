@@ -139,7 +139,7 @@ export default function ServicesMain() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: mainContainer.current,
-          markers: true,
+          // markers: true,
           start: "top top",
           end: "bottom -500%",
           pin: true,
@@ -289,7 +289,7 @@ export default function ServicesMain() {
                   </p>
                   <div>
                     <button
-                      className={`px-[5vw] lg:px-[1vw]  py-[2vw] lg:py-[0.5vw] text-[3.5vw] lg:text-[0.9vw] font-semibold ${
+                      className={`px-[5vw] lg:px-[1vw]  py-[2vw] lg:py-[0.5vw] whitespace-nowrap text-[3.5vw] lg:text-[0.9vw] font-semibold ${
                         index % 2 === 0 ? "bg-[#cffade] " : "bg-[#d5e8f4]"
                       } rounded-lg  text-zinc-700 border-zinc-600`}
                     >
@@ -669,29 +669,29 @@ const processData = [
     description:
       "To validate practical skills, candidates undergo thorough trade testing, allowing us to assess their hands-on capabilities and suitability for the specified roles.",
   },
-  {
-    title: "Screening & Short Listing",
-    description:
-      "Following practical testing, a secondary screening and shortlisting process refines the candidate pool, ensuring that only the most qualified individuals progress further.",
-  },
-  {
-    title: "Candidate Interview",
-    description:
-      "Continuing the assessment, additional interviews further refine the selection, allowing us to gain deeper insights into candidates’ suitability for the client’s requirements.",
-  },
-  {
-    title: "Practical Trade Testing",
-    description:
-      "Iterative practical trade testing ensures a comprehensive evaluation of candidates’ capabilities, guaranteeing that those chosen possess the necessary skills for success.",
-  },
-  {
-    title: "Screening & Short Listing",
-    description:
-      "An additional screening and shortlisting phase fine-tunes the selection, ensuring that the final pool of candidates aligns perfectly with the client’s expectations.",
-  },
-  {
-    title: "Candidate Interview",
-    description:
-      "Culminating in a final round of interviews, we meticulously assess candidates’ overall suitability, facilitating the selection of the best-matched individuals for the client’s requirements.",
-  },
+  // {
+  //   title: "Screening & Short Listing",
+  //   description:
+  //     "Following practical testing, a secondary screening and shortlisting process refines the candidate pool, ensuring that only the most qualified individuals progress further.",
+  // },
+  // {
+  //   title: "Candidate Interview",
+  //   description:
+  //     "Continuing the assessment, additional interviews further refine the selection, allowing us to gain deeper insights into candidates’ suitability for the client’s requirements.",
+  // },
+  // {
+  //   title: "Practical Trade Testing",
+  //   description:
+  //     "Iterative practical trade testing ensures a comprehensive evaluation of candidates’ capabilities, guaranteeing that those chosen possess the necessary skills for success.",
+  // },
+  // {
+  //   title: "Screening & Short Listing",
+  //   description:
+  //     "An additional screening and shortlisting phase fine-tunes the selection, ensuring that the final pool of candidates aligns perfectly with the client’s expectations.",
+  // },
+  // {
+  //   title: "Candidate Interview",
+  //   description:
+  //     "Culminating in a final round of interviews, we meticulously assess candidates’ overall suitability, facilitating the selection of the best-matched individuals for the client’s requirements.",
+  // },
 ];

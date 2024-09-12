@@ -56,18 +56,18 @@ export default function HomeHero() {
           </div>
         </div> */}
 
-        <h1 className="text-[9vw] lg:text-[3vw] relative z-[10]    hero   font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
+        <h1 className="text-[9vw] lg:text-[3vw] relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
           {/* Find Job <br /> You Deserve */}
-          Connecting You with the Right Talent, <br /> Every Time
-        </h1>
-
-        {/* paintbrush */}
+          Connecting You with the <span className="relative text-white z-[200]">Right Talent</span> {/* paintbrush */}
         <img
           src="./public/brush.png"
           alt="brush"
-          className="absolute right-80 top-20 z-[1] w-[20vw]"
+          className="absolute -top-4 right-0 z-[1] w-[21vw] h-[5vw]"
         />
+, <br /> Every Time
+        </h1>
 
+       
         {/* <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
             <img
               src="/public/hero-img/hero1.png"

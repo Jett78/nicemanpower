@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-type Props = {};
 
-export default function HomeAbout({}: Props) {
+export default function HomeAbout() {
   return (
     <div className="py-[2rem]  w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
       {/* experience  */}

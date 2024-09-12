@@ -29,20 +29,15 @@ export default function Footer() {
                   Samakhusi Town Planning, Kathmandu, Nepal.
                 </h1>
 
-                <div className="flex mt-2 gap-3 items-center text-zinc-700  duration-300">
-                  <Icon
-                    icon="ic:baseline-facebook"
-                    className="w-6 h-6 hover:scale-95 duration-300 hover:text-zinc-900"
-                  />
-                  <Icon
-                    icon="ri:instagram-fill"
-                    className="w-6 h-6 hover:scale-95 duration-300 hover:text-zinc-900"
-                  />
-                  <Icon
-                    icon="ri:twitter-fill"
-                    className="w-6 h-6 hover:scale-95 duration-300 hover:text-zinc-900"
-                  />
-                </div>
+                <div className="flex gap-4 items-center text-[1.5vw]">
+              <Icon icon="logos:facebook" />
+              <Icon
+                icon="fa6-brands:square-x-twitter"
+                style={{ color: "black" }}
+              />
+              <Icon icon="skill-icons:instagram" />
+              <Icon icon="devicon:linkedin" />
+            </div>
               </div>
 
               <div className="w-full flex flex-col gap-2">

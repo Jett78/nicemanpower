@@ -53,9 +53,14 @@ export default function Contact() {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Social
             </span>
-            <div className="flex gap-2 items-center">
-              <Icon icon="ic:baseline-facebook" className="w-6 h-6" />
-              <Icon icon="ri:instagram-fill" className="w-6 h-6" />
+            <div className="flex gap-4 items-center text-[2vw]">
+              <Icon icon="logos:facebook" />
+              <Icon
+                icon="fa6-brands:square-x-twitter"
+                style={{ color: "black" }}
+              />
+              <Icon icon="skill-icons:instagram" />
+              <Icon icon="devicon:linkedin" />
             </div>
           </div>
         </div>
