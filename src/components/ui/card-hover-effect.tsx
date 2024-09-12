@@ -63,14 +63,19 @@ export const HoverEffect = ({
 export const Card = ({
   className,
   children,
+  isHovered,
+
 }: {
   className?: string;
   children: React.ReactNode;
+  isHovered?: boolean;
+
 }) => {
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-transparent border-zinc-600 border relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-transparent  relative z-20",
+        isHovered ? "border border-white" : "border-2",
         className
       )}
     >
