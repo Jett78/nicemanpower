@@ -41,7 +41,7 @@ tl.to(".imgrotate",{
           help you build the perfect team to drive your business forward.
         </p>
         
-            <button  onClick={() => Setactive(!active)} className="mt-[4em] px-[4vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3vw] lg:text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
+            <button  onClick={() => Setactive(!active)} className="mt-[1.5em] px-[4vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3vw] lg:text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
               Get in Touch Today
             </button>
       </section>

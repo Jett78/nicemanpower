@@ -27,7 +27,7 @@ export default function Testimonials() {
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 4000,
     arrows: false,
     // pauseOnHover: false,
     responsive: [
@@ -101,15 +101,15 @@ export default function Testimonials() {
         <div className="flex text-4xl items-center gap-4 absolute left-1/2 transform -translate-x-1/2 -bottom-20 mt-4">
           <button
             onClick={handlePrev}
-            className="cursor-pointer outline-none border rounded-full bg-white active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
+            className="cursor-pointer outline-none border rounded-full bg-[#2088ca]  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
           >
-            <Icon icon="iconamoon:arrow-left-2" style={{ color: "black" }} />
+            <Icon icon="iconamoon:arrow-left-2" style={{ color: "white" }} />
           </button>
           <button
             onClick={handleNext}
-            className="cursor-pointer outline-none border rounded-full bg-white  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
+            className="cursor-pointer outline-none border rounded-full bg-[#2088ca]  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
           >
-            <Icon icon="iconamoon:arrow-right-2" style={{ color: "black" }} />
+            <Icon icon="iconamoon:arrow-right-2" style={{ color: "white" }} />
           </button>
         </div>
       </div>

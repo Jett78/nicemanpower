@@ -69,6 +69,15 @@ export default function JobDetail() {
                   key={index}
                   className="grid grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
                 >
+                  <div className="flex justify-center items-center gap-[6px]">
+                    {/* <Icon
+                      className="w-4 h-4 object-cover object-center text-green-500"
+                    ></Icon> */}
+                    <Icon  className=" text-[1.2em] object-cover object-center text-green-500" icon="carbon:location-company"  style={{color: "[#f4f4f4]"}} />
+                    <span className="text-sm font-medium text-zinc-700">
+                      {job.companyName}
+                    </span>
+                  </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
@@ -80,7 +89,7 @@ export default function JobDetail() {
                   </div>
                   <div className="flex justify-center items-center gap-2">
                     <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
+                      className="text-[0.8em] ml-1 object-cover object-center text-green-500"
                       icon={job.icons.date}
                     ></Icon>
                     <span className="text-sm font-medium text-zinc-700">
@@ -281,7 +290,7 @@ export default function JobDetail() {
             {/* form  */}
             <form
               action=""
-              className="py-5 relative bg-white p-5 rounded-3xl pt-[3rem] w-11/12 md:w-9/12 lg:w-8/12  mt-5 grid grid-cols-2 gap-5"
+              className="py-5 w-[60vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
             >
               {/* <div
                 onClick={handleCloseForm}
@@ -325,7 +334,7 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 py-2 w-[25vw] text-sm  lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 w-[25vw] h-[3vw] text-sm  lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -341,7 +350,7 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -357,13 +366,13 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
 
               {/* -----gender---- */}
-              <div className="relative w-[25vw]">
+              <div className="relative w-[25vw] ">
                 <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -372,7 +381,7 @@ export default function JobDetail() {
                 </label>
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer  h-[3vw]  lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option value="" disabled selected hidden>
                     Gender
@@ -398,7 +407,7 @@ export default function JobDetail() {
                 </div>
               </div>
 
-              <div className="relative w-[25vw]">
+              <div className="relative w-[25vw] ">
                 <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -407,7 +416,7 @@ export default function JobDetail() {
                 </label>
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer  h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option value="" disabled selected hidden>
                     Maritial Status
@@ -444,12 +453,12 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
 
-              <div className="relative w-[25vw]">
+              <div className="relative w-[25vw] ">
                 <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -458,7 +467,7 @@ export default function JobDetail() {
                 </label>
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer  h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option value="" disabled selected hidden>
                     Qualifications
@@ -485,7 +494,7 @@ export default function JobDetail() {
                 </div>
               </div>
 
-              <div className="w-[25vw] ">
+              <div className="w-[25vw]  h-[3vw]">
               <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -496,11 +505,9 @@ export default function JobDetail() {
                   type="file"
                   className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
-                <p className="text-xs text-gray-400 mt-2">
-                  PNG, JPG SVG, WEBP, and GIF are Allowed.
-                </p>
+               
               </div>
-              <div className="w-[25vw] ">
+              <div className="w-[25vw]  h-[3vw] ">
               <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -511,9 +518,7 @@ export default function JobDetail() {
                   type="file"
                   className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
-                <p className="text-xs text-gray-400 mt-2">
-                  PNG, JPG SVG, WEBP, and GIF are Allowed.
-                </p>
+               
               </div>
 
 
@@ -529,7 +534,7 @@ export default function JobDetail() {
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 w-[58vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
+                  className="p-2 py-4 w-[55vw]  h-[5vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
                   required
                 />
               </div>

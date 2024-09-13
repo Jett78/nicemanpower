@@ -134,7 +134,7 @@ export default function JobsMain() {
             
             className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[4vw] lg:text-[1vw] font-semibold  rounded-full text-blue-500 duration-300"
           >
-            View All Jobs
+            View more Jobs
             <Icon
               icon="lets-icons:arrow-right-long-light"
               className="w-5 group-hover:translate-x-2 duration-300"
