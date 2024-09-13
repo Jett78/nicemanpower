@@ -3,11 +3,11 @@ import { motion} from "framer-motion";
 
 
 const steps = [
-  { number: 1, text: "Bahrain", image: "/public/client/bahrain.png" },
-  { number: 2, text: "UAE", image: "/public/client/uae.png" },
-  { number: 3, text: "Saudi Arabia", image: "public/client/saudi.png" },
-  { number: 4, text: "Qatar", image: "/public/client/quatar.png" },
-  { number: 5, text: "Malaysia", image: "/public/client/malaysia.png" },
+  { number: 1, text: "Bahrain", image: "/public/client/Bahrain.png" },
+  { number: 2, text: "UAE", image: "/public/client/Uae.png" },
+  { number: 3, text: "Saudi Arabia", image: "public/client/Saudi.png" },
+  { number: 4, text: "Qatar", image: "/public/client/Qatar.png" },
+  { number: 5, text: "Malaysia", image: "/public/client/Malaysia.png" },
 ];
 
 export default function OurClientele() {
@@ -27,7 +27,7 @@ export default function OurClientele() {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Clientele
       </h1>
-      <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
+      <p className=" py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
         We have already worked with 200+ clients all over the world and they are
         pretty satisfied with our work.
       </p>
@@ -89,7 +89,7 @@ export default function OurClientele() {
           </AnimatePresence>
         </div> */}
 
-        <div className="h-[50vh] overflow-y-scroll cursor-pointer">
+        <div className="h-[50vh] overflow-y-scroll overflow-auto cursor-pointer">
         <img
                 src={
                   steps.find((step) => step.number === activeStep)?.image ||

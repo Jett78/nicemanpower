@@ -11,7 +11,7 @@ export default function CoreValues({}: Props) {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Core Values
       </h1>
-      <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
+      <p className="py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
         Discover the principles and standards that drive our commitment to
         excellence, integrity, and innovation in everything we do.
       </p>

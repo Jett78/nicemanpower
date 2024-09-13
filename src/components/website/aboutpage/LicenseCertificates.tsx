@@ -33,11 +33,11 @@ export default function LicenseCertificates() {
     }
   };
   return (
-    <div className="w-full py-[2rem]">
+    <div className="w-full py-[4rem]">
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         License & Certificates
       </h1>
-      <p className="text-[3.5vw] lg:text-[1.2vw] lg:text-center text-zinc-700 lg:w-8/12 mx-auto">
+      <p className="py-4 text-[3.5vw] lg:text-[1.2vw] lg:text-center text-zinc-700 lg:w-8/12 mx-auto">
         Verify our credentials and industry certifications ensuring quality and
         compliance.
       </p>
