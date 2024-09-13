@@ -73,7 +73,11 @@ export default function JobDetail() {
                     {/* <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                     ></Icon> */}
-                    <Icon  className=" text-[1.2em] object-cover object-center text-green-500" icon="carbon:location-company"  style={{color: "[#f4f4f4]"}} />
+                    <Icon
+                      className=" text-[1.2em] object-cover object-center text-green-500"
+                      icon="carbon:location-company"
+                      style={{ color: "[#f4f4f4]" }}
+                    />
                     <span className="text-sm font-medium text-zinc-700">
                       {job.companyName}
                     </span>
@@ -305,7 +309,7 @@ export default function JobDetail() {
                 onClick={handleCloseForm}
               />
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="firstName"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -322,7 +326,7 @@ export default function JobDetail() {
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="lastName"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -332,13 +336,13 @@ export default function JobDetail() {
                 <input
                   type="text"
                   id="lastName"
-                  placeholder="Your Last Name"
+                  placeholder="Your Father's Name"
                   name="lastName"
                   className="p-2 py-2 w-[25vw] h-[3vw] text-sm  lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="lastName"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -348,13 +352,13 @@ export default function JobDetail() {
                 <input
                   type="text"
                   id="lastName"
-                  placeholder="Your Last Name"
+                  placeholder="Your Passport Number"
                   name="lastName"
                   className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="lastName"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -372,13 +376,14 @@ export default function JobDetail() {
               </div>
 
               {/* -----gender---- */}
-              <div className="relative w-[25vw] ">
+              <div className="relative w-[25vw]">
                 <label
                   htmlFor="gender"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  className="font-medium  text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
                   Gender<span className="text-blue-500">*</span>
                 </label>
+
                 <select
                   id="gender"
                   className="p-2 py-2 cursor-pointer  h-[3vw]  lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
@@ -407,25 +412,30 @@ export default function JobDetail() {
                 </div>
               </div>
 
-              <div className="relative w-[25vw] ">
+              <div className="relative w-[25vw]">
                 <label
-                  htmlFor="gender"
+                  htmlFor="maritalStatus"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Maritial Status<span className="text-blue-500">*</span>
+                  Marital Status<span className="text-blue-500">*</span>
                 </label>
                 <select
-                  id="gender"
-                  className="p-2 py-2 cursor-pointer  h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  id="maritalStatus"
+                  className="p-2 py-2 cursor-pointer h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
-                  <option value="" disabled selected hidden>
-                    Maritial Status
+                  <option
+                    value=""
+                    disabled
+                    selected
+                    hidden
+                    className="text-gray-500"
+                  >
+                    Marital Status
                   </option>
-                  <option value="Male">Single</option>
-                  <option value="Female">Married</option>
-                  <option value="Other">Divorced</option>
+                  <option value="Single">Single</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorced">Divorced</option>
                 </select>
-
                 <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -441,7 +451,8 @@ export default function JobDetail() {
                   </svg>
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
+
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="lastName"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
@@ -451,7 +462,7 @@ export default function JobDetail() {
                 <input
                   type="text"
                   id="lastName"
-                  placeholder="Your Last Name"
+                  placeholder="Your Mobile Number"
                   name="lastName"
                   className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
@@ -495,7 +506,7 @@ export default function JobDetail() {
               </div>
 
               <div className="w-[25vw]  h-[3vw]">
-              <label
+                <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
@@ -505,24 +516,22 @@ export default function JobDetail() {
                   type="file"
                   className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
-               
               </div>
               <div className="w-[25vw]  h-[3vw] ">
-              <label
+                <label
                   htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Upload Passport Size Photo<span className="text-blue-500">*</span>
+                  Upload Passport Size Photo
+                  <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
                   className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
-               
               </div>
 
-
-              <div className="col-span-2 flex flex-col gap-2">
+              <div className="col-span-2 mt-4 flex flex-col gap-2">
                 <label
                   htmlFor="message"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[1vw]"

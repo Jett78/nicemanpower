@@ -98,7 +98,7 @@ export default function Testimonials() {
         <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-zinc-50 to-transparent z-10"></div>
         <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-zinc-50 to-transparent z-10"></div>
 
-        <div className="flex text-4xl items-center gap-4 absolute left-1/2 transform -translate-x-1/2 -bottom-20 mt-4">
+        <div className="flex text-2xl items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -bottom-20 mt-4">
           <button
             onClick={handlePrev}
             className="cursor-pointer outline-none border rounded-full bg-[#2088ca]  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"

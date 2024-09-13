@@ -1,8 +1,14 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
+  const location = useLocation()
+  const isActive = (href: string) => {
+    return (
+      location.pathname === href || location.pathname.startsWith(`${href}/`)
+    );
+  };
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -30,14 +36,16 @@ export default function Footer() {
                 </h1>
 
                 <div className="flex gap-4 items-center text-[1.5vw]">
-              <Icon icon="logos:facebook" />
-              <Icon
-                icon="fa6-brands:square-x-twitter"
-                style={{ color: "black" }}
-              />
-              <Icon icon="skill-icons:instagram" />
-              <Icon icon="devicon:linkedin" />
-            </div>
+                  <Link to="https://www.facebook.com/profile.php?id=61563009514672">
+                    <Icon icon="logos:facebook" />
+                  </Link>
+                  <Icon
+                    icon="fa6-brands:square-x-twitter"
+                    style={{ color: "black" }}
+                  />
+                  <Icon icon="skill-icons:instagram" />
+                  <Icon icon="devicon:linkedin" />
+                </div>
               </div>
 
               <div className="w-full flex flex-col gap-2">
@@ -92,24 +100,13 @@ export default function Footer() {
           />
 
           <div className="flex w-full text-nowrap  text-[3vw] md:text-[2.5vw] lg:text-[0.9vw] text-tertiary-500 font-semibold gap-5 justify-end items-center">
-            <Link to="/" className="hover:text-secondary-500">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-secondary-500">
-              About
-            </Link>
-            <Link to="/services" className="hover:text-secondary-500">
-              Services
-            </Link>
-            <Link to="/blogs" className="hover:text-secondary-500">
-              Blogs
-            </Link>
-            <Link to="/contact" className="hover:text-secondary-500">
-              Contact
-            </Link>
-            <Link to="/jobs" className="hover:text-secondary-500">
-              Find Jobs
-            </Link>
+          {navItems.map((item,index) => (
+            <div key={index} >
+                  <Link to={item.href}  className={`transition-all hover:text-green-500 font-medium duration-300 ${
+                    isActive(item.href) ? "text-green-500" : "text-tertiary-700 "
+                  }`}>{item.label}</Link>
+            </div>
+          ))}
           </div>
 
           {/* <span className="text-[2.6vw] flex lg:justify-end md:text-[2.5vw] lg:text-[1vw] text-tertiary-700">
@@ -121,3 +118,12 @@ export default function Footer() {
     </motion.div>
   );
 }
+
+
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/blogs", label: "Blogs" },
+  { href: "/jobs", label: "Jobs" },
+];

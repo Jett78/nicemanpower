@@ -26,7 +26,7 @@ const JobsFeature = () => {
     });
 
 tl.to(".imgrotate",{
-  rotateZ:"20deg",
+  rotateZ:"16deg",
 })
   }, []);
 
@@ -56,7 +56,7 @@ tl.to(".imgrotate",{
     {active && (
         <>
           <div
-            className="fixed inset-0 bg-black bg-opacity-70 z-[150]"
+            className="fixed inset-0 bg-black bg-opacity-85 z-[150]"
             onClick={closeDropdown}
           ></div>
           <div className="fixed z-[200] inset-0 flex justify-center items-center">

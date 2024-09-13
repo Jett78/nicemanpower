@@ -26,6 +26,10 @@ export default function Navbar() {
     );
   };
 
+
+
+
+
   useEffect(() => {
     controls.start({
       y: scrollingUp ? 0 : -80,

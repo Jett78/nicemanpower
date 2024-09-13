@@ -6,12 +6,10 @@ export default function OurTeam({}: Props) {
   return (
     <div className="w-full py-[2rem]">
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
-        Our Team
+        Our Leaders
       </h1>
-      <p className="text-[3.5vw] lg:text-[1.2vw]  text-zinc-700 w-full lg:w-8/12 mx-auto">
-        We are what we are today is only because of our dedicated team. Let us
-        introduce you our team who makes it possible for you to get the skilled
-        manpower you need.
+      <p className="text-[3.5vw] lg:text-[1.2vw] text-center  text-zinc-700 w-full lg:w-[55%] mx-auto">
+      Meet our versatile leaders who have established our name in the modern competetive world
       </p>
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5 lg:mt-10 gap-x-3 lg:gap-x-5 gap-y-4">
         {teamMembers.map((member, index) => (
@@ -73,24 +71,24 @@ const teamMembers = [
   {
     name: "Nirmal GC",
     position: "Ceo",
-    imageSrc: "/public/team/ceo.png",
+    imageSrc: "/public/team/frame1.png",
     socials: "icon", // You can replace this with actual social media icons
   },
   {
     name: "Bandana Koirala",
     position: "Managing Director",
+    imageSrc: "/public/team/frame2.png",
+    socials: "icon", // Replace with actual icons
+  },
+  {
+    name: "Ranjita Tamang",
+    position: "Admin Manager",
     imageSrc: "/public/team/ceo.png",
     socials: "icon", // Replace with actual icons
   },
   {
-    name: "Sanam Manandhar",
-    position: "HR Manager",
-    imageSrc: "/public/team/ceo.png",
-    socials: "icon", // Replace with actual icons
-  },
-  {
-    name: "Niruta Thapa",
-    position: "Office Secretary",
+    name: "Sushmita Rijal",
+    position: "Marketting Manager",
     imageSrc: "/public/team/ceo.png",
     socials: "icon", // Replace with actual icons
   },

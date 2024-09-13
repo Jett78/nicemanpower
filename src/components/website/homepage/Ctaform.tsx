@@ -1,20 +1,20 @@
 
 const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
-    <main className="bg-white rounded-2xl  p-10 relative">
+    <main className="bg-white rounded-2xl  p-10 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  w-[50vw] h-[40vw] mx-auto">
         <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer w-8" onClick={closeDropdown} />
       <div>
-        <p className="italic text-[14px] text-center w-[60%] mx-auto">
+        <p className="italic text-[0.9vw] text-center w-[90%] mx-auto">
           We specialize in providing skilled professionals across industries
           like construction, oil and gas, hospitality, and more, we’re here to
-          help you find the right talent.ँ
+          help you find the right talent.
         </p>
-        <h3 className="font-medium text-[20px] text-center py-4 ">
+        <h3 className="font-medium text-[1.2vw] text-center py-4 ">
           Contact us today to access top talent for your business needs.
         </h3>
-        <div className="w-[50em] bg-[#2088CA] mx-auto h-[1.2px]"> </div>
+        <div className="w-[25em] bg-[#2088CA] mx-auto h-[1.2px]"> </div>
       </div>
-      <form action="" className="col-span-3  py-5 mt-5 grid grid-cols-2 gap-5 gap-x-24">
+      <form action="" className="col-span-3 h-[28vw] py-5 mt-5 grid grid-cols-2 gap-5 gap-x-14">
         <div className="flex flex-col gap-2">
           <label
             htmlFor="firstName"
@@ -27,7 +27,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             id="firstName"
             placeholder="Your First Name"
             name="firstName"
-            className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
@@ -44,7 +44,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             id="lastName"
             placeholder="Your Last Name"
             name="lastName"
-            className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 text-sm lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
@@ -61,7 +61,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             id="email"
             name="email"
             placeholder="Your Email"
-            className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 text-sm  lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
@@ -78,7 +78,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             id="phone"
             name="phone"
             placeholder="Your Phone Number"
-            className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 text-sm lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
@@ -95,7 +95,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             name="message"
             placeholder="Your Message"
             rows={4}
-            className="p-2 py-2 lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 text-sm  lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>

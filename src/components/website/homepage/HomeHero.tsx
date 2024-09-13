@@ -1,6 +1,6 @@
 // import { Icon } from "@iconify/react/dist/iconify.js";
 import Ctaform from "./Ctaform";
-import {  useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function HomeHero() {
   const [active, Setactive] = useState(false);
@@ -8,7 +8,14 @@ export default function HomeHero() {
   const closeDropdown = () => {
     Setactive(false);
   };
-  
+
+  useEffect(() => {
+    if (active) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [active]);
 
   return (
     <div className="w-full   overflow-hidden h-screen  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
@@ -58,16 +65,17 @@ export default function HomeHero() {
 
         <h1 className="text-[9vw] lg:text-[3vw] relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
           {/* Find Job <br /> You Deserve */}
-          Connecting You with the <span className="relative text-white z-[200]">Right Talent</span> {/* paintbrush */}
-        <img
-          src="./public/brush.png"
-          alt="brush"
-          className="absolute -top-4 right-0 z-[1] w-[21vw] h-[5vw]"
-        />
-, <br /> Every Time
+          Connecting You with the{" "}
+          <span className="relative text-white z-[200]">Right Talent</span>{" "}
+          {/* paintbrush */}
+          <img
+            src="./public/brush.png"
+            alt="brush"
+            className="absolute -top-4 right-0 z-[1] w-[21vw] h-[5vw]"
+          />
+          , <br /> Every Time
         </h1>
 
-       
         {/* <div className="absolute top-0 right-[100%] w-[15vw] h-[22vw] hover:scale-95 duration-300 -translate-x-10 rotate-2 rounded-3xl overflow-hidden">
             <img
               src="/public/hero-img/hero1.png"
@@ -82,15 +90,15 @@ export default function HomeHero() {
               className="w-full h-full object-cover object-center"
             />
           </div> */}
-           {/* --Dark overlay-- */}
-      {active && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 z-[150]"
-          onClick={closeDropdown}
-        ></div>
-      )}
+        {/* --Dark overlay-- */}
+        {active && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-85 z-[150]"
+            onClick={closeDropdown}
+          ></div>
+        )}
         <div className={`${active ? "fixed" : "hidden"} z-[200] fixed `}>
-          <Ctaform closeDropdown={closeDropdown}/>
+          <Ctaform closeDropdown={closeDropdown} />
         </div>
 
         <p className="text-[3.5vw] lg:text-[1.2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
@@ -108,7 +116,10 @@ export default function HomeHero() {
             </button>
           </Link> */}
           <div>
-            <button  onClick={() => Setactive(!active)} className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+            <button
+              onClick={() => Setactive(!active)}
+              className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+            >
               I need skilled talents
             </button>
           </div>
