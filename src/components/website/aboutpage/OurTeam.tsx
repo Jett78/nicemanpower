@@ -15,13 +15,13 @@ export default function OurTeam({}: Props) {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="flex text-zinc-800   cursor-pointer hover:border-tertiary-700 duration-300 w-full  border-2 border-tertiary-700 flex-col p-2 lg:p-10 rounded-xl gap-1"
+            className="flex text-zinc-800   cursor-pointer hover:border-tertiary-700 duration-300 w-full  border-2 border-tertiary-700 flex-col p-2 lg:p-8 rounded-xl gap-1"
           >
             {/* Team member image */}
             <img
               src={member.imageSrc}
               alt={`${member.name}-img`}
-              className="rounded-full border-white border-2 w-[5rem] h-[5rem] lg:w-[8rem] lg:h-[8rem] object-cover object-center"
+              className="rounded-full border-white border-2 w-[5rem] h-[5rem] lg:w-[8rem] lg:h-[8rem] -mt-2 object-cover object-center"
             />
 
             {/* Name */}
@@ -83,13 +83,13 @@ const teamMembers = [
   {
     name: "Ranjita Tamang",
     position: "Admin Manager",
-    imageSrc: "/public/team/ceo.png",
+    imageSrc: "/public/team/frame3.png",
     socials: "icon", // Replace with actual icons
   },
   {
     name: "Sushmita Rijal",
     position: "Marketting Manager",
-    imageSrc: "/public/team/ceo.png",
+    imageSrc: "/public/team/frame4.png",
     socials: "icon", // Replace with actual icons
   },
   // Add more team members as needed
