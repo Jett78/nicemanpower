@@ -58,7 +58,7 @@ export default function AboutMain() {
         <h1 className="text-[3vw] lg:text-[1vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-500  leading-none hero">
           {`Chairman's Message`}
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-5 mt-2  gap-x-5">
+        <div className="grid grid-cols-1 lg:grid-cols-5 mt-2  ">
           <div className="lg:col-span-3 flex flex-col gap-2">
             {/* name  */}
             <h2 className="font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pointer-events-none">
@@ -91,11 +91,11 @@ export default function AboutMain() {
           </div>
 
           {/* charman img */}
-          <div className="w-full overflow-hidden relative lg:col-span-2 h-full">
+          <div className="w-full overflow-hidden rounded-full relative p-2 lg:col-span-2 h-full">
             <img
               src="/public/chairman.png"
               alt="ceo-img"
-              className="scale-105 h-full object-cover object-center"
+              className="scale-90 h-full object-cover"
             ></img>
           </div>
         </div>

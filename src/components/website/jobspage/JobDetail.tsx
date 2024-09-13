@@ -174,6 +174,14 @@ export default function JobDetail() {
                     transition={{ duration: 0.3 }}
                   />
                 </div>
+                <div className="absolute top-10 right-20" onClick={closeModal}>
+                  <img
+                    src="../public/cancelbtn.svg"
+                    alt="cancel-btn"
+                    className="cursor-pointer"
+                    onClick={closeModal}
+                  />
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
@@ -353,43 +361,76 @@ export default function JobDetail() {
                   required
                 />
               </div>
-              <div className="flex flex-col gap-2">
+
+              {/* -----gender---- */}
+              <div className="relative w-[25vw]">
                 <label
-                  htmlFor="lastName"
+                  htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
                   Gender<span className="text-blue-500">*</span>
                 </label>
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
-                  <option value="" disabled selected hidden className="">
+                  <option value="" disabled selected hidden>
                     Gender
                   </option>
-                  <option value="US">Male</option>
-                  <option value="CA">Female</option>
-                  <option value="FR">Other</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
+
+                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div className="flex flex-col gap-2">
+
+              <div className="relative w-[25vw]">
                 <label
-                  htmlFor="lastName"
+                  htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Marital Status<span className="text-blue-500">*</span>
+                  Maritial Status<span className="text-blue-500">*</span>
                 </label>
                 <select
-                  id="maritial-status"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  id="gender"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
-                  <option value="" disabled selected hidden className="">
+                  <option value="" disabled selected hidden>
                     Maritial Status
                   </option>
-                  <option value="US">Single</option>
-                  <option value="CA">Married</option>
-                  <option value="FR">Divorced</option>
+                  <option value="Male">Single</option>
+                  <option value="Female">Married</option>
+                  <option value="Other">Divorced</option>
                 </select>
+
+                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
               <div className="flex flex-col gap-2">
                 <label
@@ -407,60 +448,74 @@ export default function JobDetail() {
                   required
                 />
               </div>
-              <div className="flex flex-col gap-2">
+
+              <div className="relative w-[25vw]">
                 <label
-                  htmlFor="countries"
+                  htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Latest Qualification<span className="text-blue-500">*</span>
+                  Qulaifications<span className="text-blue-500">*</span>
                 </label>
                 <select
-                  id="qualifications"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-[25vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  id="gender"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
-                  <option value="" disabled selected hidden className="">
-                    Your Latest Qualification
+                  <option value="" disabled selected hidden>
+                    Qualifications
                   </option>
-                  <option value="US">Bachelors</option>
-                  <option value="CA">Masters</option>
-                  <option value="FR">High School</option>
-                  <option value="DE">UnderGraduate</option>
+                  <option value="Male">+2</option>
+                  <option value="Female">Bachelor</option>
+                  <option value="Other">Masters</option>
+                  <option value="Other">None</option>
                 </select>
+
+                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 text-blue-500"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
               </div>
 
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="email"
+              <div className="w-[25vw] ">
+              <label
+                  htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Upload CV <span className="text-blue-500">*</span>
+                  Upload File<span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
-                  required
+                  className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
+                <p className="text-xs text-gray-400 mt-2">
+                  PNG, JPG SVG, WEBP, and GIF are Allowed.
+                </p>
               </div>
-
-              <div className="flex flex-col gap-2">
-                <label
-                  htmlFor="phone"
+              <div className="w-[25vw] ">
+              <label
+                  htmlFor="gender"
                   className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
                 >
-                  Upload Passport Size Photo <span className="text-blue-500">*</span>
+                  Upload Passport Size Photo<span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
-                  id="phone"
-                  name="phone"
-                  placeholder="Your Phone Number"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
-                  required
+                  className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
+                <p className="text-xs text-gray-400 mt-2">
+                  PNG, JPG SVG, WEBP, and GIF are Allowed.
+                </p>
               </div>
+
 
               <div className="col-span-2 flex flex-col gap-2">
                 <label
