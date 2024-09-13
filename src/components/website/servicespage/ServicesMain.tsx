@@ -254,7 +254,7 @@ export default function ServicesMain() {
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+      <h3 className="py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
@@ -269,7 +269,7 @@ export default function ServicesMain() {
       >
         <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-10">
           {/* Left Titles */}
-          <div className="h-[90vh] flex flex-col gap-2 w-full lg:w-[20vw]">
+          <div className="h-screen flex flex-col gap-2 w-full lg:w-[20vw]">
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
@@ -376,7 +376,7 @@ export default function ServicesMain() {
         viewport={{ once: false, amount: 0.3 }}
         className="flex py-[4rem] flex-col gap-2"
       >
-        <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        <h1 className="mt-12 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
         </h1>
         <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto">
