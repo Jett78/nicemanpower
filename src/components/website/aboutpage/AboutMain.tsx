@@ -91,11 +91,11 @@ export default function AboutMain() {
           </div>
 
           {/* charman img */}
-          <div className="w-full overflow-hidden rounded-full relative p-2 lg:col-span-2 h-full">
+          <div className="w-full overflow-hidden relative  lg:col-span-2 h-full">
             <img
               src="/public/chairman.png"
               alt="ceo-img"
-              className="scale-90 h-full object-cover"
+              className="scale-90 h-full object-cover rounded-full"
             ></img>
           </div>
         </div>

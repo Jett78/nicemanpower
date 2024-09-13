@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-// import { useRef } from "react";
+import { useRef } from "react";
 
 export default function Testimonials() {
-  // const sliderRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<Slider>(null);
 
-  // const handleNext = () => {
-  //   if (sliderRef.current) {
-  //     sliderRef.current.slickNext();
-  //   }
-  // };
+  const handleNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
 
-  // const handlePrev = () => {
-  //   if (sliderRef.current) {
-  //     sliderRef.current.slickPrev();
-  //   }
-  // };
+  const handlePrev = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
 
   const settings = {
     dots: false,
@@ -27,7 +27,7 @@ export default function Testimonials() {
     slidesToScroll: 1,
     autoplay: true,
     speed: 500,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1000,
     arrows: false,
     // pauseOnHover: false,
     responsive: [
@@ -68,7 +68,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative w-full mt-10">
-        <Slider {...settings} >
+        <Slider {...settings} ref={sliderRef}>
           {reviewsData.map((item, index) => (
             <div key={index} className="px-4 cursor-pointer py-10">
               <div className="bg-[#f4f4f5] grid border-2 border-zinc-200 min-h-[15vw] max-w-[24vw] p-6 rounded-2xl mx-auto">
@@ -95,21 +95,23 @@ export default function Testimonials() {
             </div>
           ))}
         </Slider>
+        <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-zinc-50 to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-zinc-50 to-transparent z-10"></div>
 
-        {/* <div className="flex text-4xl items-center gap-4 absolute left-1/2 transform -translate-x-1/2 top-0 mt-4">
+        <div className="flex text-4xl items-center gap-4 absolute left-1/2 transform -translate-x-1/2 -bottom-20 mt-4">
           <button
             onClick={handlePrev}
-            className="cursor-pointer outline-none border rounded-full bg-white shadow-sm p-2"
+            className="cursor-pointer outline-none border rounded-full bg-white active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
           >
             <Icon icon="iconamoon:arrow-left-2" style={{ color: "black" }} />
           </button>
           <button
             onClick={handleNext}
-            className="cursor-pointer outline-none border rounded-full bg-white shadow-sm p-2"
+            className="cursor-pointer outline-none border rounded-full bg-white  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
           >
             <Icon icon="iconamoon:arrow-right-2" style={{ color: "black" }} />
           </button>
-        </div> */}
+        </div>
       </div>
     </motion.div>
   );

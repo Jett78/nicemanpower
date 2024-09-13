@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 
 
 const steps = [
@@ -66,7 +66,7 @@ export default function OurClientele() {
         </div>
 
         {/* Image Display */}
-        <div className="h-[60vh] overflow-auto relative">
+        {/* <div className="h-[60vh] overflow-scroll bg-red-200 relative">
           <AnimatePresence>
             <motion.div
               key={activeStep || lastHoveredImage}
@@ -83,10 +83,22 @@ export default function OurClientele() {
                   "/dummy-work.png"
                 }
                 alt="work"
-                className="w-full"
+                className="w-full "
               />
             </motion.div>
           </AnimatePresence>
+        </div> */}
+
+        <div className="h-[50vh] overflow-y-scroll cursor-pointer">
+        <img
+                src={
+                  steps.find((step) => step.number === activeStep)?.image ||
+                  lastHoveredImage ||
+                  "/dummy-work.png"
+                }
+                alt="work"
+                className="w-full "
+              />
         </div>
       </div>
     </motion.div>

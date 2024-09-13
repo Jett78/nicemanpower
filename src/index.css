@@ -26,3 +26,14 @@
   font-family: "Hendrix";
   src:url("/fonts/brhendrix.otf")
 }
+.scroll-container {
+  height: 55vh;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scrolling */
+  position: relative; /* Ensure it’s positioned correctly for scrolling */
+}
+
+.scroll-container img {
+  display: block; /* Ensure the image doesn't cause overflow issues */
+  width: 100%; /* Ensure the image scales to fit the container */
+}
