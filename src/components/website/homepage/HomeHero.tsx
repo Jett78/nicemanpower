@@ -21,7 +21,7 @@ export default function HomeHero() {
     <div className="w-full   overflow-hidden h-screen  lg:pt-[10vw] pb-[6vw] flex flex-col lg:flex-row gap-5 justify-center items-center relative">
       <div className="absolute top-0 left-0 w-full h-full   duration-300  overflow-hidden">
         <img
-          src="/public/hero-img/hero8.png"
+          src="/public/hero-img/hero8.webp"
           alt=""
           className="w-full h-full brightness-50 object-cover object-center"
         />
