@@ -21,7 +21,7 @@ export default function Footer() {
         <div className="w-full  flex justify-center items-center bg-zinc-100 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  rounded-3xl">
           <div className="w-full p-5 lg:p-8 lg:px-16">
             <div className="w-full gap-20 text-zinc-800  h-full flex flex-col lg:flex-row justify-between  items-center">
-              <div className="w-full flex gap-3 flex-col">
+              <div className="w-full flex gap-2 flex-col">
                 <h1 className="text-[8vw] md:text-[4vw] hero font-medium lg:text-[3vw] leading-normal">
                   Reach out
                 </h1>
@@ -36,7 +36,7 @@ export default function Footer() {
                 </h1>
 
                 <div className="flex gap-4 items-center text-[1.5vw]">
-                  <Link to="https://www.facebook.com/profile.php?id=61563009514672">
+                  <Link target="_blank" rel="noopener noreferrer"  to="https://www.facebook.com/profile.php?id=61563009514672">
                     <Icon icon="logos:facebook" />
                   </Link>
                   <Icon
@@ -72,7 +72,7 @@ export default function Footer() {
               <div>
                 Designed & Developed by{" "}
                 <span className="font-semibold hover:scale-105 duration-300 cursor-pointer">
-                <Link to="https://webxnep.com/">
+                <Link target="_blank" rel="noopener noreferrer" to="https://webxnep.com/">
                 WebX</Link>
                 </span>
               </div>

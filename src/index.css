@@ -37,3 +37,8 @@
   display: block; /* Ensure the image doesn't cause overflow issues */
   width: 100%; /* Ensure the image scales to fit the container */
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+
+}
