@@ -2,13 +2,9 @@ import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 // import RelatedBlogs from "./RelatedBlogs";
 
-type Props = {
-  url: string;
-  title: string;
-};
-export default function BlogDetail({ url, title }: Props) {
-  const encodedURL = encodeURIComponent(url);
-  const encodedTitle = encodeURIComponent(title);
+type Props = {};
+
+export default function BlogDetail({}: Props) {
   return (
     <>
       <div className="w-11/12 pt-[4rem]  lg:pt-[8rem] relative md:w-9/12 lg:w-7/12 mx-auto py-[5rem]">
@@ -208,32 +204,17 @@ export default function BlogDetail({ url, title }: Props) {
               <span className="text-[12px] font-semibold">Share:</span>
               {/* socio icon  */}
               <div className="flex justify-center items-center  gap-1">
-                {/* Twitter */}
                 <div className="cursor-pointer">
-                  <a
-                    href={`https://twitter.com/intent/tweet?url=${encodedURL}&text=${encodedTitle}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon
-                      icon="logos:twitter"
-                      className="w-[1.5rem] h-[1.5rem] object-cover object-center"
-                    />
-                  </a>
+                  <Icon
+                    icon="logos:twitter"
+                    className="w-[1.5rem] h-[1.5rem] object-cover object-center"
+                  />
                 </div>
-                
-                {/* Facebook */}
                 <div className="cursor-pointer">
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedURL}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon
-                      icon="logos:facebook"
-                      className="w-[1.5rem] h-[1.5rem] object-cover object-center"
-                    />
-                  </a>
+                  <Icon
+                    icon="logos:facebook"
+                    className="w-[1.5rem] h-[1.5rem] object-cover object-center"
+                  />
                 </div>
               </div>
             </div>
