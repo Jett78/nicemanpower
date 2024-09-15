@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion} from "framer-motion";
+import Lenis from "lenis";
 
 
 const steps = [
@@ -89,8 +90,9 @@ export default function OurClientele() {
           </AnimatePresence>
         </div> */}
 
-        <div className="h-[50vh] overflow-y-scroll overflow-auto cursor-pointer">
-        <img
+        <div className="h-[50vh]  overflow-auto cursor-pointer" data-lenis-prevent>
+      <div>
+          <img
                 src={
                   steps.find((step) => step.number === activeStep)?.image ||
                   lastHoveredImage ||
@@ -99,6 +101,7 @@ export default function OurClientele() {
                 alt="work"
                 className="w-full "
               />
+      </div>
         </div>
       </div>
     </motion.div>

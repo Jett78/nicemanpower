@@ -9,7 +9,7 @@ export default function OurTeam({}: Props) {
         Our Leaders
       </h1>
       <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-center  text-zinc-700 w-full lg:w-[55%] mx-auto">
-      Meet our versatile leaders who have established our name in the modern competetive world
+      Meet our versatile leaders who have established our name in the modern competitive world.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5 lg:mt-10 gap-x-3 lg:gap-x-5 gap-y-4">
         {teamMembers.map((member, index) => (
