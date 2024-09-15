@@ -248,13 +248,13 @@ export default function ServicesMain() {
           </div>
         </motion.div> */}
       </div>
-      <div className="w-full -mt-[4vw] mx-auto px-8">
+      <div className="w-full -mt-[vw] mx-auto px-8">
       <HoverEffect items={projects} />
     </div>
-      <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="mt-[4vw] text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center my-10">
+      <h3 className="mt-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center ">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
