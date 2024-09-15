@@ -1,8 +1,7 @@
 import { useRef } from "react";
 
-type Props = {};
 
-export default function ProcessFlowChart({}: Props) {
+export default function ProcessFlowChart() {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   // const [isDragging, setIsDragging] = useState(false);

@@ -63,7 +63,7 @@ export default function HomeHero() {
           </div>
         </div> */}
 
-        <h1 className="text-[9vw] lg:text-[3vw] relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
+        <h1 className=" md:text-[3vw] relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
           {/* Find Job <br /> You Deserve */}
           Connecting You with the{" "}
           <span className="relative text-white z-[200]">Right Talent</span>{" "}
@@ -93,7 +93,7 @@ export default function HomeHero() {
         {/* --Dark overlay-- */}
         {active && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-85 z-[150]"
+            className="fixed inset-0 bg-black bg-opacity-85 z-[50]"
             onClick={closeDropdown}
           ></div>
         )}
@@ -101,7 +101,7 @@ export default function HomeHero() {
           <Ctaform closeDropdown={closeDropdown} />
         </div>
 
-        <p className="text-[3.5vw] lg:text-[1.2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
+        <p className="text-[4vw] sm:text-[1.2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
           We are manpower recruiting agency. We are experts in this field and we
           know how to{" "}
           <span className="text-orange-500 italic">
@@ -118,7 +118,7 @@ export default function HomeHero() {
           <div>
             <button
               onClick={() => Setactive(!active)}
-              className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+              className=" px-6 sm:px-[2vw] sm:py-[2vw] py-4 lg:py-[0.8vw]   sm:text-[2rem] md:text-[1vw]  font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
             >
               I need skilled talents
             </button>

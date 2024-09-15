@@ -59,11 +59,11 @@ export default function Footer() {
                 <p className="text-[1.4vw] mt-2 font-semibold text-black/75 ">
                   Ready to strengthen your workforce?
                 </p>
-                <Link to="/contact">
-                  <button className="px-[5vw] mt-4 lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
-                    Contact Us Today
+              
+                  <button className="w-fit px-[5vw] mt-4 lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+                  <Link to="/contact">Contact Us Today </Link>
                   </button>
-                </Link>
+               
               </div>
             </div>
 

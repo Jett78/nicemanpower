@@ -187,14 +187,14 @@ export default function JobDetail() {
                     transition={{ duration: 0.3 }}
                   />
                 </div>
-                <div className="absolute top-10 right-20" onClick={closeModal}>
+
+                {/* <div className="absolute left-1/2" onClick={closeModal}>
                   <img
                     src="../public/cancelbtn.svg"
                     alt="cancel-btn"
                     className="cursor-pointer"
-                    onClick={closeModal}
                   />
-                </div>
+                </div> */}
               </motion.div>
             )}
           </AnimatePresence>
@@ -294,7 +294,7 @@ export default function JobDetail() {
             {/* form  */}
             <form
               action=""
-              className="py-5 w-[60vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
+              className="pt-10 relative  w-[54vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
             >
               {/* <div
                 onClick={handleCloseForm}
@@ -305,7 +305,7 @@ export default function JobDetail() {
               <img
                 src="../public/cancelbtn.svg"
                 alt="cancel-btn"
-                className="absolute right-6 top-6 cursor-pointer w-8"
+                className="absolute right-6 top-2 cursor-pointer w-8"
                 onClick={handleCloseForm}
               />
 
@@ -386,7 +386,7 @@ export default function JobDetail() {
 
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer  h-[3vw]  lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer  lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option value="" disabled selected hidden>
                     Gender
@@ -411,6 +411,24 @@ export default function JobDetail() {
                   </svg>
                 </div>
               </div>
+              {/* <div className="flex flex-col gap-1">
+              <label
+                  htmlFor="lastName"
+                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                >
+                 Gender <span className="text-blue-500">*</span>
+                </label>
+                <select
+                  id="countries"
+                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+
+                >
+                  <option>United States</option>
+                  <option>Canada</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                </select>
+              </div> */}
 
               <div className="relative w-[25vw]">
                 <label
@@ -421,7 +439,7 @@ export default function JobDetail() {
                 </label>
                 <select
                   id="maritalStatus"
-                  className="p-2 py-2 cursor-pointer h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option
                     value=""
@@ -464,7 +482,7 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Mobile Number"
                   name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 py-2 lg:py-4 w-[25vw]  text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -478,7 +496,7 @@ export default function JobDetail() {
                 </label>
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer  h-[3vw] lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
                 >
                   <option value="" disabled selected hidden>
                     Qualifications
@@ -543,7 +561,7 @@ export default function JobDetail() {
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 w-[55vw]  h-[5vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
+                  className="p-2 py-4 w-[51vw]  h-[5vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
                   required
                 />
               </div>
