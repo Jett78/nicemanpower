@@ -217,7 +217,7 @@ export default function ServicesMain() {
         <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           What services do <br /> we provide?
         </h1>
-        <h3 className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+        <h3 className="my-10 text-[3.5vw] w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto text-left lg:text-center">
           At Nice Recruiting Agency, we are dedicated to providing comprehensive
           manpower solutions that empower businesses to succeed. Our services
           range from permanent and contract staffing to executive search, skill
@@ -254,7 +254,7 @@ export default function ServicesMain() {
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
+      <h3 className="py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center my-10">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
@@ -376,10 +376,10 @@ export default function ServicesMain() {
         viewport={{ once: false, amount: 0.3 }}
         className="flex py-[4rem] flex-col gap-2"
       >
-        <h1 className="mt-12 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+        <h1 className="mt-16 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
         </h1>
-        <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto">
+        <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto ">
           Our Recruitment Process: Learn about our systematic approach to
           sourcing, evaluating, and placing top talent to meet your hiring needs
           effectively.

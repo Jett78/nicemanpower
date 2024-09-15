@@ -27,7 +27,7 @@ export default function OurClientele() {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Clientele
       </h1>
-      <p className=" py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
+      <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
         We have already worked with 200+ clients all over the world and they are
         pretty satisfied with our work.
       </p>
