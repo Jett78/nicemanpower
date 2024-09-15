@@ -6,7 +6,7 @@ export default function HomeAbout() {
     <div className="py-[2rem]  w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
       {/* experience  */}
       <div className="pb-[5rem] grid  lg:grid-cols-3 w-full gap-2 lg:gap-10">
-        <div className="bg-[#D8FCE3] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
+        <div className="bg-[#c3f5d2] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
           <span className="font-semibold text-[4vw] lg:text-[2vw] hero">
             800+
           </span>
@@ -14,7 +14,7 @@ export default function HomeAbout() {
             Successful Placements
           </span>
         </div>
-        <div className="bg-[#FDE7DB] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+        <div className="bg-[#f6cfb9] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
           <span className="font-semibold text-[4vw] lg:text-[2vw] hero">
             20+
           </span>
@@ -22,7 +22,7 @@ export default function HomeAbout() {
             Industries Served
           </span>
         </div>
-        <div className="bg-[#D2EDFF] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
+        <div className="bg-[#bbe1fb] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10 flex flex-col gap-2 justify-center items-center">
           <span className="font-semibold text-[4vw] lg:text-[2vw] hero">
             17+
           </span>

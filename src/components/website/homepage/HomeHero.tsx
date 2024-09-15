@@ -23,7 +23,7 @@ export default function HomeHero() {
         <img
           src="/public/hero-img/hero8.png"
           alt=""
-          className="w-full h-full brightness-[0.7] object-cover object-center"
+          className="w-full h-full brightness-50 object-cover object-center"
         />
       </div>
      
