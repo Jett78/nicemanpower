@@ -53,7 +53,7 @@ export default function JobDetail() {
           <div className="font-medium">Back</div>
         </div>
       </Link>
-      <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
+      <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-14 rounded-xl">
         {/* top  */}
 
         <div className="flex flex-col itemscenter gap-2 w-full">
@@ -62,7 +62,7 @@ export default function JobDetail() {
             <img
                 src="/public/company-logo.png"
                 alt="company-logo"
-                className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-4"
+                className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-8"
               />
               <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
                 Construction Laborer
@@ -209,7 +209,7 @@ export default function JobDetail() {
           </AnimatePresence>
 
           {/* detail text  */}
-          <div className="flex flex-col gap-5 mt-5">
+          <div className="flex flex-col gap-5 mt-10">
             <div className="flex flex-col gap-2">
               {/* title  */}
               <h3 className="font-semibold text-[4vw] md:text-[3vw]  lg:text-[1.2vw]">
@@ -579,7 +579,7 @@ export default function JobDetail() {
               <div className="flex justify-start">
                 <button
                   type="submit"
-                  className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+                  className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-[#2088ca] hover:bg-[#2563eb] duration-300 rounded-full text-zinc-50  border-zinc-600 "
                 >
                   Apply
                 </button>

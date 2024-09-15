@@ -101,7 +101,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
         </div>
 
         <div className="flex justify-start">
-          <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+          <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-[#2088ca] hover:bg-[#2563eb] duration-300 rounded-full text-zinc-50  border-zinc-600 ">
             Submit
           </button>
         </div>

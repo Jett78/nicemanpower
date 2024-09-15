@@ -157,6 +157,14 @@ export default function Contact() {
           </div>
         </form>
       </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.8089545489173!2d85.32167295054035!3d27.718339218365184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19ef724448ef%3A0x3a3a57d9bf6a4146!2sNice%20Recruiting%20Agency!5e0!3m2!1sen!2snp!4v1726401289263!5m2!1sen!2snp"
+        width="100%"
+        height="450"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="rounded-2xl mt-[4vw]"
+      ></iframe>
     </motion.div>
   );
 }
