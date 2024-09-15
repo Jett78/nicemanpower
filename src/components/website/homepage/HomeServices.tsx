@@ -12,7 +12,7 @@ export default function HomeServices() {
       viewport={{ once: false, amount: 0.1 }}
       className="pb-[5rem] min-h-screen flex justify-center items-center flex-col w-full"
     >
-      <div className="flex flex-col  lg:flex-row w-full gap-10 lg:gap-14 h-full relative">
+      <div className="flex mt-[4vw]  flex-col  lg:flex-row w-full gap-10 lg:gap-14 h-full relative">
         <div className="w-[50%]">
           <motion.div
             initial={{ opacity: 0 }}
@@ -27,8 +27,8 @@ export default function HomeServices() {
                 multiple disciplines
               </span>
             </p>
-            <h1 className="hero text-[8vw] lg:text-[4vw]  font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-left lg:text-right w-full leading-none">
-              We Specialize
+            <h1 className="hero text-[8vw] lg:text-[3.6vw] whitespace-nowrap  font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-left lg:text-right w-full leading-none">
+              We Specialize In
             </h1>
           </motion.div>
         </div>
