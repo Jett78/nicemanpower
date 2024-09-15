@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -26,6 +26,17 @@ export default function JobDetail() {
     setIsOpenForm(false);
     document.body.style.overflowY = "auto";
   };
+
+  
+  useEffect(() => {
+    if (isOpenForm) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpenForm]);
+
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -274,7 +285,7 @@ export default function JobDetail() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center"
+            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center" data-lenis-prevent
           >
             <Link
               onClick={handleCloseForm}
