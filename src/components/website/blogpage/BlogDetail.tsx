@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 // import RelatedBlogs from "./RelatedBlogs";
 // import { useParams } from "react-router-dom";
 
-
 type Props = {};
 
 export default function BlogDetail({}: Props) {
@@ -209,10 +208,17 @@ export default function BlogDetail({}: Props) {
               {/* socio icon  */}
               <div className="flex justify-center items-center  gap-1">
                 <div className="cursor-pointer">
-                  <Icon
-                    icon="logos:twitter"
-                    className="w-[1.5rem] h-[1.5rem] object-cover object-center"
-                  />
+                  <a
+                    href={`https://twitter.com/intent/tweet?&url=${encodedURL}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon
+                      icon="fa6-brands:square-x-twitter"
+                      style={{ color: "black" }}
+                      className="w-[1.5rem] h-[1.5rem]"
+                    />
+                  </a>
                 </div>
                 <div className="cursor-pointer">
                   <a
