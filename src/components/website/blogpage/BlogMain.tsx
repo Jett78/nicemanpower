@@ -12,13 +12,12 @@ export default function BlogMain({}: Props) {
     >
       {" "}
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
-        Discover Our Article
+        Discover Our Articles
       </h1>
-      <h3 className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center">
-        At Nice Recruiting Agency, we are dedicated to providing comprehensive
-        manpower solutions that empower businesses to succeed. Our services
-        range from permanent and contract staffing to executive search, skill
-        development, and outsourcing.
+      <h3 className="my-[2vw] text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center">
+        Explore insights and expert perspectives across diverse industries, from
+        construction to hospitality. Stay updated with the latest trends, tips,
+        and industry news through our curated articles.
       </h3>
       {/* cards */}
       <div className="grid mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">

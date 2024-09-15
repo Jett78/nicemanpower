@@ -72,7 +72,8 @@ export default function Footer() {
               <div>
                 Designed & Developed by{" "}
                 <span className="font-semibold hover:scale-105 duration-300 cursor-pointer">
-                  webX
+                <Link to="https://webxnep.com/">
+                WebX</Link>
                 </span>
               </div>
             </div>

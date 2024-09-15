@@ -10,13 +10,13 @@ export default function Contact() {
       className="pt-[4rem]  lg:pt-[8rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
     >
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
-        Reach Out Us
+        Reach Out To Us
       </h1>
-      <p className="my-10 text-[3.5vw] lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
+      <p className="mt-4 text-[3.5vw] lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Search all the open positions on the web. Get your own personalized
         salary estimate. Read reviews on over 30000+ companies worldwide.
       </p>
-      <div className="grid w-full mt-5   md:grid-cols-5 gap-x-[8vw]">
+      <div className="grid w-full   md:grid-cols-5 gap-x-[8vw]">
         <div className="flex col-span-2 justify-center items-start flex-col gap-2">
           {/* office */}
           <div className="w-full flex flex-col gap-1 py-5 border-b-2 border-zinc-200">

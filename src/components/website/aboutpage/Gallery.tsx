@@ -58,7 +58,7 @@ export default function Gallery({}: Props) {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Gallery
       </h1>
-      <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 text-start lg:text-center lg:w-8/12 mx-auto">Cherish the moments with us with the collection of our memories.</p>
+      <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 text-start lg:text-center lg:w-8/12 mx-auto">Cherish the moments with us with the collection of our memories.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
         {teamMembers.map((member, index) => (
           <div

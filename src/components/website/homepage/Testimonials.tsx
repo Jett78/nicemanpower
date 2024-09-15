@@ -60,7 +60,7 @@ export default function Testimonials() {
         <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none hero">
           Voice Of Our <span className="">Clients</span>
         </h1>
-        <p className="my-6 w-full lg:w-6/12 text-[3.5vw] lg:text-[1.3vw] text-zinc-700 mx-auto leading-relaxed">
+        <p className="my-[2vw]  w-full lg:w-6/12 text-[3.5vw] lg:text-[1.3vw] text-zinc-700 mx-auto leading-relaxed">
           You may not trust us yet, but you can trust the positive experiences
           of our clients who have benefited from our dedicated service and
           successful placements.

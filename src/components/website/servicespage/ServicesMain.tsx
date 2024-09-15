@@ -217,7 +217,7 @@ export default function ServicesMain() {
         <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           What services do <br /> we provide?
         </h1>
-        <h3 className="mt-10 text-[3.5vw] w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto text-left lg:text-center">
+        <h3 className="mt-[2vw]  text-[3.5vw] w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto text-left lg:text-center">
           At Nice Recruiting Agency, we are dedicated to providing comprehensive
           manpower solutions that empower businesses to succeed. Our services
           range from permanent and contract staffing to executive search, skill
@@ -248,13 +248,13 @@ export default function ServicesMain() {
           </div>
         </motion.div> */}
       </div>
-      <div className="w-full mx-auto px-8">
+      <div className="w-full -mt-[4vw] mx-auto px-8">
       <HoverEffect items={projects} />
     </div>
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="py-4 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:w-8/12  mx-auto text-left lg:text-center my-10">
+      <h3 className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center my-10">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
@@ -273,7 +273,7 @@ export default function ServicesMain() {
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
-                className={`w-full flex-grow rounded-xl flex gap-3 justify-between items-center p-4 title-card-${
+                className={`w-full  rounded-xl flex  justify-between items-center p-3 title-card-${
                   index + 1
                 } ${index % 2 === 0 ? "bg-[#86efac]" : "bg-[#5da5d3]"}`}
               >
@@ -309,13 +309,13 @@ export default function ServicesMain() {
 
           {/* Middle Images */}
          <div>
-         <div className={`h-[90vh] hidden  w-[30vw] overflow-hidden lg:flex flex-col  relative `}>
+         <div className={`h-[85vh] hidden   w-[28vw]  lg:flex flex-col   relative `}>
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
                 className={` ${
                         index % 2 === 0 ? "border-[#008932] " : "border-[#5da5d3]"
-                      } absolute object-center top-0 left-0 w-full h-full p-2 grid gap-3  rounded-2xl grid-cols-2 border-2 auto-rows-fr  images-${
+                      } absolute object-center -top-10 left-0 w-full h-full p-2 grid gap-3  rounded-2xl grid-cols-2 border-2 auto-rows-fr  images-${
                   index + 1
                 } ${index > 0 ? "opacity-0" : ""}`}
               >
@@ -379,7 +379,7 @@ export default function ServicesMain() {
         <h1 className="mt-16 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
         </h1>
-        <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto ">
+        <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto ">
           Our Recruitment Process: Learn about our systematic approach to
           sourcing, evaluating, and placing top talent to meet your hiring needs
           effectively.

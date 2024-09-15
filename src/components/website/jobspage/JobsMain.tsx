@@ -25,7 +25,7 @@ export default function JobsMain() {
       <h1 className="text-[8vw] w-11/12 mx-auto lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Vacancies Announcement
       </h1>
-      <p className="my-10 text-[3.5vw] w-11/12 lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
+      <p className="my-[2vw]  text-[3.5vw] w-11/12 lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Discover exciting career opportunities with our latest job openings.
         Find roles that match your skills and ambitions and apply today to join
         our dynamic team!

@@ -8,7 +8,7 @@ export default function OurTeam({}: Props) {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Leaders
       </h1>
-      <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-center  text-zinc-700 w-full lg:w-[55%] mx-auto">
+      <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-center  text-zinc-700 w-full lg:w-[55%] mx-auto">
       Meet our versatile leaders who have established our name in the modern competitive world.
       </p>
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mt-5 lg:mt-10 gap-x-3 lg:gap-x-5 gap-y-4">

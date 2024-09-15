@@ -37,7 +37,7 @@ export default function ProcessFlowChart() {
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Process Flow Chart
       </h1>
-      <p className="my-10 text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
+      <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
         Explore the detailed steps and stages of our operations, illustrating
         how we ensure efficient and effective workflows from start to finish.
       </p>
