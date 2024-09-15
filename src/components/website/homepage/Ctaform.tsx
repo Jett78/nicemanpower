@@ -83,7 +83,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
           />
         </div>
 
-        <div className="col-span-2 flex flex-col gap-2">
+        <div className="col-span-2 flex flex-col gap-2 h-auto" data-lenis-pevent>
           <label
             htmlFor="message"
             className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
@@ -95,7 +95,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             name="message"
             placeholder="Your Message"
             rows={4}
-            className="p-2 py-2 text-sm  lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 py-2 text-sm  overflow-auto resize-none lg:py-[0.8vw]  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
