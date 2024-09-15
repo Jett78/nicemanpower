@@ -1,10 +1,14 @@
 import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 // import RelatedBlogs from "./RelatedBlogs";
+// import { useParams } from "react-router-dom";
+
 
 type Props = {};
 
 export default function BlogDetail({}: Props) {
+  // const { id } = useParams();  // Assuming you are using React Router for dynamic routes
+  const encodedURL = encodeURIComponent(window.location.href); // Current blog URL
   return (
     <>
       <div className="w-11/12 pt-[4rem]  lg:pt-[8rem] relative md:w-9/12 lg:w-7/12 mx-auto py-[5rem]">
@@ -211,10 +215,16 @@ export default function BlogDetail({}: Props) {
                   />
                 </div>
                 <div className="cursor-pointer">
-                  <Icon
-                    icon="logos:facebook"
-                    className="w-[1.5rem] h-[1.5rem] object-cover object-center"
-                  />
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedURL}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon
+                      icon="logos:facebook"
+                      className="w-[1.5rem] h-[1.5rem]"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
