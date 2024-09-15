@@ -27,7 +27,6 @@ export default function JobDetail() {
     document.body.style.overflowY = "auto";
   };
 
-  
   useEffect(() => {
     if (isOpenForm) {
       document.body.style.overflow = "hidden";
@@ -35,7 +34,6 @@ export default function JobDetail() {
       document.body.style.overflow = "auto";
     }
   }, [isOpenForm]);
-
 
   return (
     <motion.div
@@ -57,108 +55,108 @@ export default function JobDetail() {
       </Link>
       <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-16 rounded-xl">
         {/* top  */}
-        <div className="flex flex-col gap-2 w-full">
-          <div className="w-full flex items-center  justify-between">
-            <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
-              Construction Laborer
-            </h2>
-            {/* company logo  */}
 
-            <div className="rounded-full object-cover md:hidden object-center w-[4vw] h-[4vw] md:w-[10vw] p-6 md:h-[10vw] bg-white">
-              <img
-                alt="company-logo"
+        <div className="flex flex-col itemscenter gap-2 w-full">
+          <div className="grid grid-cols-2">
+            <div>
+            <img
                 src="/public/company-logo.png"
-                className="w-full h-full object-center object-contain"
-              ></img>
-            </div>
-          </div>
-
-          <div className="w-full grid md:grid-cols-2 gap-x-5">
-            <div className="flex w-full flex-wrap mt-2 justify-start items-start">
-              {jobData.map((job, index) => (
-                <div
-                  key={index}
-                  className="grid grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
-                >
-                  <div className="flex justify-center items-center gap-[6px]">
-                    {/* <Icon
+                alt="company-logo"
+                className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-4"
+              />
+              <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
+                Construction Laborer
+              </h2>
+              
+              <div className="w-full">
+                <div className="flex w-full flex-wrap mt-2 justify-start items-start">
+                  {jobData.map((job, index) => (
+                    <div
+                      key={index}
+                      className="grid grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
+                    >
+                      <div className="flex justify-center items-center gap-[6px]">
+                        {/* <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                     ></Icon> */}
-                    <Icon
-                      className=" text-[1.2em] object-cover object-center text-green-500"
-                      icon="carbon:location-company"
-                      style={{ color: "[#f4f4f4]" }}
-                    />
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.companyName}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.location}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.location}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="text-[0.8em] ml-1 object-cover object-center text-green-500"
-                      icon={job.icons.date}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.date}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.type}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.type}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.salary}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.salary}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.overtime}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.overtime}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.workdays}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.workdays}
-                    </span>
-                  </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Icon
-                      className="w-4 h-4 object-cover object-center text-green-500"
-                      icon={job.icons.benefits}
-                    ></Icon>
-                    <span className="text-sm font-medium text-zinc-700">
-                      {job.benefits}
-                    </span>
-                  </div>
+                        <Icon
+                          className=" text-[1.2em] object-cover object-center text-green-500"
+                          icon="carbon:location-company"
+                          style={{ color: "[#f4f4f4]" }}
+                        />
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.companyName}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.location}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.location}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="text-[0.8em] ml-1 object-cover object-center text-green-500"
+                          icon={job.icons.date}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.date}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.type}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.type}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.salary}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.salary}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.overtime}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.overtime}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.workdays}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.workdays}
+                        </span>
+                      </div>
+                      <div className="flex justify-center items-center gap-2">
+                        <Icon
+                          className="w-4 h-4 object-cover object-center text-green-500"
+                          icon={job.icons.benefits}
+                        ></Icon>
+                        <span className="text-sm font-medium text-zinc-700">
+                          {job.benefits}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
+
             {/* company logo  */}
             <div className="md:flex hidden justify-center items-center">
               <div className="object-cover object-center w-full h-[15vw] bg-white">
@@ -285,7 +283,8 @@ export default function JobDetail() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center" data-lenis-prevent
+            className="fixed top-0 left-0 w-full z-[105] backdrop-blur-md bg-black/40 h-screen flex items-center justify-center"
+            data-lenis-prevent
           >
             <Link
               onClick={handleCloseForm}
