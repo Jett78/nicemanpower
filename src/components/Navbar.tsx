@@ -30,6 +30,7 @@ export default function Navbar() {
 
 
 
+
   useEffect(() => {
     controls.start({
       y: scrollingUp ? 0 : -80,
@@ -44,6 +45,12 @@ export default function Navbar() {
       transition: { duration: 0.3, ease: "easeOut" },
     });
   }, [scrollingUp, controls]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [location]);
+
+
   return (
     <motion.div
       animate={controls}
