@@ -223,7 +223,7 @@ export default function ServicesMain() {
         <h1 className="text-[8vw] lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           What services do <br /> we provide?
         </h1>
-        <h3 className="mt-[2vw]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-center md:w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto  lg:text-center">
+        <h3 className="mt-[2vw]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-center md:w-[80%]  text-zinc-700   mx-auto  lg:text-center">
           At Nice Recruiting Agency, we are dedicated to providing comprehensive
           manpower solutions that empower businesses to succeed. Our services
           range from permanent and contract staffing to executive search, skill

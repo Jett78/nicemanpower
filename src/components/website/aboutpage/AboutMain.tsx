@@ -20,7 +20,7 @@ export default function AboutMain() {
         <h1 className="text-[8vw] text-center lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           About Us
         </h1>
-        <p className="text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-center md:w-[80%] mx-auto text-zinc-700 leading-snug  my-[2vw] ">
+        <p className="text-[0.6em] sm:text-[2vw] lg:text-[1.2vw] text-center md:w-[80%] mx-auto text-zinc-700 leading-snug  my-[2vw] ">
           We are Nice Recruiting Agency, established in 2007 in Kathmandu. We
           provide skilled workers across various sectors, with branches and
           training centers throughout Nepal, adhering to international hiring

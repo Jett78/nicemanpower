@@ -64,7 +64,7 @@ export default function Footer() {
                   Ready to strengthen your workforce?
                 </p>
 
-                <button className="w-fit px-[5vw] mt-4 lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+                <button className=" md:px-[2vw] md:py-[1vw] px-3 py-2 text-[3vw] lg:text-lg text-xs w-fit mt-4 font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
                   <Link to="/contact">Contact Us Today </Link>
                 </button>
               </div>

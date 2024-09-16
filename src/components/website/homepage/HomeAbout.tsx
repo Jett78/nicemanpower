@@ -66,7 +66,7 @@ export default function HomeAbout() {
           </p>
 
           <Link to="/jobs" className="mt-5">
-            <button className="px-[4vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3vw] lg:text-[1vw] font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
+            <button className=" md:px-[2vw] md:py-[1vw] px-3 py-2 text-[3vw] lg:text-lg text-xs font-semibold text-zinc-50  rounded-full bg-orange-500 hover:bg-orange-600 duration-300">
               Explore Jobs
             </button>
           </Link>

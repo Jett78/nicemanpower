@@ -216,7 +216,7 @@ export default function JobDetail() {
                 About company
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
+              <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 We are a leading construction firm based in Dubai, UAE,
                 specializing in large-scale infrastructure projects. With a
                 commitment to quality and innovation, we pride ourselves on
@@ -231,7 +231,7 @@ export default function JobDetail() {
                 Job Details and Responsibilities
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
+              <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 As a Construction Laborer, you will be responsible for
                 supporting various construction projects by performing manual
                 tasks such as digging, lifting, and transporting materials.
@@ -247,7 +247,7 @@ export default function JobDetail() {
                 Skills and experience
               </h3>
               {/* desc  */}
-              <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
+              <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
                 {` As a Construction Laborer, you will be responsible for
                 supporting various construction projects by performing manual
                 tasks such as digging, lifting, and transporting materials.
@@ -268,7 +268,7 @@ export default function JobDetail() {
           <div className="flex justify-start mt-5">
             <button
               onClick={handleOpenForm}
-              className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+              className=" md:px-[2vw] md:py-[1vw] px-3 py-2 text-[3vw] lg:text-lg text-xs font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
             >
               Apply For The Position
             </button>

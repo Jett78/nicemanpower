@@ -12,7 +12,7 @@ export default function Contact() {
       <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Reach Out To Us
       </h1>
-      <p className="mt-4 text-[3.5vw] lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
+      <p className="mt-4 text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Search all the open positions on the web. Get your own personalized
         salary estimate. Read reviews on over 30000+ companies worldwide.
       </p>
@@ -23,7 +23,7 @@ export default function Contact() {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Office
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
+            <h3 className="text-[3.3vw] md:text-[2vw] lg:text-[1.1vw] font-semibold text-tertiary-500">
               Samakhusi Town Planning, Kathmandu, Nepal.
             </h3>
           </div>
@@ -33,7 +33,7 @@ export default function Contact() {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Email
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
+            <h3 className="text-[3.3vw] md:text-[2vw] lg:text-[1.1vw] font-semibold text-tertiary-500">
               info@nicerecruitment.org
             </h3>
           </div>
@@ -43,7 +43,7 @@ export default function Contact() {
             <span className="text-[3vw] md:text-[2vw] lg:text-[0.8vw] text-zinc-700">
               Phone
             </span>
-            <h3 className="text-[3.5vw] md:text-[2.5vw] lg:text-[1.2vw] font-semibold text-tertiary-500">
+            <h3 className="text-[3.3vw] md:text-[2vw] lg:text-[1.1vw] font-semibold text-tertiary-500">
               +977 01-4354297
             </h3>
           </div>
@@ -73,7 +73,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="firstName"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-500 lg:text-[0.9vw]"
+              className="font-medium text-[3vw] md:text-[2vw] text-tertiary-500 lg:text-[0.9vw]"
             >
               First Name <span className="text-blue-500">*</span>
             </label>
@@ -89,7 +89,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="lastName"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+              className="font-medium text-[3vw] md:text-[2vw] text-tertiary-600 lg:text-[0.9vw]"
             >
               Last Name <span className="text-blue-500">*</span>
             </label>
@@ -105,7 +105,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+              className="font-medium text-[3vw] md:text-[2vw] text-tertiary-600 lg:text-[0.9vw]"
             >
               Email <span className="text-blue-500">*</span>
             </label>
@@ -121,7 +121,7 @@ export default function Contact() {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="phone"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+              className="font-medium text-[3vw] md:text-[2vw] text-tertiary-600 lg:text-[0.9vw]"
             >
               Phone <span className="text-blue-500">*</span>
             </label>
@@ -137,7 +137,7 @@ export default function Contact() {
           <div className="col-span-2 flex flex-col gap-2">
             <label
               htmlFor="message"
-              className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+              className="font-medium text-[3vw] md:text-[2vw] text-tertiary-600 lg:text-[0.9vw]"
             >
               Message <span className="text-blue-500">*</span>
             </label>
@@ -151,7 +151,7 @@ export default function Contact() {
           </div>
 
           <div className="flex justify-start">
-            <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+            <button className=" md:px-[2vw] md:py-[1vw] px-3 py-2 text-[3vw] lg:text-lg text-xs font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
               Submit
             </button>
           </div>
