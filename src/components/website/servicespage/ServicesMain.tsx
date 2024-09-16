@@ -16,7 +16,6 @@ const sections = [
       "/public/oil/img3.png",
       "/public/oil/img4.png",
       "/public/oil/img2.png",
-     
     ],
     description: "Need expert manpower to boost your business operations?",
   },
@@ -31,7 +30,8 @@ const sections = [
       "/public/construction/img4.png",
       "/public/construction/img2.png",
     ],
-    description: "Looking for skilled professionals to power your oil and gas projects?",
+    description:
+      "Looking for skilled professionals to power your oil and gas projects?",
   },
   {
     title: "Staff for hotels, restaurants, and guest services.",
@@ -44,10 +44,12 @@ const sections = [
       "/public/hospitality/img4.png",
       "/public/hospitality/img2.png",
     ],
-    description: "Looking for skilled professionals to power your oil and gas projects?",
+    description:
+      "Looking for skilled professionals to power your oil and gas projects?",
   },
   {
-    title: "Looking for dedicated staff to manage and maintain your facilities?",
+    title:
+      "Looking for dedicated staff to manage and maintain your facilities?",
     category: "Facilities Management",
     icon: "./public/icons/img4.png",
 
@@ -69,7 +71,8 @@ const sections = [
       "/public/transport/img4.png",
       "/public/transport/img2.png",
     ],
-    description: "Need reliable drivers and logistics experts for your transportation needs?",
+    description:
+      "Need reliable drivers and logistics experts for your transportation needs?",
   },
   {
     title: "Workers for assembly, production, and quality control.",
@@ -82,7 +85,8 @@ const sections = [
       "/public/manufacture/img4.png",
       "/public/manufacture/img2.png",
     ],
-    description: "Looking for skilled workers to streamline your manufacturing process?",
+    description:
+      "Looking for skilled workers to streamline your manufacturing process?",
   },
   {
     title: "Field laborers, harvesters, and equipment operators.",
@@ -95,7 +99,8 @@ const sections = [
       "/public/agriculture/img4.png",
       "/public/agriculture/img2.png",
     ],
-    description: "Need hardworking labor for your agricultural and farm operations?",
+    description:
+      "Need hardworking labor for your agricultural and farm operations?",
   },
   {
     title: "Sales staff, cashiers, and stock management.",
@@ -121,7 +126,8 @@ const sections = [
       "/public/industries/img4.png",
       "/public/industries/img2.png",
     ],
-    description: "Need skilled technicians for your electro-mechanical projects? ",
+    description:
+      "Need skilled technicians for your electro-mechanical projects? ",
   },
 ];
 
@@ -213,48 +219,27 @@ export default function ServicesMain() {
       transition={{ duration: 1 }}
       className="py-[2rem] w-11/12 lg:w-9/12 pt-[4rem]  lg:pt-[8rem] mx-auto"
     >
-      <div className="mb-[5rem]">
-        <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <div className="md:mb-[5rem]">
+        <h1 className="text-[8vw] lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           What services do <br /> we provide?
         </h1>
-        <h3 className="mt-[2vw]  text-[3.5vw] w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto text-left lg:text-center">
+        <h3 className="mt-[2vw]  text-[3.5vw] text-center md:w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto  lg:text-center">
           At Nice Recruiting Agency, we are dedicated to providing comprehensive
           manpower solutions that empower businesses to succeed. Our services
           range from permanent and contract staffing to executive search, skill
           development, and outsourcing.
         </h3>
-
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="flex mt-8 flex-col gap-2"
-        >
-          <div className="grid w-full  mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
-            {servicesData.map((service, index) => (
-              <div
-                key={index}
-                className={`group flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-xl cursor-pointer hover:border-tertiary-600 duration-300 w-full bg-zinc-100 border-2 border-tertiary-600`}
-              >
-                <h3 className="w-full duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw]  pb-3">
-                  {service.title}
-                </h3>
-                <p className="text-[3.8vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
       </div>
-      <div className="w-full -mt-[vw] mx-auto px-8">
-      <HoverEffect items={projects} />
-    </div>
+
+      {/* cards */}
+      <div className="w-full  mx-auto md:px-8">
+        <HoverEffect items={projects} />
+      </div>
+
       <h1 className="mt-[4vw] text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="mt-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center ">
+      <h3 className="mt-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 md:w-[80%]  mx-auto text-left lg:text-center ">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
@@ -265,7 +250,7 @@ export default function ServicesMain() {
 
       <div
         ref={mainContainer}
-        className="w-full lg:h-screen flex justify-center items-center"
+        className="w-full lg:h-screen  flex justify-center items-center"
       >
         <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-10">
           {/* Left Titles */}
@@ -308,41 +293,43 @@ export default function ServicesMain() {
           </div>
 
           {/* Middle Images */}
-         <div>
-         <div className={`h-[85vh] hidden   w-[28vw]  lg:flex flex-col   relative `}>
-            {sections.map((section: any, index: number) => (
-              <div
-                key={index}
-                className={` ${
-                        index % 2 === 0 ? "border-[#008932] " : "border-[#5da5d3]"
-                      } absolute object-center -top-10 left-0 w-full h-full p-2 grid gap-3  rounded-2xl grid-cols-2 border-2 auto-rows-fr  images-${
-                  index + 1
-                } ${index > 0 ? "opacity-0" : ""}`}
-              >
-                {section.images.map((src: any, imgIndex: number) => (
-                  <div
-                    key={imgIndex}
-                    className={`relative overflow-hidden rounded-lg object-center ${
-                      imgIndex % 4 === 0
-                        ? "col-span-2 row-span-2"
-                        : imgIndex % 3 === 0
-                        ? "col-span-2 row-span-1"
-                        : "col-span-1 row-span-1"
-                    }`}
-                  >
-                    <img
-                      src={src}
-                      alt=""
-                      className="w-full h-full object-center object-cover  rounded-lg transition-transform duration-300 hover:scale-105"
-                    />
-                    {/* Add subtle shadow for elevation */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-25"></div>
-                  </div>
-                ))}
-              </div>
-            ))}
+          <div>
+            <div
+              className={`h-[85vh] hidden   w-[28vw]  lg:flex flex-col   relative `}
+            >
+              {sections.map((section: any, index: number) => (
+                <div
+                  key={index}
+                  className={` ${
+                    index % 2 === 0 ? "border-[#008932] " : "border-[#5da5d3]"
+                  } absolute object-center -top-10 left-0 w-full h-full p-2 grid gap-3  rounded-2xl grid-cols-2 border-2 auto-rows-fr  images-${
+                    index + 1
+                  } ${index > 0 ? "opacity-0" : ""}`}
+                >
+                  {section.images.map((src: any, imgIndex: number) => (
+                    <div
+                      key={imgIndex}
+                      className={`relative overflow-hidden rounded-lg object-center ${
+                        imgIndex % 4 === 0
+                          ? "col-span-2 row-span-2"
+                          : imgIndex % 3 === 0
+                          ? "col-span-2 row-span-1"
+                          : "col-span-1 row-span-1"
+                      }`}
+                    >
+                      <img
+                        src={src}
+                        alt=""
+                        className="w-full h-full object-center object-cover  rounded-lg transition-transform duration-300 hover:scale-105"
+                      />
+                      {/* Add subtle shadow for elevation */}
+                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-25"></div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
-         </div>
 
           {/* Right Descriptions */}
           <div className="h-[90vh] hidden  w-[20vw] lg:flex justify-center items-start relative">
@@ -357,9 +344,14 @@ export default function ServicesMain() {
                   {section.description}
                 </p>
                 <Link to="">
-                  <button onClick={() => Setactive(!active)} className={`${
-                        index % 2 === 0 ? "bg-green-500 hover:bg-green-500 " : "bg-[#2b7aab]"
-                      } px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold  duration-300 rounded-full text-zinc-50 border-zinc-600`}>
+                  <button
+                    onClick={() => Setactive(!active)}
+                    className={`${
+                      index % 2 === 0
+                        ? "bg-green-500 hover:bg-green-500 "
+                        : "bg-[#2b7aab]"
+                    } px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold  duration-300 rounded-full text-zinc-50 border-zinc-600`}
+                  >
                     Contact Us
                   </button>
                 </Link>
@@ -379,7 +371,7 @@ export default function ServicesMain() {
         <h1 className="mt-16 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
         </h1>
-        <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center w-8/12 mx-auto ">
+        <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center md:w-[80%] mx-auto ">
           Our Recruitment Process: Learn about our systematic approach to
           sourcing, evaluating, and placing top talent to meet your hiring needs
           effectively.
@@ -393,25 +385,25 @@ export default function ServicesMain() {
         </p> */}
         <div className="grid w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
           {processData.map((service, index) => (
-           <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] p-[2px] rounded-2xl">
-             <div
-              key={index}
-              className="group h-full flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-2xl cursor-pointer  duration-300 w-full bg-white"
-            >
-              <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pb-3">
-                {service.title}
-              </h3>
-              <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[0.1vw] group-hover:w-[15vw] ease-in-out duration-500 w-[7vw]"></div>
-              <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 h-[7vw]">
-                {service.description}
-              </p>
+            <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] p-[2px] rounded-2xl">
+              <div
+                key={index}
+                className="group h-full flex flex-col justify-center lg:text-center items-center gap-2 p-10 rounded-2xl cursor-pointer  duration-300 w-full bg-white"
+              >
+                <h3 className="w-full group-hover:border-zinc-600 duration-300 font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] pb-3">
+                  {service.title}
+                </h3>
+                <div className="md:block hidden bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[0.1vw] group-hover:w-[15vw] ease-in-out duration-500 w-[7vw]"></div>
+                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 md:h-[7vw]">
+                  {service.description}
+                </p>
+              </div>
             </div>
-           </div>
           ))}
         </div>
       </motion.div>
-        {/* --Dark overlay-- */}
-    {active && (
+      {/* --Dark overlay-- */}
+      {active && (
         <>
           <div
             className="fixed inset-0 bg-black bg-opacity-70 z-[150]"

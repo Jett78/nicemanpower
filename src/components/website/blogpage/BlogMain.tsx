@@ -11,10 +11,10 @@ export default function BlogMain({}: Props) {
       className="pt-[4rem]  lg:pt-[8rem] pb-[4rem] w-11/12 lg:w-9/12 mx-auto"
     >
       {" "}
-      <h1 className="text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Discover Our Articles
       </h1>
-      <h3 className="my-[2vw] text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-[80%]  mx-auto text-left lg:text-center">
+      <h3 className="my-[2vw] text-[3.5vw] lg:text-[1.2vw] text-zinc-700 md:w-[80%] text-center  mx-auto  lg:text-center">
         Explore insights and expert perspectives across diverse industries, from
         construction to hospitality. Stay updated with the latest trends, tips,
         and industry news through our curated articles.

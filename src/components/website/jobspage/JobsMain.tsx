@@ -35,7 +35,7 @@ export default function JobsMain() {
       <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
         {displayedJobs.map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
-            <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
+            <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
                 {/* Company Name & Logo */}
                 <div className="flex justify-center items-center gap-3">

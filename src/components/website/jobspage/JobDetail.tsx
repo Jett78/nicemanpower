@@ -43,7 +43,7 @@ export default function JobDetail() {
       className="pt-[4rem]  lg:pt-[8rem]"
     >
       <Link to="/jobs">
-        <div className="text-zinc-500 z-40 fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
+        <div className="text-zinc-500 z-40 lg:fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
           <div className="overflow-hidden title flex justify-center items-center">
             <Icon
               icon="ic:outline-arrow-left"
@@ -53,7 +53,7 @@ export default function JobDetail() {
           <div className="font-medium">Back</div>
         </div>
       </Link>
-      <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-14 rounded-xl">
+      <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-14 rounded-xl md:mt-0 mt-8">
         {/* top  */}
 
         <div className="flex flex-col itemscenter gap-2 w-full">
@@ -64,7 +64,7 @@ export default function JobDetail() {
                 alt="company-logo"
                 className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-8"
               />
-              <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
+              <h2 className="font-semibold text-[4.5vw] whitespace-nowrap md:text-[3vw] lg:text-[1.3vw]">
                 Construction Laborer
               </h2>
               
@@ -73,7 +73,7 @@ export default function JobDetail() {
                   {jobData.map((job, index) => (
                     <div
                       key={index}
-                      className="grid grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
+                      className="grid sm:grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
                     >
                       <div className="flex justify-center items-center gap-[6px]">
                         {/* <Icon

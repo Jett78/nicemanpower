@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 // import RelatedBlogs from "./RelatedBlogs";
 // import { useParams } from "react-router-dom";
 
-type Props = {};
 
-export default function BlogDetail({}: Props) {
+export default function BlogDetail() {
   // const { id } = useParams();  // Assuming you are using React Router for dynamic routes
   const encodedURL = encodeURIComponent(window.location.href); // Current blog URL
   return (
@@ -73,7 +72,7 @@ export default function BlogDetail({}: Props) {
             height={1000}
             src="/public/dummy-work.png"
             alt="expedition-image"
-            className="w-full h-[70vh] object-cover object-top"
+            className="w-full md:h-[70vh] object-cover rounded-xl object-top"
           />
 
           {/* CONTENT  */}
@@ -83,7 +82,7 @@ export default function BlogDetail({}: Props) {
               <h2 className="title font-medium tracking-wide text-lg italic">
                 1. HERE IS THE TITLE
               </h2>
-              <p>
+              <p className="md:text-base text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequatur repellendus eum saepe iusto, distinctio asperiores
                 rem quis cupiditate minus laborum magnam aliquam molestiae quos
@@ -102,7 +101,7 @@ export default function BlogDetail({}: Props) {
               <h2 className="title font-medium tracking-wide text-lg italic">
                 2. HERE IS THE TITLE
               </h2>
-              <p>
+              <p className="md:text-base text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequatur repellendus eum saepe iusto, distinctio asperiores
                 rem quis cupiditate minus laborum magnam aliquam molestiae quos
@@ -119,13 +118,13 @@ export default function BlogDetail({}: Props) {
             {/* banner  */}
             <div className="w-full  relative h-[30vh] mx-auto flex justify-center items-center">
               {/* mask */}
-              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.3] z-10"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-black opacity-[0.3] z-10 rounded-xl"></div>
               <img
                 width={1000}
                 height={1000}
                 src="/public/dummy-work.png"
                 alt="banner-image"
-                className="absolute top-0 left-0 bg-c w-full h-full object-cover object-bottom"
+                className="absolute top-0 left-0 bg-c rounded-xl w-full h-full object-cover object-bottom"
               ></img>
 
               {/* <div className="relative z-20 w-9/12 flex justify-between items-center gap-5 mx-auto">
@@ -150,7 +149,7 @@ export default function BlogDetail({}: Props) {
               <h2 className="title font-medium tracking-wide text-lg italic">
                 3. HERE IS THE TITLE
               </h2>
-              <p>
+              <p className="md:text-base text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequatur repellendus eum saepe iusto, distinctio asperiores
                 rem quis cupiditate minus laborum magnam aliquam molestiae quos
@@ -169,7 +168,7 @@ export default function BlogDetail({}: Props) {
               <h2 className="title font-medium tracking-wide text-lg italic">
                 Conclusion
               </h2>
-              <p>
+              <p className="md:text-base text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Consequatur repellendus eum saepe iusto, distinctio asperiores
                 rem quis cupiditate minus laborum magnam aliquam molestiae quos
