@@ -36,7 +36,7 @@ export default function HomeHero() {
           <img
             src="./public/brush.png"
             alt="brush"
-            className="absolute -top-4 right-0 z-[1] w-[21vw] h-[5vw]"
+            className="lg:absolute hidden -top-4 right-0 z-[1] w-[21vw] h-[5vw]"
           />
           , <br /> Every Time
         </h1>

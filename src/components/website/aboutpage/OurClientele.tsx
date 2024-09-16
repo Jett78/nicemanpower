@@ -204,7 +204,7 @@ export default function OurClientele() {
               <img
                 src={item?.img}
                 alt="icons-company"
-                className=" object-cover rounded-lg h-32 w-40"
+                className=" object-cover rounded-lg md:h-32 md:w-40 h-14 w-14"
               />
             </div>
           ))}
@@ -215,7 +215,7 @@ export default function OurClientele() {
               <img
                 src={item?.img}
                 alt="icons-company"
-                className=" object-cover rounded-lg h-32 w-40"
+                className=" object-cover rounded-lg md:h-32 md:w-40 h-14 w-14"
               />
             </div>
           ))}
