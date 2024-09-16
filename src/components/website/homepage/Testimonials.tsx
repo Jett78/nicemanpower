@@ -54,7 +54,7 @@ export default function Testimonials() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: false, amount: 0.3 }}
-      className="pb-[2rem] my-20 min-h-screen overflow-hidden flex justify-center items-center flex-col w-full"
+      className="pb-[2rem] md:my-20 my-6 min-h-screen overflow-hidden flex justify-center items-center flex-col w-full"
     >
       <div className="w-full justify-center items-center text-center">
         <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none hero">
@@ -71,8 +71,8 @@ export default function Testimonials() {
         <Slider {...settings} ref={sliderRef}>
           {reviewsData.map((item, index) => (
             <div key={index} className="px-4 cursor-pointer py-10">
-              <div className="bg-[#f4f4f5] grid border-2 border-zinc-200 min-h-[15vw] max-w-[24vw] p-6 rounded-2xl mx-auto">
-                <div className="flex mb-4 text-[1vw]">
+              <div className="bg-[#f4f4f5] grid border-2 border-zinc-200 min-h-[15vw] lg:w-[24vw] p-6 rounded-2xl mx-auto">
+                <div className="flex mb-4 md:text-[1vw]">
                   {[...Array(5)].map((_, i) => (
                     <Icon
                       key={i}
@@ -81,14 +81,14 @@ export default function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="mb-4 text-light  text-[1vw] h-[6vw]">
+                <p className="mb-4 text-light  md:text-[1vw] text-sm md:h-[6vw]">
                   "{item.reviewDescription}"
                 </p>
-                <div className="flex items-center gap-[1vw]">
-                  <img src={item.img} alt="avatars"/>
+                <div className="flex items-center md:gap-[1vw] gap-4">
+                  <img src={item.img} alt="avatars" className="w-10 h-10 "/>
                  <div>
-                 <h2 className="font-semibold md:text-[1vw]">{item.name}</h2>
-                 <p className="font-medium md:text-[0.8vw]">{item.position}</p>
+                 <h2 className="font-semibold md:text-[1vw] text-sm">{item.name}</h2>
+                 <p className="font-medium md:text-[0.8vw] text-xs">{item.position}</p>
                  </div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function Testimonials() {
         <div className="absolute top-0 left-0 h-full bg-gradient-to-r w-[20vw] from-zinc-50 to-transparent z-10"></div>
         <div className="absolute top-0 right-0 h-full bg-gradient-to-l w-[20vw] from-zinc-50 to-transparent z-10"></div>
 
-        <div className="flex text-2xl items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -bottom-20 mt-4">
+        <div className="flex text-2xl items-center gap-6 absolute left-1/2 transform -translate-x-1/2 -bottom-10 mt-4">
           <button
             onClick={handlePrev}
             className="cursor-pointer outline-none border rounded-full bg-[#2088ca]  active:bg-blue-500/50 ease-in-out duration-200 shadow-sm p-2"
