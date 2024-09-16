@@ -5,7 +5,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 export default function FeatureJobs() {
   return (
-    <div className="py-[4rem] pt-[6rem]">
+    <div className="py-[4rem] md:pt-[6rem]">
       <div className="w-full flex gap-5 justify-between items-end">
         <div className="flex w-full h-full flex-col gap-2">
           <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
@@ -34,7 +34,7 @@ export default function FeatureJobs() {
       <div className="grid lg:grid-cols-3 gap-5 mt-5 lg:mt-10">
         {jobData.slice(0, 3).map((job, index) => (
           <Link to={`/jobs/${job.companyName}`} key={index}>
-            <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start p-10 items-start gap-3 relative overflow-hidden">
+            <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
                 {/* Company Name & Logo */}
                 <div className="flex justify-center items-center gap-3">

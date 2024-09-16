@@ -31,8 +31,8 @@ tl.to(".imgrotate",{
   }, []);
 
   return (
-    <main className="flex justify-center gap-10 items-center h-full my-20" ref={featureContainer}>
-      <section className="flex flex-col justify-center items-start gap-1 text-left h-full lg:w-[50%]">
+    <main className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center h-full md:my-20 my-6" ref={featureContainer}>
+      <section className="flex flex-col justify-center items-start gap-1 text-left h-full">
         <h2 className="text-[3vw] lg:text-[1vw]  font-semibold text-orange-500 hero">Need Skilled Talent for Your Projects?</h2>
         <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 leading-relaxed lg:w-[96%]">
           We’ve partnered with over 800 companies globally, delivering top-tier
@@ -49,7 +49,7 @@ tl.to(".imgrotate",{
       <img
               src="/public/hands.png"
               alt="hands"
-              className="w-[30vw] h-[16vw] object-cover object-center rounded-xl"
+              className="w-full h-full object-cover object-center rounded-xl"
             />
       </section>
     {/* --Dark overlay-- */}

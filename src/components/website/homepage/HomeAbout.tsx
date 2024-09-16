@@ -3,9 +3,9 @@ import JobsFeature from "./JobsFeature";
 
 export default function HomeAbout() {
   return (
-    <div className="py-[2rem]  w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
+    <div className="md:py-[2rem]  w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
       {/* experience  */}
-      <div className="py-[5rem] grid  lg:grid-cols-3 w-full gap-2 lg:gap-10">
+      <div className="md:py-[5rem] py-[5rem] grid  lg:grid-cols-3 w-full gap-2 lg:gap-10">
         {/* <div className="bg-[#c3f5d2] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
           <span className="font-semibold text-[4vw] lg:text-[2vw] hero">
             800+
@@ -30,9 +30,9 @@ export default function HomeAbout() {
             Years of Experience
           </span>
         </div> */}
-        <img src="./public/cards/img1.png" alt="" />
-        <img src="./public/cards/img2.png" alt="" />
-        <img src="./public/cards/img3.png" alt="" />
+        <img src="./public/cards/img1.png" alt="card" />
+        <img src="./public/cards/img2.png" alt="card" />
+        <img src="./public/cards/img3.png" alt="card" />
       </div>
       <JobsFeature />
 

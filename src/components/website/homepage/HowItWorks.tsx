@@ -9,7 +9,7 @@ export default function HowItWorks() {
   const stickyContainer = useRef(null);
 
   useGSAP(() => {
-    let tl = gsap.timeline({
+    const tl = gsap.timeline({
       scrollTrigger: {
         start: "top top",
         end: "end -500%",
