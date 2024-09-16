@@ -22,10 +22,10 @@ export default function JobsMain() {
       transition={{ duration: 1 }}
       className="py-[2rem]  pt-[4rem]  lg:pt-[8rem] w-full"
     >
-      <h1 className="text-[8vw] w-11/12 mx-auto lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
+      <h1 className="text-[8vw] w-11/12 mx-auto lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Vacancies Announcement
       </h1>
-      <p className="my-[2vw]  text-[3.5vw] w-11/12 lg:text-[1.2vw] lg:text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
+      <p className="my-[2vw] text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] w-11/12 text-center mx-auto lg:w-8/12 leading-relaxed text-zinc-700">
         Discover exciting career opportunities with our latest job openings.
         Find roles that match your skills and ambitions and apply today to join
         our dynamic team!
@@ -46,18 +46,18 @@ export default function JobsMain() {
                       className="w-full h-full  object-contain object-center"
                     />
                   </div>
-                  <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
+                  <h2 className="font-semibold text-[3vw] md:text-[2.5vw] lg:text-[1.3vw]">
                     {job.companyName}
                   </h2>
                 </div>
 
                 {/* Job Title */}
-                <h3 className="font-semibold text-[4vw] md:text-[3vw] lg:text-[1.2vw] text-orange-500">
+                <h3 className="font-semibold text-[3vw] md:text-[2.5vw] lg:text-[1.2vw] text-orange-500">
                   {job.jobTitle}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
+                <p className="text-[2vw] md:text-[1.5vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
                   {job.description}
                 </p>
               </div>

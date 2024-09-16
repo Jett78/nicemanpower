@@ -67,7 +67,7 @@ export default function HowItWorks() {
               </span>
 
               <div className="flex flex-col lg:flex-row relative justify-center items-center gap-8">
-                <p className="w-full lg:w-[55%] text-[3.5vw] lg:text-[1.1vw] text-zinc-600">
+                <p className="w-full lg:w-[55%] text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-600">
                   Start your journey by submitting your application online.
                   Provide us with your resume, portfolio, and any other relevant
                   information to help us understand your qualifications and
@@ -109,7 +109,7 @@ export default function HowItWorks() {
                 </span>
 
                 <div className="flex flex-col lg:flex-row justify-center relative items-center gap-8">
-                  <p className="w-full lg:w-[55%] text-[3.5vw] lg:text-[1.1vw] text-zinc-600">
+                  <p className="w-full lg:w-[55%] text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-600">
                     {step.description}
                   </p>
                   <img

@@ -5,7 +5,7 @@ export default function HomeAbout() {
   return (
     <div className="md:py-[2rem]  w-full lg:pb-[7rem]  flex flex-col justify-center items-center">
       {/* experience  */}
-      <div className="md:py-[5rem] py-[5rem] grid  lg:grid-cols-3 w-full gap-2 lg:gap-10">
+      <div className="md:py-[5rem] py-[5rem] grid  lg:grid-cols-3 md:grid-cols-2 w-full gap-2 lg:gap-10">
         {/* <div className="bg-[#c3f5d2] rounded-xl w-full h-[25vw] text-center lg:h-[15vw] p-10  flex flex-col gap-2 justify-center items-center">
           <span className="font-semibold text-[4vw] lg:text-[2vw] hero">
             800+
@@ -59,7 +59,7 @@ export default function HomeAbout() {
             Millions of jobs. Find the one that's right for you.
           </h2>
 
-          <p className="text-[3.5vw] lg:text-[1.2vw] text-zinc-700 leading-relaxed">
+          <p className="text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-700 leading-relaxed">
             Explore millions of job opportunities across industries and find the
             perfect match for your skills and goals. Whether starting your
             career or advancing, we connect you with the right opportunity.

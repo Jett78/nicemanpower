@@ -223,7 +223,7 @@ export default function ServicesMain() {
         <h1 className="text-[8vw] lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           What services do <br /> we provide?
         </h1>
-        <h3 className="mt-[2vw]  text-[3.5vw] text-center md:w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto  lg:text-center">
+        <h3 className="mt-[2vw]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-center md:w-[80%] lg:text-[1.2vw] text-zinc-700   mx-auto  lg:text-center">
           At Nice Recruiting Agency, we are dedicated to providing comprehensive
           manpower solutions that empower businesses to succeed. Our services
           range from permanent and contract staffing to executive search, skill
@@ -239,7 +239,7 @@ export default function ServicesMain() {
       <h1 className="mt-[4vw] text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Industries We Supply
       </h1>
-      <h3 className="mt-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 md:w-[80%]  mx-auto text-left lg:text-center ">
+      <h3 className="mt-[2vw]  text-zinc-700 lg:w-[80%]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] mx-auto lg:text-center text-left ">
         At Nice Recruiting Agency, we are dedicated to providing comprehensive
         manpower solutions that empower businesses to succeed. Our services
         range from permanent and contract staffing to executive search, skill
@@ -250,7 +250,7 @@ export default function ServicesMain() {
 
       <div
         ref={mainContainer}
-        className="w-full lg:h-screen  flex justify-center items-center"
+        className="w-full flex justify-center items-center"
       >
         <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-10">
           {/* Left Titles */}
@@ -266,7 +266,7 @@ export default function ServicesMain() {
                   <p
                     className={`${
                       index % 2 === 0 ? "text-black " : "text-white"
-                    } hero font-regular h-auto overflow-hidden text-[3.5vw] mb-2 lg:mb-[4px] lg:text-[1vw] title-${
+                    } hero font-regular h-auto overflow-hidden text-[3.5vw] sm:text-[2vw] lg:text-[1vw] mb-2 lg:mb-[4px]  title-${
                       index + 1
                     } `}
                   >
@@ -274,7 +274,7 @@ export default function ServicesMain() {
                   </p>
                   <div>
                     <button
-                      className={`px-[5vw] lg:px-[1vw]  py-[2vw] lg:py-[0.5vw] whitespace-nowrap text-[3.5vw] lg:text-[0.9vw] font-semibold ${
+                      className={`px-[5vw] lg:px-[1vw]  py-[2vw] lg:py-[0.5vw] whitespace-nowrap text-[3.5vw] sm:text-[2vw] lg:text-[0.9vw] font-semibold ${
                         index % 2 === 0 ? "bg-[#cffade] " : "bg-[#d5e8f4]"
                       } rounded-lg  text-zinc-700 border-zinc-600`}
                     >
@@ -371,18 +371,12 @@ export default function ServicesMain() {
         <h1 className="mt-16 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
         </h1>
-        <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 lg:text-center md:w-[80%] mx-auto ">
+        <p className="my-[2vw]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-700 lg:text-center lg:w-[80%] mx-auto ">
           Our Recruitment Process: Learn about our systematic approach to
           sourcing, evaluating, and placing top talent to meet your hiring needs
           effectively.
         </p>
 
-        {/* <p className="lg:text-[1.2vw] text-zinc-700 text-center w-7/12 mx-auto">
-          we believe in a streamlined and effective recruitment process that
-          ensures the best fit for both clients and candidates. Our process is
-          built on a foundation of transparency, efficiency, and attention to
-          detail.
-        </p> */}
         <div className="grid w-full mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 gap-5">
           {processData.map((service, index) => (
             <div className="bg-gradient-to-tr from-[#2088ca] to-[#f37023] p-[2px] rounded-2xl">
@@ -394,7 +388,7 @@ export default function ServicesMain() {
                   {service.title}
                 </h3>
                 <div className="md:block hidden bg-gradient-to-tr from-[#2088ca] to-[#f37023] h-[0.1vw] group-hover:w-[15vw] ease-in-out duration-500 w-[7vw]"></div>
-                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 md:h-[7vw]">
+                <p className="text-[3.5vw] sm:text-[2.4vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 lg:h-[7vw]">
                   {service.description}
                 </p>
               </div>

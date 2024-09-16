@@ -54,20 +54,20 @@ export default function Testimonials() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: false, amount: 0.3 }}
-      className="pb-[2rem] md:my-20 my-6 min-h-screen overflow-hidden flex justify-center items-center flex-col w-full"
+      className="pb-[2rem] md:my-40 my-20  flex justify-center items-center flex-col w-full"
     >
       <div className="w-full justify-center items-center text-center">
         <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800 text-center leading-none hero">
           Voice Of Our <span className="">Clients</span>
         </h1>
-        <p className="my-[2vw]  w-full lg:w-10/12 text-[3.5vw] lg:text-[1.3vw] text-zinc-700 mx-auto leading-relaxed">
+        <p className="my-[2vw]  w-full lg:w-10/12 text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-700 mx-auto leading-relaxed">
           You may not trust us yet, but you can trust the positive experiences
           of our clients who have benefited from our dedicated service and
           successful placements.
         </p>
       </div>
 
-      <div className="relative w-full mt-10">
+      <div className="relative w-full md:mt-10">
         <Slider {...settings} ref={sliderRef}>
           {reviewsData.map((item, index) => (
             <div key={index} className="px-4 cursor-pointer py-10">
@@ -81,7 +81,7 @@ export default function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="mb-4 text-light  md:text-[1vw] text-sm md:h-[6vw]">
+                <p className="mb-4 text-light  md:text-[1vw] text-xs leading-6">
                   "{item.reviewDescription}"
                 </p>
                 <div className="flex items-center md:gap-[1vw] gap-4">

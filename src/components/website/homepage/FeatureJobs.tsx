@@ -11,7 +11,7 @@ export default function FeatureJobs() {
           <h1 className="text-[8vw] lg:text-[4vw] font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
             Featured Jobs
           </h1>
-          <p className="text-[3.5vw] lg:text-[1.2vw] lg:w-[50%] leading-relaxed text-zinc-700">
+          <p className="text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] lg:w-[50%] leading-relaxed text-zinc-700">
             Search all the open positions on the web. Get your own personalized
             salary estimate. Read reviews on over 30000+ companies worldwide.
           </p>

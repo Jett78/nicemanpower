@@ -1,40 +1,155 @@
 import { useState } from "react";
-import { motion} from "framer-motion";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+// const steps = [
+//   { number: 1, text: "Bahrain", image: "/public/client/Bahrain.png" },
+//   { number: 2, text: "UAE", image: "/public/client/Uae.png" },
+//   { number: 3, text: "Saudi Arabia", image: "public/client/Saudi.png" },
+//   { number: 4, text: "Qatar", image: "/public/client/Qatar.png" },
+//   { number: 5, text: "Malaysia", image: "/public/client/Malaysia.png" },
+// ];
 
-const steps = [
-  { number: 1, text: "Bahrain", image: "/public/client/Bahrain.png" },
-  { number: 2, text: "UAE", image: "/public/client/Uae.png" },
-  { number: 3, text: "Saudi Arabia", image: "public/client/Saudi.png" },
-  { number: 4, text: "Qatar", image: "/public/client/Qatar.png" },
-  { number: 5, text: "Malaysia", image: "/public/client/Malaysia.png" },
+const clientdata = [
+  {
+    img: "/public/client/cm1.jpg",
+  },
+  {
+    img: "/public/client/cm2.png",
+  },
+  {
+    img: "/public/client/cm3.png",
+  },
+  {
+    img: "/public/client/cm4.png",
+  },
+  {
+    img: "/public/client/cm5.png",
+  },
 ];
-
+const clientdata2 = [
+  {
+    img: "/public/client/cm1.jpg",
+  },
+  {
+    img: "/public/client/cm2.png",
+  },
+  {
+    img: "/public/client/cm3.png",
+  },
+  {
+    img: "/public/client/cm4.png",
+  },
+  {
+    img: "/public/client/cm5.png",
+  },
+];
 export default function OurClientele() {
-  const [activeStep, setActiveStep] = useState<number | null>(1);
-  const [lastHoveredImage, setLastHoveredImage] = useState<string | null>(
-    steps[0].image
-  );
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    rtl: false, // Add this line to change the slide direction
+    pauseOnHover: false, // Continue sliding when hovered
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          pauseOnHover: false, // Continue sliding when hovered
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          pauseOnHover: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          pauseOnHover: false,
+        },
+      },
+    ],
+  };
+  const settings2 = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    rtl: true, // Add this line to change the slide direction
+    pauseOnHover: false, // Continue sliding when hovered
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          pauseOnHover: false, // Continue sliding when hovered
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+          infinite: true,
+          pauseOnHover: false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          pauseOnHover: false,
+        },
+      },
+    ],
+  };
+
+  // const [activeStep, setActiveStep] = useState<number | null>(1);
+  // const [lastHoveredImage, setLastHoveredImage] = useState<string | null>(
+  //   steps[0].image
+  // );
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: false, amount: 0.3 }}
-      className="py-[2rem] w-full"
-    >
+    <div className="py-[10rem] w-full">
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Clientele
       </h1>
-      <p className="my-[2vw]  text-[3.5vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
+      <p className="my-[2vw]  text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-700 w-full lg:w-8/12 mx-auto text-left lg:text-center">
         We have already worked with 200+ clients all over the world and they are
         pretty satisfied with our work.
       </p>
 
       <div className="w-full mt-5 lg:mt-10 lg:grid grid-cols-1 gap-x-10">
-        {/* Steps List */}
-        <div className="col-span-1 relative  flex flex-col gap-4">
+        {/* <div className="col-span-1 relative  flex flex-col gap-4">
           <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-5 mb-10   items-center top-[4rem]">
             {steps.map(({ number, text, image }) => (
               <motion.div
@@ -54,7 +169,7 @@ export default function OurClientele() {
                 transition={{ duration: 0.3 }}
               >
                 <h2
-                  className={`font-semibold whitespace-nowrap text-[3.5vw] md:text-[3vw] lg:text-[1.2vw] leading-none duration-300 transition-colors ${
+                  className={`font-semibold whitespace-nowrap text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] leading-none duration-300 transition-colors ${
                     activeStep === number ? "text-white" : "text-zinc-500 "
                   }`}
                 >
@@ -63,46 +178,50 @@ export default function OurClientele() {
               </motion.div>
             ))}
           </div>
-        </div>
-
-        {/* Image Display */}
-        {/* <div className="h-[60vh] overflow-scroll bg-red-200 relative">
-          <AnimatePresence>
-            <motion.div
-              key={activeStep || lastHoveredImage}
-              className="absolute inset-0"
-              initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
-              animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
-              exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
-              transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
-            >
-              <img
-                src={
-                  steps.find((step) => step.number === activeStep)?.image ||
-                  lastHoveredImage ||
-                  "/dummy-work.png"
-                }
-                alt="work"
-                className="w-full "
-              />
-            </motion.div>
-          </AnimatePresence>
         </div> */}
 
-        <div className="h-[50vh]  overflow-auto cursor-pointer" data-lenis-prevent>
-      <div>
-          <img
-                src={
-                  steps.find((step) => step.number === activeStep)?.image ||
-                  lastHoveredImage ||
-                  "/dummy-work.png"
-                }
-                alt="work"
-                className="w-full "
+        {/* <div
+          className="h-[50vh]  overflow-auto cursor-pointer"
+          data-lenis-prevent
+        >
+          <div>
+            <img
+              src={
+                steps.find((step) => step.number === activeStep)?.image ||
+                lastHoveredImage ||
+                "/dummy-work.png"
+              }
+              alt="work"
+              className="w-full "
+            />
+          </div>
+        </div> */}
+      </div>
+
+      <div className="space-y-16 md:my-20 my-10 ">
+        <Slider {...settings} className="">
+          {clientdata?.map((item, index) => (
+            <div key={index} className="">
+              <img
+                src={item?.img}
+                alt="icons-company"
+                className=" object-cover rounded-lg h-32 w-40"
               />
+            </div>
+          ))}
+        </Slider>
+        <Slider {...settings2}>
+          {clientdata2?.map((item, index) => (
+            <div key={index} className="">
+              <img
+                src={item?.img}
+                alt="icons-company"
+                className=" object-cover rounded-lg h-32 w-40"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
-        </div>
-      </div>
-    </motion.div>
+    </div>
   );
 }

@@ -25,17 +25,17 @@ export default function Footer() {
                 <h1 className="text-[8vw] md:text-[4vw] hero font-medium lg:text-[3vw] leading-normal">
                   Reach out
                 </h1>
-                <h1 className="text-[4vw] md:text-[4vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2">
+                <h1 className="text-[3.5vw] sm:text-[2vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2">
                   info@nicerecruitment.org
                 </h1>
-                <h1 className="text-[4vw] md:text-[4vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
+                <h1 className="text-[3.5vw] sm:text-[2vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
                   +977 01-4354297
                 </h1>
-                <h1 className="text-[4vw] md:text-[4vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
+                <h1 className="text-[3.5vw] sm:text-[2vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
                   Samakhusi Town Planning, Kathmandu, Nepal.
                 </h1>
 
-                <div className="flex gap-4 items-center md:text-[1.5vw]">
+                <div className="flex gap-4 items-center lg:text-[1.5vw] text-xl">
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function Footer() {
               </div>
 
               <div className="w-full flex flex-col gap-2">
-                <p className="w-full text-start  italic text-zinc-600 text-[3.5vw] lg:text-[0.9vw]">
+                <p className="w-full text-start  italic text-zinc-600 text-[3.5vw] sm:text-[2vw] lg:text-[0.9vw]">
                   Partner with us to access skilled manpower tailored to meet
                   your industry’s unique demands. Our expertise spans a wide
                   range of sectors, ensuring you get the right talent, every

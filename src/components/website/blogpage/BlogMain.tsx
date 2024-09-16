@@ -14,7 +14,7 @@ export default function BlogMain({}: Props) {
       <h1 className="text-[8vw] lg:text-[4vw] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Discover Our Articles
       </h1>
-      <h3 className="my-[2vw] text-[3.5vw] lg:text-[1.2vw] text-zinc-700 md:w-[80%] text-center  mx-auto  lg:text-center">
+      <h3 className="my-[2vw] text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw] text-zinc-700 md:w-[80%] text-center  mx-auto  lg:text-center">
         Explore insights and expert perspectives across diverse industries, from
         construction to hospitality. Stay updated with the latest trends, tips,
         and industry news through our curated articles.
@@ -38,12 +38,12 @@ export default function BlogMain({}: Props) {
               <span>July 20, 2024</span>
               <span>5 minutes read</span>
             </div>
-            <h3 className="font-semibold text-[4vw]   duration-300 md:text-[3vw] lg:text-[1.2vw]">
+            <h3 className="font-semibold    duration-300 text-[3.5vw] sm:text-[2vw] lg:text-[1.2vw]">
               {item.title.length > 50
                 ? item.title.slice(0, 50) + "..."
                 : item.title}
             </h3>
-            <p className="text-[3.5vw] md:text-[2.5vw] lg:text-[0.8vw] text-zinc-700">
+            <p className="text-[3vw] sm:text-[1.5vw] lg:text-[0.8vw] text-zinc-700">
               {item.description.length > 70
                 ? item.description.slice(0, 70) + "..."
                 : item.description}
