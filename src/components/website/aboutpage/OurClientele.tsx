@@ -35,7 +35,7 @@ export default function OurClientele() {
       <div className="w-full mt-5 lg:mt-10 lg:grid grid-cols-1 gap-x-10">
         {/* Steps List */}
         <div className="col-span-1 relative  flex flex-col gap-4">
-          <div className="sticky flex justify-around gap-5 mb-10   items-center top-[4rem]">
+          <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-5 mb-10   items-center top-[4rem]">
             {steps.map(({ number, text, image }) => (
               <motion.div
                 key={number}
