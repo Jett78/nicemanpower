@@ -26,11 +26,9 @@ export default function HomeHero() {
           className="w-full h-full brightness-50 object-cover object-center"
         />
       </div>
-     
-      <div className="flex flex-col w-full h-full justify-center z-[2] relative items-center">
-   
 
-        <h1 className=" md:text-[3vw] relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
+      <div className="flex flex-col w-full h-full justify-center z-[2] relative items-center">
+        <h1 className=" md:text-[4vw] lg:text-[3vw] text-2xl relative z-[10]    hero   font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-zinc-50 to-zinc-100 text-center leading-none">
           {/* Find Job <br /> You Deserve */}
           Connecting You with the{" "}
           <span className="relative text-white z-[200]">Right Talent</span>{" "}
@@ -57,7 +55,7 @@ export default function HomeHero() {
           </div>
         </div>
 
-        <p className="text-[4vw] sm:text-[1.2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
+        <p className="text-sm md:text-[1.3vw] lg:text-[1.2vw] lg:leading-[2vw] py-4 font-semibold  text-zinc-50 w-11/12 mx-auto  lg:w-6/12 text-center">
           We are manpower recruiting agency. We are experts in this field and we
           know how to{" "}
           <span className="text-orange-500 italic">
@@ -66,11 +64,10 @@ export default function HomeHero() {
           all over the world.
         </p>
         <div className="flex gap-5 mt-[1.5rem] justify-center items-center">
-     
           <div>
             <button
               onClick={() => Setactive(!active)}
-              className=" px-6 sm:px-[2vw] sm:py-[2vw] py-4 lg:py-[0.8vw]   sm:text-[2rem] md:text-[1vw]  font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
+              className=" md:px-[2vw] md:py-[1vw] px-6 py-3 font-semibold bg-orange-500 hover:bg-orange-600 duration-300 rounded-full text-zinc-50  border-zinc-600 "
             >
               I need skilled talents
             </button>
