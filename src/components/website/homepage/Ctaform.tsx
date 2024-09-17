@@ -1,8 +1,8 @@
 
 const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
-    <main className="bg-white sm:rounded-2xl  p-10 absolute left-1/2 -translate-x-1/2 lg:top-1/2 top-14 -translate-y-1/2  lg:w-[50em]  mx-auto">
-        <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer w-8" onClick={closeDropdown} />
+    <main className="bg-white sm:rounded-2xl  md:p-10 p-6 absolute left-1/2 -translate-x-1/2 top-1/2  -translate-y-1/2  lg:w-[50em]  mx-auto">
+        <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 md:top-6 top-2 cursor-pointer md:w-8 w-6" onClick={closeDropdown} />
       <div>
         <p className="italic lg:text-[0.8vw] xl:text-sm text-xs md:block hidden text-center w-[90%] mx-auto">
           We specialize in providing skilled professionals across industries
@@ -17,7 +17,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
       </div>
 
       
-      <form action="" className="col-span-3  py-5 md:mt-5  gap-x-14">
+      <form action="" className="col-span-3  md:py-5 md:mt-5  gap-x-14">
            <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
 
            <div className="flex flex-col md:gap-2 sm:w-full w-60 mx-auto">
