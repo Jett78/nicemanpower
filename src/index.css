@@ -75,3 +75,16 @@
     background-position: 0 50%,0 calc(0% - 2px),0 calc(100% + 2px),50% 50%,50% calc(0% - 2px),50% calc(100% + 2px),100% 50%,100% calc(0% - 2px),100% calc(100% + 2px);
  }
 }
+
+/* Default placeholder style */
+input::placeholder {
+  color: #a0a0a0; /* or whatever color you prefer */
+  font-size: 12px;
+}
+
+/* Hide placeholder on screens smaller than 640px (tailored for mobile) */
+@media (max-width: 640px) {
+  input::placeholder {
+    color: transparent; /* Hides the placeholder */
+  }
+}

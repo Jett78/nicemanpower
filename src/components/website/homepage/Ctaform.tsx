@@ -1,7 +1,7 @@
 
 const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
-    <main className="bg-white sm:rounded-2xl  md:p-10 p-6 absolute left-1/2 -translate-x-1/2 top-1/2  -translate-y-1/2  lg:w-[50em]  mx-auto">
+    <main className="bg-white rounded-2xl  md:p-10 p-6 absolute left-1/2 -translate-x-1/2 top-1/2  -translate-y-1/2  lg:w-[50em]  mx-auto">
         <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 md:top-6 top-2 cursor-pointer md:w-8 w-4" onClick={closeDropdown} />
       <div>
         <p className="italic lg:text-[0.8vw] xl:text-sm text-xs md:block hidden text-center w-[90%] mx-auto">
