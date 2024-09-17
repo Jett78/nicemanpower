@@ -60,10 +60,10 @@ export default function Navbar() {
     <main className="">
       <motion.div
         animate={controls}
-        className="w-full flex  justify-center items-center fixed top-2 left-0 py-[0.5vw] z-20"
+        className="w-full flex  justify-center items-center fixed md:top-2 left-0 md:py-[0.5vw] z-20"
       >
-        <div className="mx-auto sm:w-fit w-full  flex sm:justify-center justify-between sm:rounded-full sm:px-[2vw] sm:py-[0.5vw] py-2 bg-zinc-100 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center">
-          <div className="w-full flex justify-center gap-28 items-center">
+        <div className="mx-auto w-full md:w-fit  flex justify-center md:rounded-full px-[2vw] sm:py-[0.5vw]  bg-zinc-100 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center">
+          <div className="w-full  flex justify-between md:gap-28  px-2 md:py-0 py-4 items-center">
             <Link to="/">
               <img
                 className="md:w-[8vw] w-20"
@@ -72,7 +72,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <div className="sm:flex hidden gap-[2vw] text-[0.9vw] font-semibold justify-center items-center text-zinc-700">
+            <div className="md:flex hidden gap-[2vw] text-[0.9vw] font-semibold justify-center items-center text-zinc-700">
               {navItems.map(({ href, label }) => (
                 <Link key={href} to={href}>
                   <span
@@ -86,12 +86,12 @@ export default function Navbar() {
               ))}
             </div>
 
-            <button className="sm:block hidden px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-blue-500 hover:bg-blue-600 duration-300   rounded-full text-tertiary-50">
+            <button className="md:block hidden px-[2vw] py-[0.5vw] text-[1vw] font-semibold bg-blue-500 hover:bg-blue-600 duration-300   rounded-full text-tertiary-50">
               <Link to="/contact">Contact </Link>
             </button>
 
             <div
-              className={`sm:hidden block`}
+              className={`md:hidden block`}
               onClick={() => setActive(!active)}
             >
               <Icon icon="mingcute:menu-line" style={{ color: "black" }} />
@@ -103,8 +103,8 @@ export default function Navbar() {
       {/* Sliding Menu */}
       <div
         className={`${
-          active ? "translate-y-14" : "-translate-y-full"
-        } bg-white fixed  z-[200] w-[18em] rounded-2xl left-1/2 -translate-x-1/2 ease-in-out duration-300`}
+          active ? "translate-y-20" : "-translate-y-full"
+        } bg-white fixed  z-[200] w-[19em] rounded-2xl left-1/2 -translate-x-1/2 ease-in-out duration-300`}
       >
         <div className="flex flex-col items-center justify-center gap-6 my-8">
         {navItems.map(({ href, label }) => (
