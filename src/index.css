@@ -77,6 +77,18 @@
 }
 
 /* Default placeholder style */
+textarea::placeholder {
+  color: #a0a0a0; /* or whatever color you prefer */
+  font-size: 12px;
+}
+
+/* Hide placeholder on screens smaller than 640px (tailored for mobile) */
+@media (max-width: 640px) {
+  textarea::placeholder {
+    color: transparent; /* Hides the placeholder */
+  }
+}
+/* Default placeholder style */
 input::placeholder {
   color: #a0a0a0; /* or whatever color you prefer */
   font-size: 12px;

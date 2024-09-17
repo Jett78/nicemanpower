@@ -17,7 +17,7 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
       </div>
 
       
-      <form action="" className="col-span-3  md:py-5 md:mt-5  gap-x-14">
+      <form action="" className="col-span-3  md:py-5 py-2 md:mt-5  gap-x-14">
            <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
 
            <div className="flex flex-col md:gap-2 sm:w-full w-60 mx-auto">
