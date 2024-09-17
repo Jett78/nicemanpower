@@ -1,24 +1,29 @@
 
 const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
   return (
-    <main className="bg-white rounded-2xl  p-10 absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2  w-[50vw] h-[40vw] mx-auto">
+    <main className="bg-white sm:rounded-2xl  p-10 absolute left-1/2 -translate-x-1/2 lg:top-1/2 top-14 -translate-y-1/2  lg:w-[50em]  mx-auto">
         <img src="./public/cancelbtn.svg" alt="cancel-btn" className="absolute right-6 top-6 cursor-pointer w-8" onClick={closeDropdown} />
       <div>
-        <p className="italic text-[0.9vw] text-center w-[90%] mx-auto">
+        <p className="italic lg:text-[0.8vw] xl:text-sm text-xs md:block hidden text-center w-[90%] mx-auto">
           We specialize in providing skilled professionals across industries
           like construction, oil and gas, hospitality, and more, we’re here to
           help you find the right talent.
         </p>
-        <h3 className="font-medium text-[1.2vw] text-center py-4 ">
+        <h3 className="font-medium lg:text-[1.2vw] xl:text-xl text-xs text-center py-4 ">
           Contact us today to access top talent for your business needs.
         </h3>
-        <div className="w-[25em] bg-[#2088CA] mx-auto h-[1.2px]"> </div>
+
+        <div className="sm:w-[25em] bg-[#2088CA] mx-auto h-[1.2px]"> </div>
       </div>
-      <form action="" className="col-span-3 h-[28vw] py-5 mt-5 grid grid-cols-2 gap-5 gap-x-14">
-        <div className="flex flex-col gap-2">
+
+      
+      <form action="" className="col-span-3  py-5 md:mt-5  gap-x-14">
+           <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
+
+           <div className="flex flex-col md:gap-2 sm:w-full w-60 mx-auto">
           <label
             htmlFor="firstName"
-            className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+            className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
           >
             First Name <span className="text-blue-500">*</span>
           </label>
@@ -27,15 +32,15 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             id="firstName"
             placeholder="Your First Name"
             name="firstName"
-            className="p-2 py-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+            className="p-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
             required
           />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:gap-2 sm:w-full w-60 mx-auto">
           <label
             htmlFor="lastName"
-            className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+            className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600"
           >
             Last Name <span className="text-blue-500">*</span>
           </label>
@@ -49,10 +54,10 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
           />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:gap-2  sm:w-full w-60 mx-auto">
           <label
             htmlFor="email"
-            className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+            className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600"
           >
             Email <span className="text-blue-500">*</span>
           </label>
@@ -66,10 +71,10 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
           />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col md:gap-2  sm:w-full w-60 mx-auto">
           <label
             htmlFor="phone"
-            className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+            className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600"
           >
             Phone <span className="text-blue-500">*</span>
           </label>
@@ -82,11 +87,12 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
             required
           />
         </div>
+           </div>
 
-        <div className="col-span-2 flex flex-col gap-2 h-auto" data-lenis-pevent>
+        <div className="col-span-2 mt-2 flex flex-col md:gap-2 sm:w-full w-60 mx-auto h-auto" data-lenis-pevent>
           <label
             htmlFor="message"
-            className="font-medium text-[3.5vw] md:text-[2.5vw] text-tertiary-600 lg:text-[0.9vw]"
+            className="font-medium  text-tertiary-600 text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw]"
           >
             Message <span className="text-blue-500">*</span>
           </label>
@@ -100,8 +106,8 @@ const Ctaform = ({ closeDropdown }: { closeDropdown: () => void }) => {
           />
         </div>
 
-        <div className="flex justify-start">
-          <button className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-[#2088ca] hover:bg-[#2563eb] duration-300 rounded-full text-zinc-50  border-zinc-600 ">
+        <div className="flex justify-start mt-4">
+          <button className="md:px-[2vw] md:py-[1vw] px-3 py-2 text-[3vw] lg:text-lg text-xs font-semibold bg-[#2088ca] hover:bg-[#2563eb] duration-300 rounded-full text-zinc-50  border-zinc-600 ">
             Submit
           </button>
         </div>
