@@ -44,7 +44,7 @@ export default function Contact() {
               Phone
             </span>
             <h3 className="text-[3.3vw] md:text-[2vw] lg:text-[1.1vw] font-semibold text-tertiary-500">
-              +977 01-4354297
+            9708906858/9706414359 
             </h3>
           </div>
 

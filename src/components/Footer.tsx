@@ -29,7 +29,7 @@ export default function Footer() {
                   info@nicerecruitment.org
                 </h1>
                 <h1 className="text-[3.5vw] sm:text-[2vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
-                  +977 01-4354297
+                9708906858/9706414359
                 </h1>
                 <h1 className="text-[3.5vw] sm:text-[2vw] lg:text-[1vw] text-zinc-600 leading-normal pb-2 ">
                   Samakhusi Town Planning, Kathmandu, Nepal.
