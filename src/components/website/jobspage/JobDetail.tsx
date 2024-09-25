@@ -545,7 +545,7 @@ export default function JobDetail() {
                 </label>
                 <input
                   type="file"
-                  className="md:text-sm text-[10px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[8px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
               <div className="flex flex-col md:w-full w-28 mx-auto ">
@@ -558,7 +558,7 @@ export default function JobDetail() {
                 </label>
                 <input
                   type="file"
-                  className="md:text-sm text-[10px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[8px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
 
