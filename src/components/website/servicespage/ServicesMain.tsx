@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { HoverEffect } from "../../ui/card-hover-effect";
-import Ctaform from "../homepage/Ctaform";
 import Ctaform2 from "../homepage/Ctaform2";
 
 const sections = [
