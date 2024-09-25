@@ -6,7 +6,6 @@ import jobData from "../../../jobs-data/JobsData";
 import { useParams } from "react-router-dom";
 
 export default function JobDetail() {
- 
   const [isOpenForm, setIsOpenForm] = useState(false);
   const { index } = useParams();
 
@@ -71,99 +70,98 @@ export default function JobDetail() {
         <div className="flex flex-col itemscenter gap-2 w-full">
           <div className="grid grid-cols-2">
             <div>
-            <img
+              <img
                 src={job.img}
                 alt="company-logo"
                 className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-8"
               />
               <h2 className="font-semibold text-[4.5vw] whitespace-nowrap md:text-[3vw] lg:text-[1.3vw]">
-               {job.jobTitle}
+                {job.jobTitle}
               </h2>
-              
+
               <div className="w-full">
                 <div className="flex w-full flex-wrap mt-2 justify-start items-start">
-                
-                    <div
-                      key={index}
-                      className="grid sm:grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
-                    >
-                      <div className="flex justify-center items-center gap-[6px]">
-                        {/* <Icon
+                  <div
+                    key={index}
+                    className="grid sm:grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
+                  >
+                    <div className="flex justify-center items-center gap-[6px]">
+                      {/* <Icon
                       className="w-4 h-4 object-cover object-center text-green-500"
                     ></Icon> */}
-                        <Icon
-                          className=" text-[1.2em] object-cover object-center text-green-500"
-                          icon="carbon:location-company"
-                          style={{ color: "[#f4f4f4]" }}
-                        />
-                        <span className="text-sm font-medium text-zinc-700">
+                      <Icon
+                        className=" text-[1.2em] object-cover object-center text-green-500"
+                        icon="carbon:location-company"
+                        style={{ color: "[#f4f4f4]" }}
+                      />
+                      <span className="text-sm font-medium text-zinc-700">
                         {job.jobTitle}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.location}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.location}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="text-[0.8em] ml-1 object-cover object-center text-green-500"
-                          icon={job.icons.date}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.date}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.type}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.type}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.salary}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.salary}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.overtime}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.overtime}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.workdays}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.workdays}
-                        </span>
-                      </div>
-                      <div className="flex justify-center items-center gap-2">
-                        <Icon
-                          className="w-4 h-4 object-cover object-center text-green-500"
-                          icon={job.icons.benefits}
-                        ></Icon>
-                        <span className="text-sm font-medium text-zinc-700">
-                          {job.benefits}
-                        </span>
-                      </div>
+                      </span>
                     </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.location}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.location}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="text-[0.8em] ml-1 object-cover object-center text-green-500"
+                        icon={job.icons.date}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.date}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.type}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.type}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.salary}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.salary}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.overtime}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.overtime}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.workdays}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.workdays}
+                      </span>
+                    </div>
+                    <div className="flex justify-center items-center gap-2">
+                      <Icon
+                        className="w-4 h-4 object-cover object-center text-green-500"
+                        icon={job.icons.benefits}
+                      ></Icon>
+                      <span className="text-sm font-medium text-zinc-700">
+                        {job.benefits}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -315,7 +313,7 @@ export default function JobDetail() {
             {/* form  */}
             <form
               action=""
-              className="pt-10 relative  w-[54vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
+              className="pt-10 relative  md:w-[54vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
             >
               {/* <div
                 onClick={handleCloseForm}
@@ -326,90 +324,89 @@ export default function JobDetail() {
               <img
                 src="../public/cancelbtn.svg"
                 alt="cancel-btn"
-                className="absolute right-6 top-2 cursor-pointer w-8"
+                className="absolute md:right-6 right-4 top-2 cursor-pointer md:w-8 w-6"
                 onClick={handleCloseForm}
               />
 
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
                   htmlFor="firstName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
                   Full Name <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
                   id="firstName"
-                  placeholder="Your Full Name"
+                  placeholder="Your First Name"
                   name="firstName"
-                  className="p-2 w-[25vw] text-sm py-2 lg:py-4 border-2 rounded-xl  border-zinc-200 outline-none bg-transparent"
+                  className="p-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
-
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="lastName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
                   Father's Name <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  placeholder="Your Father's Name"
-                  name="lastName"
-                  className="p-2 py-2 w-[25vw] h-[3vw] text-sm  lg:py-4 border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  id="firstName"
+                  placeholder="Your First Name"
+                  name="firstName"
+                  className="p-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="lastName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Passport Number<span className="text-blue-500">*</span>
+                  Passport Number <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  placeholder="Your Passport Number"
-                  name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  id="firstName"
+                  placeholder="Your First Name"
+                  name="firstName"
+                  className="p-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="lastName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Date of Birth<span className="text-blue-500">*</span>
+                  Date of Birth <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="date"
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw]  h-[3vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 md:text-sm text-[10px] lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
 
               {/* -----gender---- */}
-              <div className="relative w-[25vw]">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="gender"
-                  className="font-medium  text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Gender<span className="text-blue-500">*</span>
+                  Gender <span className="text-blue-500">*</span>
                 </label>
 
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer  lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 lg:py-[0.8vw] md:text-sm text-[10px] border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                 >
-                  <option value="" disabled selected hidden>
+                  <option value="" hidden>
                     Gender
                   </option>
                   <option value="Male">Male</option>
@@ -417,7 +414,7 @@ export default function JobDetail() {
                   <option value="Other">Other</option>
                 </select>
 
-                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-blue-500"
@@ -430,7 +427,7 @@ export default function JobDetail() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </div>
+                </div> */}
               </div>
               {/* <div className="flex flex-col gap-1">
               <label
@@ -451,31 +448,27 @@ export default function JobDetail() {
                 </select>
               </div> */}
 
-              <div className="relative w-[25vw]">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="maritalStatus"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Marital Status<span className="text-blue-500">*</span>
+                  Maritial Status <span className="text-blue-500">*</span>
                 </label>
+
                 <select
-                  id="maritalStatus"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  id="gender"
+                  className="p-2 lg:py-[0.8vw] md:text-sm text-[10px] border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                 >
-                  <option
-                    value=""
-                    disabled
-                    selected
-                    hidden
-                    className="text-gray-500"
-                  >
-                    Marital Status
+                  <option value="" hidden>
+                    Maritial Status
                   </option>
-                  <option value="Single">Single</option>
-                  <option value="Married">Married</option>
-                  <option value="Divorced">Divorced</option>
+                  <option value="Male">Single</option>
+                  <option value="Female">Married</option>
+                  <option value="Other">Divorced</option>
                 </select>
-                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+
+                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-blue-500"
@@ -488,47 +481,46 @@ export default function JobDetail() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </div>
+                </div> */}
               </div>
-
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="lastName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Mobile Number<span className="text-blue-500">*</span>
+                  Mobile Number <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  placeholder="Your Mobile Number"
-                  name="lastName"
-                  className="p-2 py-2 lg:py-4 w-[25vw]  text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  id="firstName"
+                  placeholder="Your First Name"
+                  name="firstName"
+                  className="p-2 lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
 
-              <div className="relative w-[25vw] ">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="gender"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Qulaifications<span className="text-blue-500">*</span>
+                  Qualifications <span className="text-blue-500">*</span>
                 </label>
+
                 <select
                   id="gender"
-                  className="p-2 py-2 cursor-pointer lg:py-4 w-full text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent appearance-none"
+                  className="p-2 lg:py-[0.8vw] md:text-sm text-[10px] border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                 >
-                  <option value="" disabled selected hidden>
+                  <option value="" hidden>
                     Qualifications
                   </option>
-                  <option value="Male">+2</option>
+                  <option value="Male">High School</option>
                   <option value="Female">Bachelor</option>
-                  <option value="Other">Masters</option>
-                  <option value="Other">None</option>
+                  <option value="Other">Master</option>
                 </select>
 
-                <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
+                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 text-blue-500"
@@ -541,57 +533,54 @@ export default function JobDetail() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </div>
+                </div> */}
               </div>
 
-              <div className="w-[25vw]  h-[3vw]">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
-                  htmlFor="gender"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Upload File<span className="text-blue-500">*</span>
+                  Upload File <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
-                  className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[10px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
-              <div className="w-[25vw]  h-[3vw] ">
+              <div className="flex flex-col md:w-full w-28 mx-auto ">
                 <label
-                  htmlFor="gender"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Upload Passport Size Photo
+                  Upload  photo{" "}
                   <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
-                  className="w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[10px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
 
               <div className="col-span-2 mt-4 flex flex-col gap-2">
                 <label
-                  htmlFor="message"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[1vw]"
+                  htmlFor="firstName"
+                  className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Message
+                  Message <span className="text-blue-500">*</span>
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   //   rows="4"
                   placeholder="Write something here..."
-                  className="p-2 py-4 w-[51vw]  h-[5vw] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
+                  className="p-2 py-4 w-full  md:h-[5vw] h-[10vh] text-sm border-2 rounded-xl border-zinc-300 outline-none bg-transparent"
                   required
                 />
               </div>
 
-              <div className="flex justify-start">
-                <button
-                  type="submit"
-                  className="px-[5vw] lg:px-[2vw] py-[2vw] lg:py-[0.8vw] text-[3.5vw] lg:text-[1vw] font-semibold bg-[#2088ca] hover:bg-[#2563eb] duration-300 rounded-full text-zinc-50  border-zinc-600 "
-                >
+              <div className="flex justify-start mt-4">
+                <button className="md:px-[1.7vw] md:py-[0.7vw] px-3 py-2 text-[3vw] lg:text-md text-xs font-semibold bg-blue-600 hover:bg-blue-700 duration-300 rounded-full text-zinc-50  border-zinc-600 ">
                   Apply
                 </button>
               </div>
@@ -602,5 +591,3 @@ export default function JobDetail() {
     </motion.div>
   );
 }
-
-
