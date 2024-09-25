@@ -12,19 +12,19 @@ import "slick-carousel/slick/slick-theme.css";
 
 const clientdata = [
   {
-    img: "/public/client/cm1.jpg",
+    img: "/joblogo/logo1.jpeg",
   },
   {
-    img: "/public/client/cm2.png",
+    img: "/joblogo/logo2.jpeg",
   },
   {
-    img: "/public/client/cm3.png",
+    img: "/joblogo/logo3.jpeg",
   },
   {
-    img: "/public/client/cm4.png",
+    img: "/joblogo/logo4.jpeg",
   },
   {
-    img: "/public/client/cm5.png",
+    img: "/joblogo/logo5.jpeg",
   },
 ];
 const clientdata2 = [
@@ -49,11 +49,11 @@ export default function OurClientele() {
     dots: false,
     arrows: false,
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 10,
     cssEase: "linear",
     rtl: false, // Add this line to change the slide direction
     pauseOnHover: false, // Continue sliding when hovered
@@ -204,12 +204,12 @@ export default function OurClientele() {
               <img
                 src={item?.img}
                 alt="icons-company"
-                className=" object-cover rounded-lg md:h-32 md:w-40 h-14 w-14"
+                className=" md:h-32 md:w-40 h-14 w-14 object-center"
               />
             </div>
           ))}
         </Slider>
-        <Slider {...settings2}>
+        {/* <Slider {...settings2}>
           {clientdata2?.map((item, index) => (
             <div key={index} className="">
               <img
@@ -219,7 +219,7 @@ export default function OurClientele() {
               />
             </div>
           ))}
-        </Slider>
+        </Slider> */}
       </div>
     </div>
   );
