@@ -99,7 +99,7 @@ function App() {
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:slug" element={<BlogDetail />} />
             <Route path="/jobs" element={<Jobs />} />
-            <Route path="/jobs/:slug" element={<JobDetail />} />
+            <Route path="/jobs/:index" element={<JobDetail />} />
             <Route path="/services" element={<Services />} />
           </Routes>
         </div>

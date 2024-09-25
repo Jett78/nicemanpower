@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import jobData from "../../../jobs-data/JobsData";
+import { useParams } from "react-router-dom";
 
 export default function JobDetail() {
+ 
   const [isOpenForm, setIsOpenForm] = useState(false);
+  const { index } = useParams();
+
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
     null
   );
@@ -35,6 +40,13 @@ export default function JobDetail() {
     }
   }, [isOpenForm]);
 
+  const jobIndex = parseInt(index, 10); // Convert index to a number
+  const job = jobData[jobIndex];
+
+  if (!job) {
+    return <h2>Job not found</h2>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -60,17 +72,17 @@ export default function JobDetail() {
           <div className="grid grid-cols-2">
             <div>
             <img
-                src="/public/company-logo.png"
+                src={job.img}
                 alt="company-logo"
                 className="w-24 h-24 border-2 border-zinc-500 rounded-full object-contain mb-8"
               />
               <h2 className="font-semibold text-[4.5vw] whitespace-nowrap md:text-[3vw] lg:text-[1.3vw]">
-                Construction Laborer
+               {job.jobTitle}
               </h2>
               
               <div className="w-full">
                 <div className="flex w-full flex-wrap mt-2 justify-start items-start">
-                  {jobData.map((job, index) => (
+                
                     <div
                       key={index}
                       className="grid sm:grid-cols-2 place-content-start place-items-start whitespace-nowrap   gap-x-10 gap-y-3 w-full"
@@ -85,7 +97,7 @@ export default function JobDetail() {
                           style={{ color: "[#f4f4f4]" }}
                         />
                         <span className="text-sm font-medium text-zinc-700">
-                          {job.companyName}
+                        {job.jobTitle}
                         </span>
                       </div>
                       <div className="flex justify-center items-center gap-2">
@@ -152,12 +164,11 @@ export default function JobDetail() {
                         </span>
                       </div>
                     </div>
-                  ))}
                 </div>
               </div>
             </div>
 
-            {/* company logo  */}
+            {/* vacancy logo  */}
             <div className="md:flex hidden justify-center items-center">
               <div className="object-cover object-center w-full h-[15vw] bg-white">
                 <img
@@ -592,27 +603,4 @@ export default function JobDetail() {
   );
 }
 
-const jobData = [
-  {
-    companyName: "Emirates Gas Pvt. Ltd",
-    jobTitle: "Construction Laborer",
-    description:
-      "Seeking hardworking Construction Laborers for various projects in Dubai.",
-    location: "Dubai, UAE",
-    date: "August 31, 2024",
-    type: "Full-Time",
-    salary: "100 AED",
-    overtime: "Overtime Available",
-    workdays: "6 days/week (8hrs)",
-    benefits: "Food & Accommodation",
-    icons: {
-      location: "ep:location",
-      date: "uiw:date",
-      type: "mingcute:time-line",
-      salary: "dashicons:money-alt",
-      overtime: "mdi:sort-time-descending-outline",
-      workdays: "material-symbols:work-history-outline",
-      benefits: "lucide-lab:houses",
-    },
-  },
-];
+

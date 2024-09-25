@@ -1,16 +1,17 @@
 const jobData = [
   {
-    companyName: "Emirates Gas Pvt. Ltd",
+    companyName: "BASMA Marble Restoration Co.W.L.L",
     jobTitle: "Construction Laborer",
     description:
       "Seeking hardworking Construction Laborers for various projects in Dubai.",
-    location: "Dubai, UAE",
-    date: "August 31, 2024",
+    location: "Bahrain",
+    date: "Oct 01, 2024",
     type: "Full-Time",
-    salary: "100 AED/day",
+    salary: "100 BD/month",
     overtime: "Overtime Available",
     workdays: "6 days/week (8hrs)",
     benefits: "Food & Accommodation",
+    img:"/joblogo/logo2.jpeg",
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -22,17 +23,20 @@ const jobData = [
     },
   },
   {
-    companyName: "Blue Ocean Shipping",
+    companyName: "Quick Zebra Services",
     jobTitle: "Dock Worker",
     description:
       "Dock Workers needed for cargo handling at the port of Los Angeles.",
-    location: "Los Angeles, USA",
-    date: "September 15, 2024",
+    location: "Bahrain",
+    date: "Sept 27, 2024",
     type: "Part-Time",
-    salary: "80 USD/day",
-    overtime: "Overtime Available",
-    workdays: "5 days/week (7hrs)",
+    salary: "100 BD/month",
+    overtime: "Overtime",
+    workdays: "6 days/week (8hrs)",
     benefits: "Health Insurance",
+    img:"/joblogo/logo3.jpeg",
+
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -44,17 +48,19 @@ const jobData = [
     },
   },
   {
-    companyName: "TechWave Inc.",
+    companyName: "Proworks Recruitment Services",
     jobTitle: "Front-End Developer",
     description:
       "Looking for a skilled Front-End Developer to join our innovative team in London.",
-    location: "London, UK",
-    date: "September 20, 2024",
+    location: "Dubai,UAE",
+    date: "Oct 5, 2024",
     type: "Full-Time",
-    salary: "60,000 GBP/year",
-    overtime: "Occasional Overtime",
-    workdays: "5 days/week (8hrs)",
+    salary: "1000 AED/month",
+    overtime: "According to Company Rule",
+    workdays: "6 days/week (10hrs)",
     benefits: "Remote Work & Health Insurance",
+    img:"/joblogo/logo6.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -66,17 +72,19 @@ const jobData = [
     },
   },
   {
-    companyName: "GreenFields Agriculture",
+    companyName: "Paragon Employment Services L.LC",
     jobTitle: "Farm Worker",
     description:
       "We need dedicated Farm Workers to assist in our harvest season in New Zealand.",
-    location: "Wellington, New Zealand",
-    date: "October 1, 2024",
+    location: "Dubai,UAE",
+    date: "Oct 5, 2024",
     type: "Seasonal",
-    salary: "25 NZD/hour",
+    salary: "1000 AED/month",
     overtime: "Overtime Available",
-    workdays: "6 days/week (7hrs)",
+    workdays: "6 days/week (8hrs)",
     benefits: "Accommodation & Meals",
+    img:"/joblogo/logo1.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -88,17 +96,19 @@ const jobData = [
     },
   },
   {
-    companyName: "Global Travels",
+    companyName: "Innovation Direct EMployee Services",
     jobTitle: "Tour Guide",
     description:
       "Seeking a passionate Tour Guide for guiding tourists across Europe.",
-    location: "Berlin, Germany",
-    date: "October 15, 2024",
+    location: "Dubai,UAE",
+    date: "Sept 26, 2024",
     type: "Contract",
-    salary: "50 EUR/hour",
+    salary: "1300 AED/month",
     overtime: "No Overtime",
-    workdays: "5 days/week (6hrs)",
+    workdays: "6 days/week (8hrs)",
     benefits: "Travel Expenses Covered",
+    img:"/joblogo/logo4.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -110,17 +120,19 @@ const jobData = [
     },
   },
   {
-    companyName: "StarTech Solutions",
+    companyName: "Koheji Contactors WLL",
     jobTitle: "Software Developer",
     description:
       "Join our team of developers to create innovative software solutions.",
-    location: "San Francisco, USA",
-    date: "October 10, 2024",
+    location: "Bahrain",
+    date: "Oct 6, 2024",
     type: "Full-Time",
-    salary: "120,000 USD/year",
+    salary: "100 BD/month",
     overtime: "No Overtime",
-    workdays: "5 days/week (8hrs)",
+    workdays: "6 days/week (8hrs)",
     benefits: "Remote Work Option",
+    img:"/joblogo/logo5.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -143,6 +155,8 @@ const jobData = [
     overtime: "Occasional Overtime",
     workdays: "5 days/week (9hrs)",
     benefits: "Housing Allowance & Insurance",
+    img:"/joblogo/logo1.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
@@ -165,6 +179,8 @@ const jobData = [
     overtime: "Occasional Overtime",
     workdays: "5 days/week (8hrs)",
     benefits: "Health & Dental Insurance",
+    img:"/joblogo/logo2.jpeg",
+
     icons: {
       location: "ep:location",
       date: "uiw:date",
