@@ -27,23 +27,23 @@ const clientdata = [
     img: "/joblogo/logo5.jpeg",
   },
 ];
-const clientdata2 = [
-  {
-    img: "/public/client/cm1.jpg",
-  },
-  {
-    img: "/public/client/cm2.png",
-  },
-  {
-    img: "/public/client/cm3.png",
-  },
-  {
-    img: "/public/client/cm4.png",
-  },
-  {
-    img: "/public/client/cm5.png",
-  },
-];
+// const clientdata2 = [
+//   {
+//     img: "/public/client/cm1.jpg",
+//   },
+//   {
+//     img: "/public/client/cm2.png",
+//   },
+//   {
+//     img: "/public/client/cm3.png",
+//   },
+//   {
+//     img: "/public/client/cm4.png",
+//   },
+//   {
+//     img: "/public/client/cm5.png",
+//   },
+// ];
 export default function OurClientele() {
   const settings = {
     dots: false,
@@ -88,49 +88,49 @@ export default function OurClientele() {
       },
     ],
   };
-  const settings2 = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    rtl: true, // Add this line to change the slide direction
-    pauseOnHover: false, // Continue sliding when hovered
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          pauseOnHover: false, // Continue sliding when hovered
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          infinite: true,
-          pauseOnHover: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          pauseOnHover: false,
-        },
-      },
-    ],
-  };
+  // const settings2 = {
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   slidesToShow: 6,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   speed: 2000,
+  //   autoplaySpeed: 3000,
+  //   cssEase: "linear",
+  //   rtl: true, // Add this line to change the slide direction
+  //   pauseOnHover: false, // Continue sliding when hovered
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         slidesToShow: 3,
+  //         slidesToScroll: 3,
+  //         infinite: true,
+  //         pauseOnHover: false, // Continue sliding when hovered
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 2,
+  //         initialSlide: 2,
+  //         infinite: true,
+  //         pauseOnHover: false,
+  //       },
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         pauseOnHover: false,
+  //       },
+  //     },
+  //   ],
+  // };
 
   // const [activeStep, setActiveStep] = useState<number | null>(1);
   // const [lastHoveredImage, setLastHoveredImage] = useState<string | null>(
