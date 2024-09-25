@@ -138,7 +138,7 @@ export default function OurClientele() {
   // );
 
   return (
-    <div className="py-[10rem] w-full">
+    <div className="lg:py-[8rem] py-10 w-full">
       <h1 className="text-[8vw]  lg:text-[4vw] text-left lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
         Our Clientele
       </h1>

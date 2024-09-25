@@ -154,14 +154,11 @@ export default function AboutMain() {
         <OurClientele />
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+      <div
+       
       >
         <LicenseCertificates />
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
