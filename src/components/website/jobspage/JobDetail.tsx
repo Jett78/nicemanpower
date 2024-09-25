@@ -60,11 +60,11 @@ export default function JobDetail() {
       className="pt-[4rem]  lg:pt-[8rem]"
     >
       <div>
-        <div     onClick={handleGoBack} className="text-zinc-500 z-40 lg:fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
-          <div
-            className="overflow-hidden title flex justify-center items-center"
-        
-          >
+        <div
+          onClick={handleGoBack}
+          className="text-zinc-500 z-40 lg:fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center"
+        >
+          <div className="overflow-hidden title flex justify-center items-center">
             <Icon
               icon="ic:outline-arrow-left"
               className="w-[1.5rem] h-[1.5rem]"
