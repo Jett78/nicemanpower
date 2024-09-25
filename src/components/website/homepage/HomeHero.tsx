@@ -44,12 +44,12 @@ export default function HomeHero() {
         <div className="z-[999] relative" data-lenis-prevent>
           {active && (
             <div
-              className="fixed inset-0 bg-black bg-opacity-85 "
+              className="fixed inset-0 z-[100] bg-black bg-opacity-85 "
               onClick={closeDropdown}
             ></div>
           )}
           <div className="relative flex justify-center items-center">
-            <div className={`${active ? "fixed" : "hidden"} z-[200] fixed `}>
+            <div className={`${active ? "fixed" : "hidden"} z-[999] fixed `}>
               <Ctaform closeDropdown={closeDropdown} />
             </div>
           </div>

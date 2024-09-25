@@ -80,12 +80,14 @@ function App() {
           <div className="w-[90vw] lg:w-[50vw] h-[90vh] lg:h-[40vw] bg-gradient-to-r from-[#061a26] via-[#0d2b3a] to-[#0f3447] rounded-full opacity-50 transform scale-150 blur-3xl"></div>
         </div> */}
         <motion.div
-          className="custom-cursor mix-blend-difference hidden pointer-events-none z-[50] lg:block fixed top-0 left-0 w-[0.6vw] h-[0.6vw] rounded-full bg-white"
+          className="custom-cursor mix-blend-difference hidden pointer-events-none lg:block fixed top-0 left-0 w-[0.6vw] h-[0.6vw] rounded-full bg-white"
           animate={controls}
         />
 
         {/* Navbar */}
+        <div className="z-[50] relative">
         <Navbar />
+        </div>
 
         {/* ScrollToTop Component */}
         <ScrollToTop />

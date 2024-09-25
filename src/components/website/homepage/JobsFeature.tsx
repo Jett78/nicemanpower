@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import Ctaform from "./Ctaform";
+import Ctaform2 from "./Ctaform2";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -60,7 +60,7 @@ tl.to(".imgrotate",{
             onClick={closeDropdown}
           ></div>
           <div className="fixed z-[200] inset-0 flex justify-center items-center">
-            <Ctaform closeDropdown={closeDropdown} />
+            <Ctaform2 closeDropdown={closeDropdown} />
           </div>
         </>
       )}

@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { HoverEffect } from "../../ui/card-hover-effect";
 import Ctaform from "../homepage/Ctaform";
+import Ctaform2 from "../homepage/Ctaform2";
 
 const sections = [
   {
@@ -404,7 +405,7 @@ export default function ServicesMain() {
             onClick={closeDropdown}
           ></div>
           <div className="fixed z-[200] inset-0 flex justify-center items-center">
-            <Ctaform closeDropdown={closeDropdown} />
+            <Ctaform2 closeDropdown={closeDropdown} />
           </div>
         </>
       )}
