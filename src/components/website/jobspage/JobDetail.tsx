@@ -40,7 +40,7 @@ export default function JobDetail() {
     }
   }, [isOpenForm]);
 
-  const jobIndex = parseInt(index, 10); // Convert index to a number
+  const jobIndex = index ? Number(index) : -1;
   const job = jobData[jobIndex];
 
   if (!job) {
