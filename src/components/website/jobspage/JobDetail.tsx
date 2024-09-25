@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import jobData from "../../../jobs-data/JobsData";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function JobDetail() {
   const [isOpenForm, setIsOpenForm] = useState(false);
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1); // Go back to the previous page
+  };
   const { index } = useParams();
 
   const [currentImageIndex, setCurrentImageIndex] = useState<number | null>(
@@ -53,9 +59,12 @@ export default function JobDetail() {
       transition={{ duration: 1 }}
       className="pt-[4rem]  lg:pt-[8rem]"
     >
-      <Link to="/jobs">
-        <div className="text-zinc-500 z-40 lg:fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
-          <div className="overflow-hidden title flex justify-center items-center">
+      <div>
+        <div     onClick={handleGoBack} className="text-zinc-500 z-40 lg:fixed left-40 cursor-pointer  hover:scale-105 duration-300 hover:text-zinc-600 flex items-center">
+          <div
+            className="overflow-hidden title flex justify-center items-center"
+        
+          >
             <Icon
               icon="ic:outline-arrow-left"
               className="w-[1.5rem] h-[1.5rem]"
@@ -63,7 +72,7 @@ export default function JobDetail() {
           </div>
           <div className="font-medium">Back</div>
         </div>
-      </Link>
+      </div>
       <div className="w-11/12 lg:w-7/12 mx-auto border-2 border-zinc-500 p-3 lg:p-14 rounded-xl md:mt-0 mt-8">
         {/* top  */}
 
@@ -553,8 +562,7 @@ export default function JobDetail() {
                   htmlFor="firstName"
                   className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
                 >
-                  Upload  photo{" "}
-                  <span className="text-blue-500">*</span>
+                  Upload photo <span className="text-blue-500">*</span>
                 </label>
                 <input
                   type="file"
