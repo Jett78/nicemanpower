@@ -37,15 +37,15 @@ export default function FeatureJobs() {
             <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
                 {/* Company Name & Logo */}
-                <div className="flex justify-center items-center gap-3">
-                  <div className="w-10 h-10 border p-2 bg-tertiary-100  overflow-hidden rounded-full">
+                <div className="grid grid-cols-8 gap-2 place-items-center md:h-20 ">
+                  <div className="col-span-2 bg-white rounded-full overflow-hidden border-2 w-16 h-16">
                     <img
                       src={job.img}
                       alt="company-logo"
                       className="w-full h-full  object-contain object-center"
                     />
                   </div>
-                  <h2 className="font-semibold text-[5vw] md:text-[3vw] lg:text-[1.3vw]">
+                  <h2 className="col-span-6 leading-6 font-semibold text-sm md:text-[2.5vw] lg:text-[1.3vw]">
                     {job.companyName}
                   </h2>
                 </div>
@@ -56,7 +56,7 @@ export default function FeatureJobs() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-[3.5vw] md:text-[2vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
+                <p className="text-[3.5vw] md:text-[2vw] md:h-16 lg:text-[0.9vw] text-zinc-700 font-semibold">
                   {job.description}
                 </p>
               </div>

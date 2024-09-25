@@ -180,7 +180,8 @@ export default function JobDetail() {
               <div className="object-cover object-center w-full h-[15vw] bg-white">
                 <img
                   alt="company-logo"
-                  src="/public/vacancy.png"
+                  // src="/public/vacancy.png"
+                  src={job.img}
                   className="cursor-pointer w-full h-full object-center object-contain"
                   onClick={() => openModal(0)}
                 ></img>
@@ -206,7 +207,8 @@ export default function JobDetail() {
               </div> */}
                   <motion.img
                     alt="company-logo"
-                    src="/public/vacancy.png"
+                    // src="/public/vacancy.png"
+                    src={job.img}
                     className="w-[30vw] mx-auto rounded-lg"
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
@@ -235,11 +237,7 @@ export default function JobDetail() {
               </h3>
               {/* desc  */}
               <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
-                We are a leading construction firm based in Dubai, UAE,
-                specializing in large-scale infrastructure projects. With a
-                commitment to quality and innovation, we pride ourselves on
-                delivering exceptional results while fostering a collaborative
-                and supportive work environment.
+              {job.aboutCompany}
               </p>
             </div>
 
@@ -250,12 +248,7 @@ export default function JobDetail() {
               </h3>
               {/* desc  */}
               <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
-                As a Construction Laborer, you will be responsible for
-                supporting various construction projects by performing manual
-                tasks such as digging, lifting, and transporting materials.
-                Duties include assisting with site preparation, ensuring safety
-                protocols are followed, and collaborating with other workers to
-                complete projects efficiently and on schedule.
+                {job.responsibilities}
               </p>
             </div>
 
@@ -266,19 +259,7 @@ export default function JobDetail() {
               </h3>
               {/* desc  */}
               <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
-                {` As a Construction Laborer, you will be responsible for
-                supporting various construction projects by performing manual
-                tasks such as digging, lifting, and transporting materials.
-                Duties include assisting with site preparation, ensuring safety
-                protocols are followed, and collaborating with other workers to
-                complete projects efficiently and on schedule." The ideal
-                candidate will have previous experience in a labor-intensive
-                role, preferably in construction. Strong physical stamina and
-                the ability to work in various weather conditions are essential.
-                Candidates should have a good understanding of safety
-                regulations and be able to follow instructions accurately.
-                Experience with operating basic construction tools and machinery
-                is a plus.`}
+               {job.skills}
               </p>
             </div>
           </div>

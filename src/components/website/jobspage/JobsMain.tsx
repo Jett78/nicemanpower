@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import jobData from "../../../jobs-data/JobsData";
 import { Link } from "react-router-dom";
@@ -6,14 +5,14 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 
 
 export default function JobsMain() {
-  const [showAll, setShowAll] = useState(false);
+  // const [showAll, setShowAll] = useState(false);
 
-  const handleViewAllClick = () => {
-    setShowAll(true);
-  };
+  // const handleViewAllClick = () => {
+  //   setShowAll(true);
+  // };
 
   // Determine which jobs to display based on the state
-  const displayedJobs = showAll ? jobData : jobData.slice(0, 6);
+  // const displayedJobs = showAll ? jobData : jobData.slice(0, 6);
 
   return (
     <motion.div
@@ -33,7 +32,7 @@ export default function JobsMain() {
 
       {/* cards */}
       <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
-        {displayedJobs.map((job, index) => (
+        {jobData.slice(0,6).map((job, index) => (
           <Link to={`/jobs/${index}`} key={index}>
             <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
@@ -119,7 +118,7 @@ export default function JobsMain() {
         ))}
       </div>
 
-      <div className="w-11/12 mt-5 lg:mt-10 flex justify-start lg:justify-center mx-auto items-center">
+      {/* <div className="w-11/12 mt-5 lg:mt-10 flex justify-start lg:justify-center mx-auto items-center">
         {!showAll && (
           // <button
           //   onClick={handleViewAllClick}
@@ -141,7 +140,7 @@ export default function JobsMain() {
             />
           </button>
         )}
-      </div>
+      </div> */}
     </motion.div>
   );
 }
