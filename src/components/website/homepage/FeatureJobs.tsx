@@ -33,14 +33,14 @@ export default function FeatureJobs() {
       {/* jobs  */}
       <div className="grid lg:grid-cols-3 gap-5 mt-5 lg:mt-10">
         {jobData.slice(0, 3).map((job, index) => (
-          <Link to={`/jobs/${job.companyName}`} key={index}>
+          <Link to={`/jobs/${index}`} key={index}>
             <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
               <div className="w-full flex justify-start items-start flex-col gap-2">
                 {/* Company Name & Logo */}
                 <div className="flex justify-center items-center gap-3">
                   <div className="w-10 h-10 border p-2 bg-tertiary-100  overflow-hidden rounded-full">
                     <img
-                      src="/public/company-logo.png"
+                      src={job.img}
                       alt="company-logo"
                       className="w-full h-full  object-contain object-center"
                     />
