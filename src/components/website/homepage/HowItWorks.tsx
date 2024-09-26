@@ -42,7 +42,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Main container */}
-      <div className="w-full">
+      <div className="w-full overflow-hidden">
         <div ref={stickyContainer} className="w-full h-screen  relative">
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
