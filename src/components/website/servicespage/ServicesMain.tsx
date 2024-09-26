@@ -254,7 +254,7 @@ export default function ServicesMain() {
       >
         <div className="flex mt-5 lg:mt-[8vh] w-full justify-center items-center gap-10">
           {/* Left Titles */}
-          <div className="h-screen flex flex-col gap-2 w-full lg:w-[20vw]">
+          <div className="lg:h-screen flex flex-col gap-2 w-full lg:w-[20vw]">
             {sections.map((section: any, index: number) => (
               <div
                 key={index}
@@ -285,7 +285,7 @@ export default function ServicesMain() {
                 <div className="h-full flex justify-center items-center flex-grow">
                   <img
                     src={section.icon}
-                    className="min-w-5 min-h-5 text-zinc-800"
+                    className="md:min-w-5 w-5 h-5 md:min-h-5 text-zinc-800"
                   ></img>
                 </div>
               </div>
@@ -361,12 +361,9 @@ export default function ServicesMain() {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
-        className="flex py-[4rem] flex-col gap-2"
+      <div
+       
+        className="flex py-[3rem] flex-col gap-2"
       >
         <h1 className="mt-16 text-[8vw] lg:text-[4vw] lg:text-center font-semibold text-transparent bg-clip-text bg-gradient-to-br from-zinc-600 to-zinc-800  leading-none hero">
           Our Process Of Recruitment
@@ -395,8 +392,8 @@ export default function ServicesMain() {
             </div>
           ))}
         </div>
-      </motion.div>
-      {/* --Dark overlay-- */}
+      </div>
+      {/* --Dark overlay- */}
       {active && (
         <>
           <div
