@@ -237,7 +237,7 @@ export default function JobDetail() {
               </h3>
               {/* desc  */}
               <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
-              {job.aboutCompany}
+                {job.aboutCompany}
               </p>
             </div>
 
@@ -259,7 +259,7 @@ export default function JobDetail() {
               </h3>
               {/* desc  */}
               <p className="text-[3.5vw] sm:text-[2vw] md:text-[2.3vw] lg:text-[0.8vw] leading-relaxed text-zinc-700">
-               {job.skills}
+                {job.skills}
               </p>
             </div>
           </div>
@@ -290,27 +290,14 @@ export default function JobDetail() {
               to="/jobs"
               className="w-full absolute top-[10%] left-[10%] flex justify-start"
             >
-              {/* <div className="text-zinc-100 z-40 hover:scale-105 duration-300 hover:text-zinc-50 flex  justify-center items-center">
-                <div className="overflow-hidden title flex justify-center items-center">
-                  <Icon
-                    icon="ic:outline-arrow-left"
-                    className="w-[1.5rem] h-[1.5rem]"
-                  />
-                </div>
-                <div className="font-medium">Back</div>
-              </div> */}
             </Link>
+
+
             {/* form  */}
             <form
               action=""
               className="pt-10 relative  md:w-[54vw]  bg-white p-5 rounded-3xl  mt-5 grid grid-cols-2 gap-5"
             >
-              {/* <div
-                onClick={handleCloseForm}
-                className="absolute cursor-pointer hover:scale-95 duration-300 text-zinc-700 hover:text-zinc-900 right-5 top-5"
-              >
-                <Icon icon="carbon:close-filled" className="w-7 h-7" />
-              </div> */}
               <img
                 src="../public/cancelbtn.svg"
                 alt="cancel-btn"
@@ -366,7 +353,7 @@ export default function JobDetail() {
                   required
                 />
               </div>
-              <div className="flex flex-col md:w-full w-28 mx-auto">
+              <div className="flex flex-col md:w-full w-24 mx-auto">
                 <label
                   htmlFor="firstName"
                   className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
@@ -378,7 +365,7 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 md:text-sm text-[10px] lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 md:text-sm text-[6px] lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
@@ -403,41 +390,8 @@ export default function JobDetail() {
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
-
-                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-blue-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div> */}
+              
               </div>
-              {/* <div className="flex flex-col gap-1">
-              <label
-                  htmlFor="lastName"
-                  className="font-medium text-[3.5vw] md:text-[2.5vw] text-zinc-800 lg:text-[0.9vw]"
-                >
-                 Gender <span className="text-blue-500">*</span>
-                </label>
-                <select
-                  id="countries"
-                  className="p-2 py-2 lg:py-4 w-[25vw] text-sm  border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
-
-                >
-                  <option>United States</option>
-                  <option>Canada</option>
-                  <option>France</option>
-                  <option>Germany</option>
-                </select>
-              </div> */}
-
               <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
                   htmlFor="firstName"
@@ -458,20 +412,6 @@ export default function JobDetail() {
                   <option value="Other">Divorced</option>
                 </select>
 
-                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-blue-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div> */}
               </div>
               <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
@@ -509,21 +449,6 @@ export default function JobDetail() {
                   <option value="Female">Bachelor</option>
                   <option value="Other">Master</option>
                 </select>
-
-                {/* <div className="absolute top-14 right-2 transform -translate-y-1/2 pointer-events-none">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-blue-500"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div> */}
               </div>
 
               <div className="flex flex-col md:w-full w-28 mx-auto">
@@ -535,7 +460,7 @@ export default function JobDetail() {
                 </label>
                 <input
                   type="file"
-                  className="md:text-sm text-[8px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[6px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
               <div className="flex flex-col md:w-full w-28 mx-auto ">
@@ -547,7 +472,7 @@ export default function JobDetail() {
                 </label>
                 <input
                   type="file"
-                  className="md:text-sm text-[8px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
+                  className="md:text-sm text-[6px] w-full rounded-lg border-2 outline-none text-gray-400 font-semibold text-sm bg-white file:cursor-pointer cursor-pointer file:border-0 file:p-2 md:file:py-[0.8vw] file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-blue-500 file:hover:text-white  file:text-gray-500"
                 />
               </div>
 
