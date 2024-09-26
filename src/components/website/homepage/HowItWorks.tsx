@@ -47,7 +47,7 @@ export default function HowItWorks() {
           <div
             className={`w-full  h-screen absolute  top-0 left-0 flex justify-center items-center`}
           >
-            <div className="w-11/12 lg:w-8/12  lg:h-[70vh] bg-white overflow-hidden border-2 border-zinc-400  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-5 lg:p-16 justify-center relative items-center">
+            <div className="w-10/12 lg:w-8/12  lg:h-[70vh] bg-white overflow-hidden border-2 border-zinc-400  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] bg-zinc-50/50  mx-auto rounded-3xl flex flex-col gap-10 p-5 lg:p-16 justify-center relative items-center">
               {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                 <img
                   src="/public/step/paper.avif"
@@ -81,6 +81,8 @@ export default function HowItWorks() {
               </div>
             </div>
           </div>
+
+
           {steps.map((step, index) => (
             <div
               key={index}
@@ -88,7 +90,7 @@ export default function HowItWorks() {
             >
               <div
                 // style={{ backgroundColor: step.background }}
-                className="w-11/12 lg:w-8/12 lg:h-[70vh] bg-white overflow-hidden border-2 border-zinc-400  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-10 lg:p-16 justify-center relative items-center"
+                className="w-10/12 lg:w-8/12 lg:h-[70vh] bg-white overflow-hidden border-2 border-zinc-400  shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]  mx-auto rounded-3xl flex flex-col gap-10 p-6 lg:p-16 justify-center relative items-center"
               >
                 {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
                   <img
