@@ -72,7 +72,7 @@ export default function LicenseCertificates() {
             exit={{ opacity: 0 }}
             onClick={closeModal}
           >
-            <div className="relative w-11/12 h-auto max-w-3xl">
+            <div className="relative w-11/12  max-w-3xl">
               {/* <div className="absolute w-full flex justify-center items-center bottom-5 left-1/2 -translate-x-1/2">
                 <span className="text-[3.5vw] md:text-[2vw] lg:text-[1vw] italic font-semibold text-zinc-100">
                   {documentsData[currentImageIndex].name}
@@ -81,7 +81,7 @@ export default function LicenseCertificates() {
               <motion.img
                 src={documentsData[currentImageIndex].imageSrc}
                 alt={documentsData[currentImageIndex].name}
-                className="w-[30vw] mx-auto rounded-lg"
+                className="lg:w-[30vw] md:w-[20em] sm:w-[15em] w-full mx-auto rounded-lg"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.8 }}

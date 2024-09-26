@@ -21,7 +21,7 @@ export default function OurTeam() {
             <img
               src={member.imageSrc}
               alt={`${member.name}-img`}
-              className="col-span-2 rounded-full border-white border-2  -mt-2 object-cover object-center"
+              className="col-span-2 rounded-full border-white border-2 pt-2  -mt-2 object-cover object-center"
             />
             <section className="col-span-3">
               {/* Name */}
@@ -38,8 +38,8 @@ export default function OurTeam() {
               {/* Socials */}
               <div className="flex justify-between  cursor-pointer items-center text-lg lg:text-sm text-blue-500 gap-1">
                 <div className="cursor-pointer flex flex-col lg:flex-row justify-between items-center gap-5 w-auto group">
-                  <div className="flex text-[3.5vw] lg:text-[1vw] gap-1">
-                    Socials{" "}
+                  <div className="lg:flex hidden text-[3.5vw] lg:text-[1vw] gap-1">
+                    Socials
                     <Icon
                       icon="solar:arrow-up-line-duotone"
                       className="w-5 h-5 rotate-45 group-hover:rotate-[90deg]  duration-300"

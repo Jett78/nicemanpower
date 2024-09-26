@@ -104,7 +104,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <OrganizationalChart />
       </motion.div>
@@ -113,7 +113,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <OurTeam />
       </motion.div>
@@ -122,7 +122,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <Gallery />
       </motion.div>
@@ -131,7 +131,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <CoreValues />
       </motion.div>
@@ -140,7 +140,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <ProcessFlowChart />
       </motion.div>
@@ -149,7 +149,7 @@ export default function AboutMain() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <OurClientele />
       </motion.div>
