@@ -353,7 +353,7 @@ export default function JobDetail() {
                   required
                 />
               </div>
-              <div className="flex flex-col md:w-full w-24 mx-auto">
+              <div className="flex flex-col md:w-full w-28 mx-auto">
                 <label
                   htmlFor="firstName"
                   className="font-medium text-[0.6em] sm:text-[1.5vw] lg:text-[0.8vw] text-tertiary-600 "
@@ -365,7 +365,7 @@ export default function JobDetail() {
                   id="lastName"
                   placeholder="Your Last Name"
                   name="lastName"
-                  className="p-2 md:text-sm text-[6px] lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
+                  className="p-2 md:text-sm text-[8px] lg:py-[0.8vw] text-sm border-2 rounded-xl border-zinc-200 outline-none bg-transparent"
                   required
                 />
               </div>
