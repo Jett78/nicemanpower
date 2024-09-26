@@ -26,9 +26,16 @@ export default function HowItWorks() {
         rotate: index % 2 === 0 ? 5 : -5,
       });
     });
+    // Listen for window resize events to refresh ScrollTrigger
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener("resize", handleResize);
+
 
     // Cleanup function to remove ScrollTrigger instances
     return () => {
+      window.removeEventListener("resize", handleResize);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
@@ -81,7 +88,6 @@ export default function HowItWorks() {
               </div>
             </div>
           </div>
-
 
           {steps.map((step, index) => (
             <div
