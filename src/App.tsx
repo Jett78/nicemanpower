@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes,useLocation } from "react-router-dom";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Blogs from "./pages/Blogs";
@@ -13,10 +13,18 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import ScrollToTop from "./ScrollToTop";
 import Lenis from "lenis";
+import SIgnUp from "./components/ui/SIgnUp";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const controls = useAnimation();
+  const location = useLocation();
+  
+  // List of routes where you don't want to show the Navbar and Footer
+  const noLayoutRoutes = ['/signup'];
+
+  // Check if the current route is in the noLayoutRoutes array
+  const showLayout = !noLayoutRoutes.includes(location.pathname);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -73,7 +81,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <main>
       <div className="relative  bg-[#FFFFFF] text-tertiary-800 ">
         {/* Gradient Ellipse */}
         {/* <div className="fixed inset-0 flex justify-center items-center">
@@ -86,7 +94,8 @@ function App() {
 
         {/* Navbar */}
         <div className="z-[50] relative">
-        <Navbar />
+        {showLayout && <Navbar />}
+
         </div>
 
         {/* ScrollToTop Component */}
@@ -96,6 +105,7 @@ function App() {
         <div className="relative z-10">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<SIgnUp />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blogs" element={<Blogs />} />
@@ -107,9 +117,9 @@ function App() {
         </div>
 
         {/* Footer */}
-        <Footer />
+        {showLayout && <Footer />}
       </div>
-    </Router>
+    </main>
   );
 }
 
