@@ -14,6 +14,7 @@ import { motion, useAnimation } from "framer-motion";
 import ScrollToTop from "./ScrollToTop";
 import Lenis from "lenis";
 import SIgnUp from "./components/ui/SIgnUp";
+import Dashboard from "./components/website/dashboard/Dashboard";
 
 function App() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -21,7 +22,7 @@ function App() {
   const location = useLocation();
   
   // List of routes where you don't want to show the Navbar and Footer
-  const noLayoutRoutes = ['/signup'];
+  const noLayoutRoutes = ['/signup','/dashboard'];
 
   // Check if the current route is in the noLayoutRoutes array
   const showLayout = !noLayoutRoutes.includes(location.pathname);
@@ -113,6 +114,7 @@ function App() {
             <Route path="/jobs" element={<Jobs />} />
             <Route path="/jobs/:index" element={<JobDetail />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
 
