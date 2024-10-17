@@ -1,43 +1,43 @@
 import { useState } from "react";
-import { handleError } from "./Toast";
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // Import toastify CSS
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const SIgnUp = () => {
+  const navigate = useNavigate();
+
   const [signInfo, setsignInfo] = useState({
-    name: "",
     email: "",
     password: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    const copyLoginInfo = { ...signInfo };
-    copyLoginInfo[name] = value;
-    setsignInfo(copyLoginInfo);
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setsignInfo({
+      ...signInfo,
+      [e.target.name]: e.target.value,
+    });
   };
-  console.log("loginInfo ->", signInfo);
 
-  const handleSignup = async (e) => {
+  const handleSignup = async (e: React.ChangeEvent) => {
     e.preventDefault();
-    const { name, email, password } = signInfo;
-    if (!name || !email || !password) {
-      return handleError("Please fill all the fields");
+
+    try {
+      const url = "http://localhost:5000/auth/login";
+      const response = await axios.post(url,signInfo);
+      console.log("login successful", response.data);
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 2000);
+      toast.success("Login Successful"); // Show success toast
+    } catch (error) {
+      toast.error("Invalid Email or Password"); // Show success toast
     }
-    try{
-      const url = "http://localhost:5000/auth/signup";
-      const response = await fetch(url, {
-        method:"POST",
-        headers:{
-          'Content-Type': 'application/json'
-        },
-        body:JSON.stringify(signInfo)
-    })
-    const result = await response.json();
-    console.log(result);
-  }catch(err:any){
-        handleError(err)
-  }
-}
+  };
 
   return (
     <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
@@ -51,49 +51,11 @@ const SIgnUp = () => {
           </p>
         </div>
 
-        <div className="relative max-w-md mx-auto mt-8 md:mt-16">
+        <div className="relative max-w-md mx-auto mt-8 md:mt-10">
           <div className="overflow-hidden bg-white rounded-md shadow-md">
             <div className="px-4 py-6 sm:px-8 sm:py-7">
               <form action="#" method="POST" onSubmit={handleSignup}>
                 <div className="space-y-5">
-                  <div>
-                    <label
-                      htmlFor=""
-                      className="text-base font-medium text-gray-900"
-                    >
-                      {" "}
-                      Name{" "}
-                    </label>
-                    <div className="mt-2.5 relative text-gray-400 focus-within:text-gray-600">
-                      <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                        <svg
-                          className="w-5 h-5"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                          />
-                        </svg>
-                      </div>
-
-                      <input
-                        onChange={handleChange}
-                        type="text"
-                        name="name"
-                        value={signInfo.name}
-                        id=""
-                        placeholder="Enter Full Name"
-                        className="block w-full py-4 pl-10 pr-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-blue-600 caret-blue-600"
-                      />
-                    </div>
-                  </div>
-
                   <div>
                     <label
                       htmlFor=""
@@ -180,34 +142,9 @@ const SIgnUp = () => {
                       Log in
                     </button>
                   </div>
-
-                  <div className="text-center">
-                    <p className="text-base text-gray-600">
-                      Don’t have an account?{" "}
-                      <a
-                        href="#"
-                        title=""
-                        className="font-medium text-orange-500 transition-all duration-200 hover:text-orange-600 hover:underline"
-                      >
-                        Create a free account
-                      </a>
-                    </p>
-                  </div>
                 </div>
               </form>
-              <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-              />
-              <ToastContainer />
+              <ToastContainer position="top-right" autoClose={3000} />
             </div>
           </div>
         </div>
