@@ -15,6 +15,9 @@ const Jobs = () => {
     location: "",
     salary: "",
     services: "",
+    aboutCompany: "",
+    jobDetails: "",
+    skillsExperience: "",
   });
   const handleChange = (
     e: React.ChangeEvent<
@@ -191,15 +194,46 @@ const Jobs = () => {
               </option>
             </select>
           </div>
-          {/* <textarea
-          name="requirement"
-          rows={6}
-          placeholder="Job Description"
-          value={jobData.requirement}
-          onChange={handleChange}
-          className="w-full p-4 outline-none   rounded-md"
-        /> */}
         </section>
+        <div>
+          <label htmlFor="" className="font-medium text-sm text-gray-500">
+            About Company
+          </label>
+          <textarea
+            name="aboutCompany"
+            rows={6}
+            placeholder=""
+            value={jobData.aboutCompany}
+            onChange={handleChange}
+            className="w-full p-4 outline-none   rounded-md"
+          />
+        </div>
+        <div>
+          <label htmlFor="" className="font-medium text-sm text-gray-500">
+            Job Details
+          </label>
+          <textarea
+            name="jobDetails"
+            rows={6}
+            placeholder=""
+            value={jobData.jobDetails}
+            onChange={handleChange}
+            className="w-full p-4 outline-none   rounded-md"
+          />
+        </div>
+        <div>
+          <label htmlFor="" className="font-medium text-sm text-gray-500">
+            Skills & Expereience
+          </label>
+          <textarea
+            name="skillsExperience"
+            rows={6}
+            placeholder=""
+            value={jobData.skillsExperience}
+            onChange={handleChange}
+            className="w-full p-4 outline-none   rounded-md"
+          />
+        </div>
 
         <button
           type="submit"

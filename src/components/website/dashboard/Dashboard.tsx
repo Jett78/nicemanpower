@@ -30,13 +30,13 @@ const Dashboard: React.FC = () => {
   };
   return (
     <main className="grid grid-cols-10 mx-auto">
-      <div className="col-span-2">
+      <div className="col-span-2 sticky h-fit top-2">
         <Sidebar
           onComponentSelect={setSelectedComponent}
           selectedComponent={selectedComponent}
         />
       </div>
-      <div className="col-span-8 h-screen border bg-zinc-100 p-[2vw]">
+      <div className="col-span-8  border bg-zinc-100 p-[2vw]">
         {renderComponent()}
       </div>
     </main>
