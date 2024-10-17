@@ -1,18 +1,58 @@
 import { motion } from "framer-motion";
-import jobData from "../../../jobs-data/JobsData";
 import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
+interface Job {
+  _id: string;
+  title: string;
+  type: string;
+  overtime: string;
+  days: number;
+  hours: number;
+  interviewDate: string;
+  location: string;
+  salary: string;
+  services: string;
+  skillsExperience: string;
+  company: string;
+}
 
 export default function JobsMain() {
-  // const [showAll, setShowAll] = useState(false);
+  const [jobs, setJobs] = useState<Job[]>([]); // Typing the jobs array
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // const handleViewAllClick = () => {
-  //   setShowAll(true);
-  // };
+  useEffect(() => {
+    const fetchJobs = async () => {
+      setLoading(true);
+      setError(null);
 
-  // Determine which jobs to display based on the state
-  // const displayedJobs = showAll ? jobData : jobData.slice(0, 6);
+      try {
+        const response = await axios.get("http://localhost:5000/jobs");
+        setJobs(response.data);
+      } catch (err) {
+        // Type guard to check if the error is an instance of Error
+        if (err instanceof Error) {
+          setError(err.message); // Assign the error message to the state
+        } else {
+          setError("An unknown error occurred"); // Fallback for non-Error types
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchJobs();
+  }, []);
+
+  // if (loading) {
+  //   return <div>Loading...</div>; // Display loading message
+  // }
+
+  if (error) {
+    return <div className="text-red-500">{error}</div>; // Display error message
+  }
 
   return (
     <motion.div
@@ -31,116 +71,112 @@ export default function JobsMain() {
       </p>
 
       {/* cards */}
-      <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
-        {jobData.slice(0,6).map((job, index) => (
-          <Link to={`/jobs/${index}`} key={index}>
-            <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
-              <div className="w-full flex justify-start items-start flex-col gap-2">
-                {/* Company Name & Logo */}
-                <div className="grid grid-cols-8 gap-2 place-items-center md:h-20 ">
-                  <div className="col-span-2 bg-white rounded-full border-2 w-16 h-16">
-                    <img
+      {loading ? (
+        <div className="flex justify-center items-center">
+          <div className="spinner" />
+          <p>Loading jobs...</p>
+        </div>
+      ) : (
+        <div className="grid w-11/12 lg:w-9/12 mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-5 lg:mt-10 gap-5">
+          {jobs.map((job, index) => (
+            <Link to={`/jobs/${index}`} key={index}>
+              <div className="w-full cursor-pointer h-full bg-zinc-100  duration-300 transition-all rounded-2xl flex flex-col justify-start md:p-10 p-4 items-start gap-3 relative overflow-hidden">
+                <div className="w-full flex justify-start items-start flex-col gap-2">
+                  {/* Company Name & Logo */}
+                  <div className="grid grid-cols-8 gap-2 place-items-center md:h-20 ">
+                    <div className="col-span-2 bg-white rounded-full border-2 w-16 h-16">
+                      {/* <img
                       src={job.img} 
                       alt="company-logo"
                       className="h-full w-full object-contain object-center rounded-full"
-                    />
+                    /> */}
+                    </div>
+                    <h2 className="col-span-6 leading-6 font-semibold text-sm md:text-[2.5vw] lg:text-[1.3vw]">
+                      {job.company}
+                    </h2>
                   </div>
-                  <h2 className="col-span-6 leading-6 font-semibold text-sm md:text-[2.5vw] lg:text-[1.3vw]">
-                    {job.companyName}
-                  </h2>
+
+                  {/* Job Title */}
+                  <h3 className="font-semibold text-[3vw] md:text-[2.5vw] lg:text-[1.2vw] text-orange-500">
+                    {job.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-sm md:h-16 md:text-[1.5vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
+                    {job.skillsExperience.slice(0, 62) + "..."}
+                  </p>
                 </div>
 
-                {/* Job Title */}
-                <h3 className="font-semibold text-[3vw] md:text-[2.5vw] lg:text-[1.2vw] text-orange-500">
-                  {job.jobTitle}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm md:h-16 md:text-[1.5vw] lg:text-[0.9vw] text-zinc-700 font-semibold">
-                  {job.description}
-                </p>
+                {/* Job Details */}
+                <div className="flex mt-2 flex-col flex-wrap text-zinc-700 justify-start items-start gap-3 gap-x-5">
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="weui:location-outlined"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">{job.location}</span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="uiw:date"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">
+                      {job.interviewDate}
+                    </span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="iconamoon:clock-light"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">{job.type}</span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="mage:dollar"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">{job.salary}</span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="lsicon:overtime-filled"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">
+                      Overtime {job.overtime}
+                    </span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="mdi:work-outline"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">
+                      {job.days}days/week ({job.hours}hrs)
+                    </span>
+                  </div>
+                  <div className="flex justify-center items-center gap-2">
+                    <Icon
+                      className="w-4 h-4 object-cover object-center"
+                      icon="material-symbols-light:room-service-sharp"
+                      style={{ color: "black" }}
+                    />
+                    <span className="text-sm font-medium">{job.services}</span>
+                  </div>
+                </div>
               </div>
-
-              {/* Job Details */}
-              <div className="flex mt-2 flex-col flex-wrap text-zinc-700 justify-start items-start gap-3 gap-x-5">
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.location}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.location}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.date}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.date}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.type}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.type}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.salary}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.salary}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.overtime}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.overtime}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.workdays}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.workdays}</span>
-                </div>
-                <div className="flex justify-center items-center gap-2">
-                  <Icon
-                    className="w-4 h-4 object-cover object-center"
-                    icon={job.icons.benefits}
-                  ></Icon>
-                  <span className="text-sm font-medium">{job.benefits}</span>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-
-      {/* <div className="w-11/12 mt-5 lg:mt-10 flex justify-start lg:justify-center mx-auto items-center">
-        {!showAll && (
-          // <button
-          //   onClick={handleViewAllClick}
-          //   className="border border-black dark:border-white px-8 py-3 rounded-lg text-[3.5vw] md:text-[2.5vw] lg:text-[1vw] leading-none flex justify-center items-center hover:bg-white hover:text-black transition-colors duration-300"
-          // >
-          //   View All Jobs
-          // </button>
-
-          <button
-            onClick={handleViewAllClick}
-           
-            
-            className="px-[2vw] flex gap-1 justify-center items-center  text-nowrap group hover:text-orange-400   py-[0.8vw] text-[4vw] lg:text-[1vw] font-semibold  rounded-full text-blue-500 duration-300"
-          >
-            View more Jobs
-            <Icon
-              icon="lets-icons:arrow-right-long-light"
-              className="w-5 group-hover:translate-x-2 duration-300"
-            />
-          </button>
-        )}
-      </div> */}
+            </Link>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }
